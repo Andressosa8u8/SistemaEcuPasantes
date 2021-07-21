@@ -30,7 +30,7 @@
                     </a>
                     <ul class="menu__sub-open">
                         <li>
-                            <a href="index.html" class="menu menu--active">
+                            <a href="prueba.aspx" class="menu menu--active">
                                 <div class="menu__icon"><i data-feather="activity"></i></div>
                                 <div class="menu__title">Overview 1 </div>
                             </a>
@@ -44,24 +44,18 @@
                     </a>
                     <ul class="">
                         <li>
-                            <a href="index.html" class="menu menu--active">
+                            <a href="prueba.aspx" class="menu menu--active">
                                 <div class="menu__icon"><i data-feather="activity"></i></div>
                                 <div class="menu__title">Side Menu </div>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="menu menu--active">
+                            <a href="Top_Menu.aspx" class="menu menu--active">
                                 <div class="menu__icon"><i data-feather="activity"></i></div>
                                 <div class="menu__title">Top Menu </div>
                             </a>
                         </li>
                     </ul>
-                </li>
-                <li>
-                    <a href="side-menu-light-calendar.html" class="menu">
-                        <div class="menu__icon"><i data-feather="calendar"></i></div>
-                        <div class="menu__title">Calendario </div>
-                    </a>
                 </li>
                 <li class="menu__devider my-6"></li>
                 <li>
@@ -71,45 +65,19 @@
                     </a>
                     <ul class="">
                         <li>
-                            <a href="side-menu-light-crud-data-list.html" class="menu">
+                            <a href="Crud_DataList.aspx" class="menu">
                                 <div class="menu__icon"><i data-feather="activity"></i></div>
                                 <div class="menu__title">Lista Datos </div>
                             </a>
                         </li>
                         <li>
-                            <a href="side-menu-light-crud-form.html" class="menu">
+                            <a href="Crud_Formularios.aspx" class="menu">
                                 <div class="menu__icon"><i data-feather="activity"></i></div>
                                 <div class="menu__title">Formularios </div>
                             </a>
                         </li>
                     </ul>
-                </li>
-                <li>
-                    <a href="javascript:;" class="menu">
-                        <div class="menu__icon"><i data-feather="users"></i></div>
-                        <div class="menu__title">Users <i data-feather="chevron-down" class="menu__sub-icon "></i></div>
-                    </a>
-                    <ul class="">
-                        <li>
-                            <a href="side-menu-light-users-layout-1.html" class="menu">
-                                <div class="menu__icon"><i data-feather="activity"></i></div>
-                                <div class="menu__title">Layout 1 </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="side-menu-light-users-layout-2.html" class="menu">
-                                <div class="menu__icon"><i data-feather="activity"></i></div>
-                                <div class="menu__title">Layout 2 </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="side-menu-light-users-layout-3.html" class="menu">
-                                <div class="menu__icon"><i data-feather="activity"></i></div>
-                                <div class="menu__title">Layout 3 </div>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+                </li>                
             </ul>
         </div>
 
@@ -166,7 +134,7 @@
                                 </a>
                                 <ul class="side-menu__sub-open">
                                     <li>
-                                        <a href="index.html" class="side-menu side-menu--active">
+                                        <a href="prueba.aspx" class="side-menu side-menu--active">
                                             <div class="side-menu__icon"><i data-feather="activity"></i></div>
                                             <div class="side-menu__title">Overview 1 </div>
                                         </a>
@@ -177,31 +145,24 @@
                                 <a href="javascript:;" class="side-menu">
                                     <div class="side-menu__icon"><i data-feather="box"></i></div>
                                     <div class="side-menu__title">
-                                        Menus 
-                                   
+                                        Menus                                   
                                         <div class="side-menu__sub-icon "><i data-feather="chevron-down"></i></div>
                                     </div>
                                 </a>
                                 <ul class="">
                                     <li>
-                                        <a href="index.html" class="side-menu">
+                                        <a href="prueba.aspx" class="side-menu">
                                             <div class="side-menu__icon"><i data-feather="activity"></i></div>
                                             <div class="side-menu__title">Side Menu </div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="top-menu-light-dashboard-overview-1.html" class="side-menu">
+                                        <a href="Top_Menu.aspx" class="side-menu">
                                             <div class="side-menu__icon"><i data-feather="activity"></i></div>
                                             <div class="side-menu__title">Top Menu </div>
                                         </a>
                                     </li>
                                 </ul>
-                            </li>
-                            <li>
-                                <a href="side-menu-light-calendar.html" class="side-menu">
-                                    <div class="side-menu__icon"><i data-feather="calendar"></i></div>
-                                    <div class="side-menu__title">Calendar </div>
-                                </a>
                             </li>
                             <li class="side-nav__devider my-6"></li>
                             <li>
@@ -215,37 +176,19 @@
                                 </a>
                                 <ul class="">
                                     <li>
-                                        <a href="side-menu-light-crud-data-list.html" class="side-menu">
+                                        <a href="Crud_DataList.aspx" class="side-menu">
                                             <div class="side-menu__icon"><i data-feather="activity"></i></div>
                                             <div class="side-menu__title">Lista de Datos </div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="side-menu-light-crud-form.html" class="side-menu">
+                                        <a href="Crud_Formularios.aspx" class="side-menu">
                                             <div class="side-menu__icon"><i data-feather="activity"></i></div>
                                             <div class="side-menu__title">Formularios </div>
                                         </a>
                                     </li>
                                 </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:;" class="side-menu">
-                                    <div class="side-menu__icon"><i data-feather="users"></i></div>
-                                    <div class="side-menu__title">
-                                        Users 
-                                   
-                                        <div class="side-menu__sub-icon "><i data-feather="chevron-down"></i></div>
-                                    </div>
-                                </a>
-                                <ul class="">
-                                    <li>
-                                        <a href="side-menu-light-users-layout-1.html" class="side-menu">
-                                            <div class="side-menu__icon"><i data-feather="activity"></i></div>
-                                            <div class="side-menu__title">Layout 1 </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
+                            </li>                            
                         </ul>
                     </nav>
                     <!-- END: Side Menu -->
@@ -254,280 +197,11 @@
                         <div class="grid grid-cols-12 gap-6">
                             <div class="col-span-12 xxl:col-span-9">
                                 <div class="grid grid-cols-12 gap-6">
-                                    <!-- BEGIN: Notification -->
-                                    <div class="col-span-12 mt-6 -mb-6 intro-y">
-                                        <div class="alert alert-dismissible show box bg-theme-26 text-white flex items-center mb-6" role="alert">
-                                            <span>Introducing new dashboard! Download now at <a href="https://themeforest.net/item/midone-jquery-tailwindcss-html-admin-template/26366820" class="underline ml-1" target="blank">themeforest.net</a>.</span>
-                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"><i data-feather="x" class="w-4 h-4"></i></button>
-                                        </div>
-                                    </div>
-                                    <!-- BEGIN: Notification -->
-                                    <!-- BEGIN: General Report -->
-                                    <div class="col-span-12 lg:col-span-8 xl:col-span-6 mt-2">
-                                        <div class="intro-y block sm:flex items-center h-10">
-                                            <h2 class="text-lg font-medium truncate mr-5">General Report
-                                        </h2>
-                                            <select class="sm:ml-auto mt-3 sm:mt-0 sm:w-auto form-select box">
-                                                <option value="daily">Daily</option>
-                                                <option value="weekly">Weekly</option>
-                                                <option value="monthly">Monthly</option>
-                                                <option value="yearly">Yearly</option>
-                                                <option value="custom-date">Custom Date</option>
-                                            </select>
-                                        </div>
-                                        <div class="report-box-2 intro-y mt-12 sm:mt-5">
-                                            <div class="box sm:flex">
-                                                <div class="px-8 py-12 flex flex-col justify-center flex-1">
-                                                    <i data-feather="shopping-bag" class="w-10 h-10 text-theme-23"></i>
-                                                    <div class="relative text-3xl font-medium mt-12 pl-4 ml-0.5"><span class="absolute text-2xl font-medium top-0 left-0 -ml-0.5">$</span> 54.143 </div>
-                                                    <div class="report-box-2__indicator bg-theme-10 tooltip cursor-pointer" title="47% Higher than last month">47% <i data-feather="chevron-up" class="w-4 h-4 ml-0.5"></i></div>
-                                                    <div class="mt-4 text-gray-600 dark:text-gray-600">Sales earnings this month after associated author fees, & before taxes.</div>
-                                                    <button class="btn btn-outline-secondary relative justify-start rounded-full mt-12">
-                                                        Download Reports 
-                                                   
-                                                        <span class="w-8 h-8 absolute flex justify-center items-center bg-theme-17 dark:bg-theme-26 text-white rounded-full right-0 top-0 bottom-0 my-auto ml-auto mr-0.5"><i data-feather="arrow-right" class="w-4 h-4"></i></span>
-                                                    </button>
-                                                </div>
-                                                <div class="px-8 py-12 flex flex-col justify-center flex-1 border-t sm:border-t-0 sm:border-l border-gray-300 dark:border-dark-5 border-dashed">
-                                                    <div class="text-gray-600 dark:text-gray-600 text-xs">TOTAL TRANSACTION</div>
-                                                    <div class="mt-1.5 flex items-center">
-                                                        <div class="text-base">4.501</div>
-                                                        <div class="text-theme-24 flex text-xs font-medium tooltip cursor-pointer ml-2" title="2% Lower than last month">2% <i data-feather="chevron-down" class="w-4 h-4 ml-0.5"></i></div>
-                                                    </div>
-                                                    <div class="text-gray-600 dark:text-gray-600 text-xs mt-5">CANCELATION CASE</div>
-                                                    <div class="mt-1.5 flex items-center">
-                                                        <div class="text-base">2</div>
-                                                        <div class="text-theme-24 flex text-xs font-medium tooltip cursor-pointer ml-2" title="0.1% Lower than last month">0.1% <i data-feather="chevron-down" class="w-4 h-4 ml-0.5"></i></div>
-                                                    </div>
-                                                    <div class="text-gray-600 dark:text-gray-600 text-xs mt-5">GROSS RENTAL VALUE</div>
-                                                    <div class="mt-1.5 flex items-center">
-                                                        <div class="text-base">$72.000</div>
-                                                        <div class="text-theme-10 flex text-xs font-medium tooltip cursor-pointer ml-2" title="49% Higher than last month">49% <i data-feather="chevron-up" class="w-4 h-4 ml-0.5"></i></div>
-                                                    </div>
-                                                    <div class="text-gray-600 dark:text-gray-600 text-xs mt-5">GROSS RENTAL PROFIT</div>
-                                                    <div class="mt-1.5 flex items-center">
-                                                        <div class="text-base">$54.000</div>
-                                                        <div class="text-theme-10 flex text-xs font-medium tooltip cursor-pointer ml-2" title="52% Higher than last month">52% <i data-feather="chevron-up" class="w-4 h-4 ml-0.5"></i></div>
-                                                    </div>
-                                                    <div class="text-gray-600 dark:text-gray-600 text-xs mt-5">NEW USERS</div>
-                                                    <div class="mt-1.5 flex items-center">
-                                                        <div class="text-base">2.500</div>
-                                                        <div class="text-theme-10 flex text-xs font-medium tooltip cursor-pointer ml-2" title="52% Higher than last month">52% <i data-feather="chevron-up" class="w-4 h-4 ml-0.5"></i></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- END: General Report -->
-                                    <!-- BEGIN: Visitors -->
-                                    <div class="col-span-12 sm:col-span-6 lg:col-span-4 xl:col-span-3 mt-2">
-                                        <div class="intro-y flex items-center h-10">
-                                            <h2 class="text-lg font-medium truncate mr-5">Visitors
-                                        </h2>
-                                            <a href="" class="ml-auto text-theme-26 dark:text-theme-33 truncate">View on Map</a>
-                                        </div>
-                                        <div class="report-box-2 intro-y mt-5">
-                                            <div class="box p-5">
-                                                <div class="flex items-center">
-                                                    Realtime active users 
-                                               
-                                                    <div class="dropdown ml-auto">
-                                                        <a class="dropdown-toggle w-5 h-5 block -mr-2" href="javascript:;" aria-expanded="false"><i data-feather="more-vertical" class="w-5 h-5 text-gray-600 dark:text-gray-300"></i></a>
-                                                        <div class="dropdown-menu w-40">
-                                                            <div class="dropdown-menu__content box dark:bg-dark-1 p-2">
-                                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"><i data-feather="file-text" class="w-4 h-4 mr-2"></i>Export </a>
-                                                                <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out bg-white dark:bg-dark-1 hover:bg-gray-200 dark:hover:bg-dark-2 rounded-md"><i data-feather="settings" class="w-4 h-4 mr-2"></i>Settings </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="text-2xl font-medium mt-2">214</div>
-                                                <div class="border-b border-gray-200 flex pb-2 mt-4">
-                                                    <div class="text-gray-600 dark:text-gray-600 text-xs">Page views per second</div>
-                                                    <div class="text-theme-10 flex text-xs font-medium tooltip cursor-pointer ml-auto" title="49% Lower than last month">49% <i data-feather="chevron-up" class="w-4 h-4 ml-0.5"></i></div>
-                                                </div>
-                                                <div class="mt-2 border-b broder-gray-200">
-                                                    <div class="-mb-1.5 -ml-2.5">
-                                                        <canvas id="report-bar-chart" height="111"></canvas>
-                                                    </div>
-                                                </div>
-                                                <div class="text-gray-600 dark:text-gray-600 text-xs border-b border-gray-200 flex mb-2 pb-2 mt-4">
-                                                    <div>Top Active Pages</div>
-                                                    <div class="ml-auto">Active Users</div>
-                                                </div>
-                                                <div class="flex">
-                                                    <div>/letz-lara…review/2653</div>
-                                                    <div class="ml-auto">472</div>
-                                                </div>
-                                                <div class="flex mt-1.5">
-                                                    <div>/icewall…review/1674</div>
-                                                    <div class="ml-auto">294</div>
-                                                </div>
-                                                <div class="flex mt-1.5">
-                                                    <div>/profile…review/46789</div>
-                                                    <div class="ml-auto">83</div>
-                                                </div>
-                                                <div class="flex mt-1.5">
-                                                    <div>/profile…review/24357</div>
-                                                    <div class="ml-auto">21</div>
-                                                </div>
-                                                <button class="btn btn-outline-secondary border-dashed w-full py-1 px-2 mt-4">Real-Time Report</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- END: Visitors -->
-                                    <!-- BEGIN: Users By Age -->
-                                    <div class="col-span-12 sm:col-span-6 lg:col-span-4 xl:col-span-3 mt-2 lg:mt-6 xl:mt-2">
-                                        <div class="intro-y flex items-center h-10">
-                                            <h2 class="text-lg font-medium truncate mr-5">Users By Age
-                                        </h2>
-                                            <a href="" class="ml-auto text-theme-26 dark:text-theme-33 truncate">Show More</a>
-                                        </div>
-                                        <div class="report-box-2 intro-y mt-5">
-                                            <div class="box p-5">
-                                                <div class="boxed-tabs nav nav-tabs justify-center w-4/5 bg-gray-200 text-gray-600 dark:bg-dark-1 dark:text-gray-500 rounded-md mx-auto" role="tablist"><a data-toggle="tab" data-target="#active-users" href="javascript:;" class="btn flex-1 border-0 shadow-none py-1.5 px-2 active" id="active-users-tab" role="tab" aria-controls="active-users" aria-selected="true">Active</a> <a data-toggle="tab" data-target="#inactive-users" href="javascript:;" class="btn flex-1 border-0 shadow-none py-1.5 px-2" id="inactive-users-tab" role="tab" aria-selected="false">Inactive</a> </div>
-                                                <div class="tab-content mt-6">
-                                                    <div class="tab-pane active" id="active-users" role="tabpanel" aria-labelledby="active-users-tab">
-                                                        <div class="relative">
-                                                            <canvas class="mt-3" id="report-donut-chart" height="300"></canvas>
-                                                            <div class="flex flex-col justify-center items-center absolute w-full h-full top-0 left-0">
-                                                                <div class="text-2xl font-medium">2.501</div>
-                                                                <div class="text-gray-600 dark:text-gray-600 mt-0.5">Active Users</div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="mt-5">
-                                                            <div class="flex items-center">
-                                                                <div class="w-2 h-2 bg-theme-17 rounded-full mr-3"></div>
-                                                                <span class="truncate">17 - 30 Years old</span>
-                                                                <div class="h-px flex-1 border border-r border-dashed border-gray-300 mx-3 xl:hidden"></div>
-                                                                <span class="font-medium xl:ml-auto">62%</span>
-                                                            </div>
-                                                            <div class="flex items-center mt-4">
-                                                                <div class="w-2 h-2 bg-theme-35 rounded-full mr-3"></div>
-                                                                <span class="truncate">31 - 50 Years old</span>
-                                                                <div class="h-px flex-1 border border-r border-dashed border-gray-300 mx-3 xl:hidden"></div>
-                                                                <span class="font-medium xl:ml-auto">33%</span>
-                                                            </div>
-                                                            <div class="flex items-center mt-4">
-                                                                <div class="w-2 h-2 bg-theme-23 rounded-full mr-3"></div>
-                                                                <span class="truncate">>= 50 Years old</span>
-                                                                <div class="h-px flex-1 border border-r border-dashed border-gray-300 mx-3 xl:hidden"></div>
-                                                                <span class="font-medium xl:ml-auto">10%</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- END: Users By Age -->
-                                    <!-- BEGIN: Official Store -->
-                                    <div class="col-span-12 lg:col-span-8 mt-6">
-                                        <div class="intro-y block sm:flex items-center h-10">
-                                            <h2 class="text-lg font-medium truncate mr-5">Official Store
-                                        </h2>
-                                            <div class="sm:ml-auto mt-3 sm:mt-0 relative text-gray-700 dark:text-gray-300">
-                                                <i data-feather="map-pin" class="w-4 h-4 z-10 absolute my-auto inset-y-0 ml-3 left-0"></i>
-                                                <input type="text" class="form-control sm:w-40 box pl-10" placeholder="Filter by city">
-                                            </div>
-                                        </div>
-                                        <div class="intro-y box p-5 mt-12 sm:mt-5">
-                                            <div>250 Official stores in 21 countries, click the marker to see location details.</div>
-                                            <div class="report-maps mt-5 bg-gray-200 rounded-md" data-center="-6.2425342, 106.8626478" data-sources="../Template Principal/dist/json/location.json"></div>
-                                        </div>
-                                    </div>
-                                    <!-- END: Official Store -->
-                                    <!-- BEGIN: Weekly Best Sellers -->
-                                    <div class="col-span-12 xl:col-span-4 mt-6">
-                                        <div class="intro-y flex items-center h-10">
-                                            <h2 class="text-lg font-medium truncate mr-5">Weekly Best Sellers
-                                        </h2>
-                                        </div>
-                                        <div class="mt-5">
-                                            <div class="intro-y">
-                                                <div class="box px-4 py-4 mb-3 flex items-center zoom-in">
-                                                    <div class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden">
-                                                        <img alt="Icewall Tailwind HTML Admin Template" src="../Template Principal/dist/images/profile-13.jpg">
-                                                    </div>
-                                                    <div class="ml-4 mr-auto">
-                                                        <div class="font-medium">Sylvester Stallone</div>
-                                                        <div class="text-gray-600 text-xs mt-0.5">25 April 2022</div>
-                                                    </div>
-                                                    <div class="py-1 px-2 rounded-full text-xs bg-theme-10 text-white cursor-pointer font-medium">137 Sales</div>
-                                                </div>
-                                            </div>
-                                            <div class="intro-y">
-                                                <div class="box px-4 py-4 mb-3 flex items-center zoom-in">
-                                                    <div class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden">
-                                                        <img alt="Icewall Tailwind HTML Admin Template" src="../Template Principal/dist/images/profile-8.jpg">
-                                                    </div>
-                                                    <div class="ml-4 mr-auto">
-                                                        <div class="font-medium">Kate Winslet</div>
-                                                        <div class="text-gray-600 text-xs mt-0.5">23 June 2021</div>
-                                                    </div>
-                                                    <div class="py-1 px-2 rounded-full text-xs bg-theme-10 text-white cursor-pointer font-medium">137 Sales</div>
-                                                </div>
-                                            </div>
-                                            <div class="intro-y">
-                                                <div class="box px-4 py-4 mb-3 flex items-center zoom-in">
-                                                    <div class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden">
-                                                        <img alt="Icewall Tailwind HTML Admin Template" src="../Template Principal/dist/images/profile-13.jpg">
-                                                    </div>
-                                                    <div class="ml-4 mr-auto">
-                                                        <div class="font-medium">Charlize Theron</div>
-                                                        <div class="text-gray-600 text-xs mt-0.5">28 August 2022</div>
-                                                    </div>
-                                                    <div class="py-1 px-2 rounded-full text-xs bg-theme-10 text-white cursor-pointer font-medium">137 Sales</div>
-                                                </div>
-                                            </div>
-                                            <div class="intro-y">
-                                                <div class="box px-4 py-4 mb-3 flex items-center zoom-in">
-                                                    <div class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden">
-                                                        <img alt="Icewall Tailwind HTML Admin Template" src="../Template Principal/dist/images/profile-12.jpg">
-                                                    </div>
-                                                    <div class="ml-4 mr-auto">
-                                                        <div class="font-medium">Russell Crowe</div>
-                                                        <div class="text-gray-600 text-xs mt-0.5">28 February 2022</div>
-                                                    </div>
-                                                    <div class="py-1 px-2 rounded-full text-xs bg-theme-10 text-white cursor-pointer font-medium">137 Sales</div>
-                                                </div>
-                                            </div>
-                                            <a href="" class="intro-y w-full block text-center rounded-md py-4 border border-dotted border-theme-27 dark:border-dark-5 text-theme-28 dark:text-gray-600">View More</a>
-                                        </div>
-                                    </div>
-                                    <!-- END: Weekly Best Sellers -->
-                                    <!-- BEGIN: Ads 1 -->
-                                    <div class="col-span-12 lg:col-span-6 mt-6">
-                                        <div class="ads-box box p-8 relative overflow-hidden bg-theme-17 intro-y">
-                                            <div class="ads-box__title w-full sm:w-72 text-white text-xl -mt-3">Transact safely with Lender’s Fund Account (RDL)</div>
-                                            <div class="w-full sm:w-72 leading-relaxed text-white text-opacity-70 dark:text-gray-600 dark:text-opacity-100 mt-3">Apply now, quick registration</div>
-                                            <button class="btn w-32 bg-white dark:bg-dark-2 dark:text-white mt-6 sm:mt-10">Start Now</button>
-                                            <img class="hidden sm:block absolute top-0 right-0 w-2/5 -mt-3 mr-2" alt="Icewall Tailwind HTML Admin Template" src="../Template Principal/dist/images/woman-illustration.svg">
-                                        </div>
-                                    </div>
-                                    <!-- END: Ads 1 -->
-                                    <!-- BEGIN: Ads 2 -->
-                                    <div class="col-span-12 lg:col-span-6 mt-6">
-                                        <div class="ads-box box p-8 relative overflow-hidden intro-y">
-                                            <div class="ads-box__title w-full sm:w-52 text-theme-17 dark:text-white text-xl -mt-3">Invite friends to get <span class="font-medium">FREE</span> bonuses!</div>
-                                            <div class="w-full sm:w-60 leading-relaxed text-gray-600 mt-2">Get a IDR 100,000 voucher by inviting your friends to fund #BecomeMember</div>
-                                            <div class="w-48 relative mt-6 cursor-pointer tooltip" title="Copy referral link">
-                                                <input class="form-control" value="https://dashboard.in">
-                                                <i data-feather="copy" class="absolute right-0 top-0 bottom-0 my-auto mr-4 w-4 h-4"></i>
-                                            </div>
-                                            <img class="hidden sm:block absolute top-0 right-0 w-1/2 mt-1 -mr-12" alt="Icewall Tailwind HTML Admin Template" src="../Template Principal/dist/images/phone-illustration.svg">
-                                        </div>
-                                    </div>
-                                    <!-- END: Ads 2 -->
                                     <!-- BEGIN: Weekly Top Products -->
                                     <div class="col-span-12 mt-6">
                                         <div class="intro-y block sm:flex items-center h-10">
                                             <h2 class="text-lg font-medium truncate mr-5">Weekly Top Products
-                                        </h2>
-                                            <div class="flex items-center sm:ml-auto mt-3 sm:mt-0">
-                                                <button class="btn box flex items-center text-gray-700 dark:text-gray-300"><i data-feather="file-text" class="hidden sm:block w-4 h-4 mr-2"></i>Export to Excel </button>
-                                                <button class="ml-3 btn box flex items-center text-gray-700 dark:text-gray-300"><i data-feather="file-text" class="hidden sm:block w-4 h-4 mr-2"></i>Export to PDF </button>
-                                            </div>
+                                            </h2>
                                         </div>
                                         <div class="intro-y overflow-auto lg:overflow-visible mt-8 sm:mt-0">
                                             <table class="table table-report sm:mt-2">
@@ -556,7 +230,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <a href="" class="font-medium whitespace-nowrap">Nikon Z6</a>
+                                                            <a href="#" class="font-medium whitespace-nowrap">Nikon Z6</a>
                                                             <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">Photography</div>
                                                         </td>
                                                         <td class="text-center">142</td>
@@ -585,7 +259,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <a href="" class="font-medium whitespace-nowrap">Nike Tanjun</a>
+                                                            <a href="#" class="font-medium whitespace-nowrap">Nike Tanjun</a>
                                                             <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">Sport &amp; Outdoor</div>
                                                         </td>
                                                         <td class="text-center">50</td>
@@ -614,7 +288,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <a href="" class="font-medium whitespace-nowrap">Samsung Q90 QLED TV</a>
+                                                            <a href="#" class="font-medium whitespace-nowrap">Samsung Q90 QLED TV</a>
                                                             <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">Electronic</div>
                                                         </td>
                                                         <td class="text-center">50</td>
@@ -643,7 +317,7 @@
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <a href="" class="font-medium whitespace-nowrap">Sony Master Series A9G</a>
+                                                            <a href="#" class="font-medium whitespace-nowrap">Sony Master Series A9G</a>
                                                             <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">Electronic</div>
                                                         </td>
                                                         <td class="text-center">110</td>
@@ -663,21 +337,21 @@
                                         <div class="intro-y flex flex-wrap sm:flex-row sm:flex-nowrap items-center mt-3">
                                             <ul class="pagination">
                                                 <li>
-                                                    <a class="pagination__link" href=""><i class="w-4 h-4" data-feather="chevrons-left"></i></a>
+                                                    <a class="pagination__link" href="#"><i class="w-4 h-4" data-feather="chevrons-left"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a class="pagination__link" href=""><i class="w-4 h-4" data-feather="chevron-left"></i></a>
+                                                    <a class="pagination__link" href="#"><i class="w-4 h-4" data-feather="chevron-left"></i></a>
                                                 </li>
-                                                <li><a class="pagination__link" href="">...</a> </li>
-                                                <li><a class="pagination__link" href="">1</a> </li>
-                                                <li><a class="pagination__link pagination__link--active" href="">2</a> </li>
-                                                <li><a class="pagination__link" href="">3</a> </li>
-                                                <li><a class="pagination__link" href="">...</a> </li>
+                                                <li><a class="pagination__link" href="#">...</a> </li>
+                                                <li><a class="pagination__link" href="#">1</a> </li>
+                                                <li><a class="pagination__link pagination__link--active" href="#">2</a> </li>
+                                                <li><a class="pagination__link" href="#">3</a> </li>
+                                                <li><a class="pagination__link" href="#">...</a> </li>
                                                 <li>
-                                                    <a class="pagination__link" href=""><i class="w-4 h-4" data-feather="chevron-right"></i></a>
+                                                    <a class="pagination__link" href="#"><i class="w-4 h-4" data-feather="chevron-right"></i></a>
                                                 </li>
                                                 <li>
-                                                    <a class="pagination__link" href=""><i class="w-4 h-4" data-feather="chevrons-right"></i></a>
+                                                    <a class="pagination__link" href="#"><i class="w-4 h-4" data-feather="chevrons-right"></i></a>
                                                 </li>
                                             </ul>
                                             <select class="w-20 form-select box mt-3 sm:mt-0">
@@ -694,207 +368,12 @@
                             <div class="col-span-12 xxl:col-span-3">
                                 <div class="xxl:border-l border-theme-25 -mb-10 pb-10">
                                     <div class="xxl:pl-6 grid grid-cols-12 gap-6">
-                                        <!-- BEGIN: Important Notes -->
-                                        <div class="col-span-12 md:col-span-6 xl:col-span-12 mt-3 xxl:mt-8">
-                                            <div class="intro-x flex items-center h-10">
-                                                <h2 class="text-lg font-medium truncate mr-auto">Important Notes
-                                            </h2>
-                                                <button data-carousel="important-notes" data-target="prev" class="tiny-slider-navigator btn px-2 border-gray-400 text-gray-700 dark:text-gray-300 mr-2"><i data-feather="chevron-left" class="w-4 h-4"></i></button>
-                                                <button data-carousel="important-notes" data-target="next" class="tiny-slider-navigator btn px-2 border-gray-400 text-gray-700 dark:text-gray-300 mr-2"><i data-feather="chevron-right" class="w-4 h-4"></i></button>
-                                            </div>
-                                            <div class="mt-5 intro-x">
-                                                <div class="box zoom-in">
-                                                    <div class="tiny-slider" id="important-notes">
-                                                        <div class="p-5">
-                                                            <div class="text-base font-medium truncate">Lorem Ipsum is simply dummy text</div>
-                                                            <div class="text-gray-500 mt-1">20 Hours ago</div>
-                                                            <div class="text-gray-600 text-justify mt-1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div>
-                                                            <div class="font-medium flex mt-5">
-                                                                <button type="button" class="btn btn-secondary py-1 px-2">View Notes</button>
-                                                                <button type="button" class="btn btn-outline-secondary py-1 px-2 ml-auto ml-auto">Dismiss</button>
-                                                            </div>
-                                                        </div>
-                                                        <div class="p-5">
-                                                            <div class="text-base font-medium truncate">Lorem Ipsum is simply dummy text</div>
-                                                            <div class="text-gray-500 mt-1">20 Hours ago</div>
-                                                            <div class="text-gray-600 text-justify mt-1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div>
-                                                            <div class="font-medium flex mt-5">
-                                                                <button type="button" class="btn btn-secondary py-1 px-2">View Notes</button>
-                                                                <button type="button" class="btn btn-outline-secondary py-1 px-2 ml-auto ml-auto">Dismiss</button>
-                                                            </div>
-                                                        </div>
-                                                        <div class="p-5">
-                                                            <div class="text-base font-medium truncate">Lorem Ipsum is simply dummy text</div>
-                                                            <div class="text-gray-500 mt-1">20 Hours ago</div>
-                                                            <div class="text-gray-600 text-justify mt-1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div>
-                                                            <div class="font-medium flex mt-5">
-                                                                <button type="button" class="btn btn-secondary py-1 px-2">View Notes</button>
-                                                                <button type="button" class="btn btn-outline-secondary py-1 px-2 ml-auto ml-auto">Dismiss</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- END: Important Notes -->
-                                        <!-- BEGIN: Recent Activities -->
-                                        <div class="col-span-12 md:col-span-6 xl:col-span-4 xxl:col-span-12 mt-3">
-                                            <div class="intro-x flex items-center h-10">
-                                                <h2 class="text-lg font-medium truncate mr-5">Recent Activities
-                                            </h2>
-                                                <a href="" class="ml-auto text-theme-26 dark:text-theme-33 truncate">Show More</a>
-                                            </div>
-                                            <div class="report-timeline mt-5 relative">
-                                                <div class="intro-x relative flex items-center mb-3">
-                                                    <div class="report-timeline__image">
-                                                        <div class="w-10 h-10 flex-none image-fit rounded-full overflow-hidden">
-                                                            <img alt="Icewall Tailwind HTML Admin Template" src="../Template Principal/dist/images/profile-4.jpg">
-                                                        </div>
-                                                    </div>
-                                                    <div class="box px-5 py-3 ml-4 flex-1 zoom-in">
-                                                        <div class="flex items-center">
-                                                            <div class="font-medium">Kate Winslet</div>
-                                                            <div class="text-xs text-gray-500 ml-auto">07:00 PM</div>
-                                                        </div>
-                                                        <div class="text-gray-600 mt-1">Has joined the team</div>
-                                                    </div>
-                                                </div>
-                                                <div class="intro-x relative flex items-center mb-3">
-                                                    <div class="report-timeline__image">
-                                                        <div class="w-10 h-10 flex-none image-fit rounded-full overflow-hidden">
-                                                            <img alt="Icewall Tailwind HTML Admin Template" src="../Template Principal/dist/images/profile-7.jpg">
-                                                        </div>
-                                                    </div>
-                                                    <div class="box px-5 py-3 ml-4 flex-1 zoom-in">
-                                                        <div class="flex items-center">
-                                                            <div class="font-medium">Russell Crowe</div>
-                                                            <div class="text-xs text-gray-500 ml-auto">07:00 PM</div>
-                                                        </div>
-                                                        <div class="text-gray-600">
-                                                            <div class="mt-1">Added 3 new photos</div>
-                                                            <div class="flex mt-2">
-                                                                <div class="tooltip w-8 h-8 image-fit mr-1 zoom-in" title="Nikon Z6">
-                                                                    <img alt="Icewall Tailwind HTML Admin Template" class="rounded-md border border-white" src="../Template Principal/dist/images/preview-11.jpg">
-                                                                </div>
-                                                                <div class="tooltip w-8 h-8 image-fit mr-1 zoom-in" title="Nike Tanjun">
-                                                                    <img alt="Icewall Tailwind HTML Admin Template" class="rounded-md border border-white" src="../Template Principal/dist/images/preview-10.jpg">
-                                                                </div>
-                                                                <div class="tooltip w-8 h-8 image-fit mr-1 zoom-in" title="Samsung Q90 QLED TV">
-                                                                    <img alt="Icewall Tailwind HTML Admin Template" class="rounded-md border border-white" src="../Template Principal/dist/images/preview-6.jpg">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="intro-x text-gray-500 text-xs text-center my-4">12 November</div>
-                                                <div class="intro-x relative flex items-center mb-3">
-                                                    <div class="report-timeline__image">
-                                                        <div class="w-10 h-10 flex-none image-fit rounded-full overflow-hidden">
-                                                            <img alt="Icewall Tailwind HTML Admin Template" src="../Template Principal/dist/images/profile-6.jpg">
-                                                        </div>
-                                                    </div>
-                                                    <div class="box px-5 py-3 ml-4 flex-1 zoom-in">
-                                                        <div class="flex items-center">
-                                                            <div class="font-medium">Johnny Depp</div>
-                                                            <div class="text-xs text-gray-500 ml-auto">07:00 PM</div>
-                                                        </div>
-                                                        <div class="text-gray-600 mt-1">Has changed <a class="text-theme-12 dark:text-gray-300" href="">Nike Tanjun</a> price and description</div>
-                                                    </div>
-                                                </div>
-                                                <div class="intro-x relative flex items-center mb-3">
-                                                    <div class="report-timeline__image">
-                                                        <div class="w-10 h-10 flex-none image-fit rounded-full overflow-hidden">
-                                                            <img alt="Icewall Tailwind HTML Admin Template" src="../Template Principal/dist/images/profile-13.jpg">
-                                                        </div>
-                                                    </div>
-                                                    <div class="box px-5 py-3 ml-4 flex-1 zoom-in">
-                                                        <div class="flex items-center">
-                                                            <div class="font-medium">Kate Winslet</div>
-                                                            <div class="text-xs text-gray-500 ml-auto">07:00 PM</div>
-                                                        </div>
-                                                        <div class="text-gray-600 mt-1">Has changed <a class="text-theme-12 dark:text-gray-300" href="">Sony A7 III</a> description</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- END: Recent Activities -->
-                                        <!-- BEGIN: Transactions -->
-                                        <div class="col-span-12 md:col-span-6 xl:col-span-4 xxl:col-span-12 mt-3">
-                                            <div class="intro-x flex items-center h-10">
-                                                <h2 class="text-lg font-medium truncate mr-5">Transactions
-                                            </h2>
-                                            </div>
-                                            <div class="mt-5">
-                                                <div class="intro-x">
-                                                    <div class="box px-5 py-3 mb-3 flex items-center zoom-in">
-                                                        <div class="w-10 h-10 flex-none image-fit rounded-full overflow-hidden">
-                                                            <img alt="Icewall Tailwind HTML Admin Template" src="../Template Principal/dist/images/profile-13.jpg">
-                                                        </div>
-                                                        <div class="ml-4 mr-auto">
-                                                            <div class="font-medium">Sylvester Stallone</div>
-                                                            <div class="text-gray-600 text-xs mt-0.5">25 April 2022</div>
-                                                        </div>
-                                                        <div class="text-theme-24">+$46</div>
-                                                    </div>
-                                                </div>
-                                                <div class="intro-x">
-                                                    <div class="box px-5 py-3 mb-3 flex items-center zoom-in">
-                                                        <div class="w-10 h-10 flex-none image-fit rounded-full overflow-hidden">
-                                                            <img alt="Icewall Tailwind HTML Admin Template" src="../Template Principal/dist/images/profile-8.jpg">
-                                                        </div>
-                                                        <div class="ml-4 mr-auto">
-                                                            <div class="font-medium">Kate Winslet</div>
-                                                            <div class="text-gray-600 text-xs mt-0.5">23 June 2021</div>
-                                                        </div>
-                                                        <div class="text-theme-24">+$23</div>
-                                                    </div>
-                                                </div>
-                                                <div class="intro-x">
-                                                    <div class="box px-5 py-3 mb-3 flex items-center zoom-in">
-                                                        <div class="w-10 h-10 flex-none image-fit rounded-full overflow-hidden">
-                                                            <img alt="Icewall Tailwind HTML Admin Template" src="../Template Principal/dist/images/profile-13.jpg">
-                                                        </div>
-                                                        <div class="ml-4 mr-auto">
-                                                            <div class="font-medium">Charlize Theron</div>
-                                                            <div class="text-gray-600 text-xs mt-0.5">28 August 2022</div>
-                                                        </div>
-                                                        <div class="text-theme-10">-$42</div>
-                                                    </div>
-                                                </div>
-                                                <div class="intro-x">
-                                                    <div class="box px-5 py-3 mb-3 flex items-center zoom-in">
-                                                        <div class="w-10 h-10 flex-none image-fit rounded-full overflow-hidden">
-                                                            <img alt="Icewall Tailwind HTML Admin Template" src="../Template Principal/dist/images/profile-12.jpg">
-                                                        </div>
-                                                        <div class="ml-4 mr-auto">
-                                                            <div class="font-medium">Russell Crowe</div>
-                                                            <div class="text-gray-600 text-xs mt-0.5">28 February 2022</div>
-                                                        </div>
-                                                        <div class="text-theme-10">-$63</div>
-                                                    </div>
-                                                </div>
-                                                <div class="intro-x">
-                                                    <div class="box px-5 py-3 mb-3 flex items-center zoom-in">
-                                                        <div class="w-10 h-10 flex-none image-fit rounded-full overflow-hidden">
-                                                            <img alt="Icewall Tailwind HTML Admin Template" src="../Template Principal/dist/images/profile-11.jpg">
-                                                        </div>
-                                                        <div class="ml-4 mr-auto">
-                                                            <div class="font-medium">Sylvester Stallone</div>
-                                                            <div class="text-gray-600 text-xs mt-0.5">17 September 2021</div>
-                                                        </div>
-                                                        <div class="text-theme-24">+$32</div>
-                                                    </div>
-                                                </div>
-                                                <a href="" class="intro-x w-full block text-center rounded-md py-3 border border-dotted border-theme-27 dark:border-dark-5 text-theme-28 dark:text-gray-600">View More</a>
-                                            </div>
-                                        </div>
-                                        <!-- END: Transactions -->
                                         <!-- BEGIN: Schedules -->
                                         <div class="col-span-12 md:col-span-6 xl:col-span-4 xxl:col-span-12 xl:col-start-1 xl:row-start-2 xxl:col-start-auto xxl:row-start-auto mt-3">
                                             <div class="intro-x flex items-center h-10">
                                                 <h2 class="text-lg font-medium truncate mr-5">Schedules
                                             </h2>
-                                                <a href="" class="ml-auto text-theme-26 dark:text-gray-400 truncate flex items-center"><i data-feather="plus" class="w-4 h-4 mr-1"></i>Add New Schedules </a>
+                                                <a href="#" class="ml-auto text-theme-26 dark:text-gray-400 truncate flex items-center"><i data-feather="plus" class="w-4 h-4 mr-1"></i>Add New Schedules </a>
                                             </div>
                                             <div class="mt-5">
                                                 <div class="intro-x box">
