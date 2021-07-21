@@ -1,0 +1,310 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4BDF3ADB-30A2-4D10-8ACD-F5F147BADDBF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SistemaEcuPasantes</RootNamespace>
+    <AssemblyName>SistemaEcuPasantes</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44357</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="index.aspx" />
+    <Content Include="Template\Template Principal\dist\css\app.css" />
+    <Content Include="Template\Template Principal\dist\fonts\roboto\LICENSE.txt" />
+    <Content Include="Template\Template Principal\dist\images\bg-login-page-dark.svg" />
+    <Content Include="Template\Template Principal\dist\images\bg-login-page.svg" />
+    <Content Include="Template\Template Principal\dist\images\bg-main-dark.svg" />
+    <Content Include="Template\Template Principal\dist\images\bg-main.svg" />
+    <Content Include="Template\Template Principal\dist\images\error-illustration.svg" />
+    <Content Include="Template\Template Principal\dist\images\food-beverage-1.jpg" />
+    <Content Include="Template\Template Principal\dist\images\food-beverage-10.jpg" />
+    <Content Include="Template\Template Principal\dist\images\food-beverage-11.jpg" />
+    <Content Include="Template\Template Principal\dist\images\food-beverage-12.jpg" />
+    <Content Include="Template\Template Principal\dist\images\food-beverage-13.jpg" />
+    <Content Include="Template\Template Principal\dist\images\food-beverage-14.jpg" />
+    <Content Include="Template\Template Principal\dist\images\food-beverage-15.jpg" />
+    <Content Include="Template\Template Principal\dist\images\food-beverage-16.jpg" />
+    <Content Include="Template\Template Principal\dist\images\food-beverage-17.jpg" />
+    <Content Include="Template\Template Principal\dist\images\food-beverage-18.jpg" />
+    <Content Include="Template\Template Principal\dist\images\food-beverage-19.jpg" />
+    <Content Include="Template\Template Principal\dist\images\food-beverage-2.jpg" />
+    <Content Include="Template\Template Principal\dist\images\food-beverage-3.jpg" />
+    <Content Include="Template\Template Principal\dist\images\food-beverage-4.jpg" />
+    <Content Include="Template\Template Principal\dist\images\food-beverage-5.jpg" />
+    <Content Include="Template\Template Principal\dist\images\food-beverage-6.jpg" />
+    <Content Include="Template\Template Principal\dist\images\food-beverage-7.jpg" />
+    <Content Include="Template\Template Principal\dist\images\food-beverage-8.jpg" />
+    <Content Include="Template\Template Principal\dist\images\food-beverage-9.jpg" />
+    <Content Include="Template\Template Principal\dist\images\Group 1.svg" />
+    <Content Include="Template\Template Principal\dist\images\Group 2.svg" />
+    <Content Include="Template\Template Principal\dist\images\illustration.svg" />
+    <Content Include="Template\Template Principal\dist\images\illustration2.svg" />
+    <Content Include="Template\Template Principal\dist\images\logo.svg" />
+    <Content Include="Template\Template Principal\dist\images\map-marker-region.png" />
+    <Content Include="Template\Template Principal\dist\images\map-marker.png" />
+    <Content Include="Template\Template Principal\dist\images\phone-illustration.svg" />
+    <Content Include="Template\Template Principal\dist\images\placeholders\200x200.jpg" />
+    <Content Include="Template\Template Principal\dist\images\placeholders\800x800.jpg" />
+    <Content Include="Template\Template Principal\dist\images\preview-1.jpg" />
+    <Content Include="Template\Template Principal\dist\images\preview-10.jpg" />
+    <Content Include="Template\Template Principal\dist\images\preview-11.jpg" />
+    <Content Include="Template\Template Principal\dist\images\preview-12.jpg" />
+    <Content Include="Template\Template Principal\dist\images\preview-13.jpg" />
+    <Content Include="Template\Template Principal\dist\images\preview-14.jpg" />
+    <Content Include="Template\Template Principal\dist\images\preview-15.jpg" />
+    <Content Include="Template\Template Principal\dist\images\preview-16.jpg" />
+    <Content Include="Template\Template Principal\dist\images\preview-17.jpg" />
+    <Content Include="Template\Template Principal\dist\images\preview-18.jpg" />
+    <Content Include="Template\Template Principal\dist\images\preview-19.jpg" />
+    <Content Include="Template\Template Principal\dist\images\preview-2.jpg" />
+    <Content Include="Template\Template Principal\dist\images\preview-3.jpg" />
+    <Content Include="Template\Template Principal\dist\images\preview-4.jpg" />
+    <Content Include="Template\Template Principal\dist\images\preview-5.jpg" />
+    <Content Include="Template\Template Principal\dist\images\preview-6.jpg" />
+    <Content Include="Template\Template Principal\dist\images\preview-7.jpg" />
+    <Content Include="Template\Template Principal\dist\images\preview-8.jpg" />
+    <Content Include="Template\Template Principal\dist\images\preview-9.jpg" />
+    <Content Include="Template\Template Principal\dist\images\profile-1.jpg" />
+    <Content Include="Template\Template Principal\dist\images\profile-10.jpg" />
+    <Content Include="Template\Template Principal\dist\images\profile-11.jpg" />
+    <Content Include="Template\Template Principal\dist\images\profile-12.jpg" />
+    <Content Include="Template\Template Principal\dist\images\profile-13.jpg" />
+    <Content Include="Template\Template Principal\dist\images\profile-14.jpg" />
+    <Content Include="Template\Template Principal\dist\images\profile-15.jpg" />
+    <Content Include="Template\Template Principal\dist\images\profile-16.jpg" />
+    <Content Include="Template\Template Principal\dist\images\profile-17.jpg" />
+    <Content Include="Template\Template Principal\dist\images\profile-18.jpg" />
+    <Content Include="Template\Template Principal\dist\images\profile-19.jpg" />
+    <Content Include="Template\Template Principal\dist\images\profile-2.jpg" />
+    <Content Include="Template\Template Principal\dist\images\profile-3.jpg" />
+    <Content Include="Template\Template Principal\dist\images\profile-4.jpg" />
+    <Content Include="Template\Template Principal\dist\images\profile-5.jpg" />
+    <Content Include="Template\Template Principal\dist\images\profile-6.jpg" />
+    <Content Include="Template\Template Principal\dist\images\profile-7.jpg" />
+    <Content Include="Template\Template Principal\dist\images\profile-8.jpg" />
+    <Content Include="Template\Template Principal\dist\images\profile-9.jpg" />
+    <Content Include="Template\Template Principal\dist\images\woman-illustration.svg" />
+    <Content Include="Template\Template Principal\dist\js\app.js" />
+    <Content Include="Template\Template Principal\dist\js\APPJSL~1.TXT" />
+    <Content Include="Template\Template Principal\src\images\bg-login-page-dark.svg" />
+    <Content Include="Template\Template Principal\src\images\bg-login-page.svg" />
+    <Content Include="Template\Template Principal\src\images\bg-main-dark.svg" />
+    <Content Include="Template\Template Principal\src\images\bg-main.svg" />
+    <Content Include="Template\Template Principal\src\images\error-illustration.svg" />
+    <Content Include="Template\Template Principal\src\images\food-beverage-1.jpg" />
+    <Content Include="Template\Template Principal\src\images\food-beverage-10.jpg" />
+    <Content Include="Template\Template Principal\src\images\food-beverage-11.jpg" />
+    <Content Include="Template\Template Principal\src\images\food-beverage-12.jpg" />
+    <Content Include="Template\Template Principal\src\images\food-beverage-13.jpg" />
+    <Content Include="Template\Template Principal\src\images\food-beverage-14.jpg" />
+    <Content Include="Template\Template Principal\src\images\food-beverage-15.jpg" />
+    <Content Include="Template\Template Principal\src\images\food-beverage-16.jpg" />
+    <Content Include="Template\Template Principal\src\images\food-beverage-17.jpg" />
+    <Content Include="Template\Template Principal\src\images\food-beverage-18.jpg" />
+    <Content Include="Template\Template Principal\src\images\food-beverage-19.jpg" />
+    <Content Include="Template\Template Principal\src\images\food-beverage-2.jpg" />
+    <Content Include="Template\Template Principal\src\images\food-beverage-3.jpg" />
+    <Content Include="Template\Template Principal\src\images\food-beverage-4.jpg" />
+    <Content Include="Template\Template Principal\src\images\food-beverage-5.jpg" />
+    <Content Include="Template\Template Principal\src\images\food-beverage-6.jpg" />
+    <Content Include="Template\Template Principal\src\images\food-beverage-7.jpg" />
+    <Content Include="Template\Template Principal\src\images\food-beverage-8.jpg" />
+    <Content Include="Template\Template Principal\src\images\food-beverage-9.jpg" />
+    <Content Include="Template\Template Principal\src\images\illustration.svg" />
+    <Content Include="Template\Template Principal\src\images\logo.svg" />
+    <Content Include="Template\Template Principal\src\images\map-marker-region.png" />
+    <Content Include="Template\Template Principal\src\images\map-marker.png" />
+    <Content Include="Template\Template Principal\src\images\phone-illustration.svg" />
+    <Content Include="Template\Template Principal\src\images\placeholders\200x200.jpg" />
+    <Content Include="Template\Template Principal\src\images\placeholders\800x800.jpg" />
+    <Content Include="Template\Template Principal\src\images\preview-1.jpg" />
+    <Content Include="Template\Template Principal\src\images\preview-10.jpg" />
+    <Content Include="Template\Template Principal\src\images\preview-11.jpg" />
+    <Content Include="Template\Template Principal\src\images\preview-12.jpg" />
+    <Content Include="Template\Template Principal\src\images\preview-13.jpg" />
+    <Content Include="Template\Template Principal\src\images\preview-14.jpg" />
+    <Content Include="Template\Template Principal\src\images\preview-15.jpg" />
+    <Content Include="Template\Template Principal\src\images\preview-16.jpg" />
+    <Content Include="Template\Template Principal\src\images\preview-17.jpg" />
+    <Content Include="Template\Template Principal\src\images\preview-18.jpg" />
+    <Content Include="Template\Template Principal\src\images\preview-19.jpg" />
+    <Content Include="Template\Template Principal\src\images\preview-2.jpg" />
+    <Content Include="Template\Template Principal\src\images\preview-3.jpg" />
+    <Content Include="Template\Template Principal\src\images\preview-4.jpg" />
+    <Content Include="Template\Template Principal\src\images\preview-5.jpg" />
+    <Content Include="Template\Template Principal\src\images\preview-6.jpg" />
+    <Content Include="Template\Template Principal\src\images\preview-7.jpg" />
+    <Content Include="Template\Template Principal\src\images\preview-8.jpg" />
+    <Content Include="Template\Template Principal\src\images\preview-9.jpg" />
+    <Content Include="Template\Template Principal\src\images\profile-1.jpg" />
+    <Content Include="Template\Template Principal\src\images\profile-10.jpg" />
+    <Content Include="Template\Template Principal\src\images\profile-11.jpg" />
+    <Content Include="Template\Template Principal\src\images\profile-12.jpg" />
+    <Content Include="Template\Template Principal\src\images\profile-13.jpg" />
+    <Content Include="Template\Template Principal\src\images\profile-14.jpg" />
+    <Content Include="Template\Template Principal\src\images\profile-15.jpg" />
+    <Content Include="Template\Template Principal\src\images\profile-16.jpg" />
+    <Content Include="Template\Template Principal\src\images\profile-17.jpg" />
+    <Content Include="Template\Template Principal\src\images\profile-18.jpg" />
+    <Content Include="Template\Template Principal\src\images\profile-19.jpg" />
+    <Content Include="Template\Template Principal\src\images\profile-2.jpg" />
+    <Content Include="Template\Template Principal\src\images\profile-3.jpg" />
+    <Content Include="Template\Template Principal\src\images\profile-4.jpg" />
+    <Content Include="Template\Template Principal\src\images\profile-5.jpg" />
+    <Content Include="Template\Template Principal\src\images\profile-6.jpg" />
+    <Content Include="Template\Template Principal\src\images\profile-7.jpg" />
+    <Content Include="Template\Template Principal\src\images\profile-8.jpg" />
+    <Content Include="Template\Template Principal\src\images\profile-9.jpg" />
+    <Content Include="Template\Template Principal\src\images\woman-illustration.svg" />
+    <Content Include="Template\Views\prueba.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Template\Views\prueba.aspx.cs">
+      <DependentUpon>prueba.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\Views\prueba.aspx.designer.cs">
+      <DependentUpon>prueba.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Template\Template Principal\src\images\.DS_Store" />
+    <Content Include="Template\Template Principal\src\images\placeholders\.DS_Store" />
+    <Content Include="Template\Template Principal\dist\fonts\.DS_Store" />
+    <Content Include="Template\Template Principal\dist\fonts\roboto\Roboto-Black.ttf" />
+    <Content Include="Template\Template Principal\dist\fonts\roboto\Roboto-BlackItalic.ttf" />
+    <Content Include="Template\Template Principal\dist\fonts\roboto\Roboto-Bold.ttf" />
+    <Content Include="Template\Template Principal\dist\fonts\roboto\Roboto-BoldItalic.ttf" />
+    <Content Include="Template\Template Principal\dist\fonts\roboto\Roboto-Italic.ttf" />
+    <Content Include="Template\Template Principal\dist\fonts\roboto\Roboto-Light.ttf" />
+    <Content Include="Template\Template Principal\dist\fonts\roboto\Roboto-LightItalic.ttf" />
+    <Content Include="Template\Template Principal\dist\fonts\roboto\Roboto-Medium.ttf" />
+    <Content Include="Template\Template Principal\dist\fonts\roboto\Roboto-MediumItalic.ttf" />
+    <Content Include="Template\Template Principal\dist\fonts\roboto\Roboto-Regular.ttf" />
+    <Content Include="Template\Template Principal\dist\fonts\roboto\Roboto-Thin.ttf" />
+    <Content Include="Template\Template Principal\dist\fonts\roboto\Roboto-ThinItalic.ttf" />
+    <Content Include="Template\Template Principal\dist\js\DS_STO~1" />
+    <Content Include="Template\Template Principal\dist\json\LOCATI~1.JSO" />
+    <Content Include="Template\Template Principal\dist\images\.DS_Store" />
+    <Content Include="Template\Template Principal\dist\images\placeholders\.DS_Store" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Template\Template Principal\src\fonts\" />
+    <Folder Include="Template\Template Principal\src\json\" />
+    <Folder Include="Template\Template Principal\src\js\" />
+    <Folder Include="Template\Template Principal\src\sass\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53672</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44357/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
