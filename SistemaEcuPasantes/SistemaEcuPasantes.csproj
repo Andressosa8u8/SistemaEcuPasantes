@@ -147,8 +147,7 @@
     <Content Include="Template\Template Principal\dist\js\APPJSL~1.TXT" />
     <Content Include="Template\Views\Crud_DataList.aspx" />
     <Content Include="Template\Views\Crud_Formularios.aspx" />
-    <Content Include="Template\Views\prueba.aspx" />
-    <Content Include="Template\Views\Top_Menu.aspx" />
+    <Content Include="Template\Views\Principal.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -174,19 +173,19 @@
     <Compile Include="Template\Views\Crud_Formularios.aspx.designer.cs">
       <DependentUpon>Crud_Formularios.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Template\Views\prueba.aspx.cs">
-      <DependentUpon>prueba.aspx</DependentUpon>
+    <Compile Include="Template\Views\Principal.aspx.cs">
+      <DependentUpon>Principal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Template\Views\prueba.aspx.designer.cs">
-      <DependentUpon>prueba.aspx</DependentUpon>
+    <Compile Include="Template\Views\Principal.aspx.designer.cs">
+      <DependentUpon>Principal.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Template\Views\Top_Menu.aspx.cs">
-      <DependentUpon>Top_Menu.aspx</DependentUpon>
+    <Compile Include="Template\Views\Principal.Master.cs">
+      <DependentUpon>Principal.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Template\Views\Top_Menu.aspx.designer.cs">
-      <DependentUpon>Top_Menu.aspx</DependentUpon>
+    <Compile Include="Template\Views\Principal.Master.designer.cs">
+      <DependentUpon>Principal.Master</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -208,6 +207,7 @@
     <Content Include="Template\Template Principal\dist\json\LOCATI~1.JSO" />
     <Content Include="Template\Template Principal\dist\images\.DS_Store" />
     <Content Include="Template\Template Principal\dist\images\placeholders\.DS_Store" />
+    <Content Include="Template\Views\Principal.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

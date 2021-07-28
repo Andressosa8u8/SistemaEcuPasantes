@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace SistemaEcuPasantes.Template.Views
 {
-    public partial class Top_Menu : System.Web.UI.Page
+    public partial class Principal1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
