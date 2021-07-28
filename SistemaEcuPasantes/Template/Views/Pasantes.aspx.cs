@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace SistemaEcuPasantes.Template.Views
 {
-    public partial class Crud_DataList : System.Web.UI.Page
+    public partial class Pasantes : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -96,8 +96,12 @@
     <Content Include="Template\Template Principal\dist\images\food-beverage-9.jpg" />
     <Content Include="Template\Template Principal\dist\images\Group 1.svg" />
     <Content Include="Template\Template Principal\dist\images\Group 2.svg" />
+    <Content Include="Template\Template Principal\dist\images\icon-two.jpg" />
+    <Content Include="Template\Template Principal\dist\images\icon-usu.png" />
+    <Content Include="Template\Template Principal\dist\images\icon.three.png" />
     <Content Include="Template\Template Principal\dist\images\illustration.svg" />
     <Content Include="Template\Template Principal\dist\images\illustration2.svg" />
+    <Content Include="Template\Template Principal\dist\images\logo.jpg" />
     <Content Include="Template\Template Principal\dist\images\logo.svg" />
     <Content Include="Template\Template Principal\dist\images\map-marker-region.png" />
     <Content Include="Template\Template Principal\dist\images\map-marker.png" />
@@ -145,9 +149,14 @@
     <Content Include="Template\Template Principal\dist\images\woman-illustration.svg" />
     <Content Include="Template\Template Principal\dist\js\app.js" />
     <Content Include="Template\Template Principal\dist\js\APPJSL~1.TXT" />
-    <Content Include="Template\Views\Crud_DataList.aspx" />
     <Content Include="Template\Views\Crud_Formularios.aspx" />
+    <Content Include="Template\Views\Horas.aspx" />
+    <Content Include="Template\Views\Labores.aspx" />
+    <Content Include="Template\Views\Pasantes.aspx" />
     <Content Include="Template\Views\Principal.aspx" />
+    <Content Include="Template\Views\Proyectos.aspx" />
+    <Content Include="Template\Views\Responsables.aspx" />
+    <Content Include="Template\Views\Tareas.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -159,19 +168,33 @@
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Template\Views\Crud_DataList.aspx.cs">
-      <DependentUpon>Crud_DataList.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Template\Views\Crud_DataList.aspx.designer.cs">
-      <DependentUpon>Crud_DataList.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Template\Views\Crud_Formularios.aspx.cs">
       <DependentUpon>Crud_Formularios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Template\Views\Crud_Formularios.aspx.designer.cs">
       <DependentUpon>Crud_Formularios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Template\Views\Horas.aspx.cs">
+      <DependentUpon>Horas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\Views\Horas.aspx.designer.cs">
+      <DependentUpon>Horas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Template\Views\Labores.aspx.cs">
+      <DependentUpon>Labores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\Views\Labores.aspx.designer.cs">
+      <DependentUpon>Labores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Template\Views\Pasantes.aspx.cs">
+      <DependentUpon>Pasantes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\Views\Pasantes.aspx.designer.cs">
+      <DependentUpon>Pasantes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Template\Views\Principal.aspx.cs">
       <DependentUpon>Principal.aspx</DependentUpon>
@@ -186,6 +209,27 @@
     </Compile>
     <Compile Include="Template\Views\Principal.Master.designer.cs">
       <DependentUpon>Principal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Template\Views\Proyectos.aspx.cs">
+      <DependentUpon>Proyectos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\Views\Proyectos.aspx.designer.cs">
+      <DependentUpon>Proyectos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Template\Views\Responsables.aspx.cs">
+      <DependentUpon>Responsables.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\Views\Responsables.aspx.designer.cs">
+      <DependentUpon>Responsables.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Template\Views\Tareas.aspx.cs">
+      <DependentUpon>Tareas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\Views\Tareas.aspx.designer.cs">
+      <DependentUpon>Tareas.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
