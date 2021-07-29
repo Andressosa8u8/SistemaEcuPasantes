@@ -74,6 +74,8 @@
     <Content Include="Template\Template Principal\dist\images\bg-login-page.svg" />
     <Content Include="Template\Template Principal\dist\images\bg-main-dark.svg" />
     <Content Include="Template\Template Principal\dist\images\bg-main.svg" />
+    <Content Include="Template\Template Principal\dist\images\ecu.png" />
+    <Content Include="Template\Template Principal\dist\images\ECU911.svg.png" />
     <Content Include="Template\Template Principal\dist\images\error-illustration.svg" />
     <Content Include="Template\Template Principal\dist\images\food-beverage-1.jpg" />
     <Content Include="Template\Template Principal\dist\images\food-beverage-10.jpg" />

@@ -5,13 +5,13 @@
 <html>
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="../Template Principal/../Template Principal/dist/images/logo.svg" rel="shortcut icon">
+    <link href="../Template Principal/dist/images/logo.svg" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Icewall admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Icewall Admin Template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="LEFT4CODE">
     <title>Dashboard - Icewall - Tailwind HTML Admin Template</title>
-    <link rel="stylesheet" href="../Template Principal/../Template Principal/dist/css/app.css" />
+    <link rel="stylesheet" href="../Template Principal/dist/css/app.css" />
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -23,21 +23,21 @@
         <div class="mobile-menu md:hidden">
             <div class="mobile-menu-bar">
                 <a href="#" class="flex mr-auto">
-                    <%--<img alt="Icewall Tailwind HTML Admin Template" class="w-6" src="../Template Principal/dist/images/icon.three.png">--%>
+                    <img alt="Icewall Tailwind HTML Admin Template" class="w-6" src="../Template Principal/dist/images/icon.three.png">
                 </a>
                 <a href="javascript:;" id="mobile-menu-toggler"><i data-feather="bar-chart-2" class="w-8 h-8 text-white transform -rotate-90"></i></a>
             </div>
             <ul class="border-t border-theme-2 py-5 hidden">
                 <li>
-                    <a href="javascript:;.html" class="menu menu--active">
+                    <a href="Principal.aspx" class="menu menu--active">
                         <div class="menu__icon"><i data-feather="home"></i></div>
                         <div class="menu__title">Inicio</div>
                     </a>                   
                 </li>               
                 <li>
-                    <a href="javascript:;" class="menu">
+                    <a href="javascript:;.html" class="menu">
                         <div class="menu__icon"><i data-feather="edit"></i></div>
-                        <div class="menu__title">Mantenimientos <i data-feather="chevron-down" class="menu__sub-icon "></i></div>
+                        <div class="menu__title">Mantenimientos <i data-feather="chevron-down" class="menu__sub-icon"></i></div>
                     </a>
                     <ul class="">
                         <li>
@@ -86,8 +86,8 @@
             <div class="h-full flex items-center">
                 <!-- BEGIN: Logo -->
                 <a href="Principal.aspx" class="-intro-x hidden md:flex">
-                    <img alt="Icewall Tailwind HTML Admin Template" class="w-6" src="../Template Principal/dist/images/icon-two.jpg">
-                    <span class="text-white text-lg ml-3">Sistema<span class="font-medium">Pasantes</span> </span>
+                    <img alt="Icewall Tailwind HTML Admin Template" class="w-6" src="../Template Principal/dist/images/ECU911.svg.png">
+                    <span class="text-white text-lg ml-3">Sistema<span class="font-medium"> Pasantes</span> </span>
                 </a>
                 <!-- END: Logo -->
                 <!-- BEGIN: Breadcrumb -->
@@ -120,7 +120,7 @@
                 <nav class="side-nav">
                     <ul>
                         <li>
-                            <a href="javascript:;.html" class="side-menu side-menu--active">
+                            <a href="Principal.aspx" class="side-menu side-menu--active">
                                 <div class="side-menu__icon"><i data-feather="home"></i></div>
                                 <div class="side-menu__title">
                                     Inicio 
@@ -129,11 +129,11 @@
                         </li>                        
                         <li class="side-nav__devider my-6"></li>
                         <li>
-                            <a href="javascript:;" class="side-menu">
+                            <a href="javascript:;.html" class="side-menu">
                                 <div class="side-menu__icon"><i data-feather="edit"></i></div>
                                 <div class="side-menu__title">
                                     Mantenimientos                                   
-                                <div class="side-menu__sub-icon "><i data-feather="chevron-down"></i></div>
+                                <div class="side-menu__sub-icon"><i data-feather="chevron-down"></i></div>
                                 </div>
                             </a>
                             <ul class="">
@@ -190,7 +190,7 @@
     <!-- BEGIN: JS Assets-->
         <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=["your-google-map-api"]&libraries=places"></script>
-        <script src="../Template Principal/../Template Principal/dist/js/app.js"></script>
+        <script src="../Template Principal/dist/js/app.js"></script>
         <!-- END: JS Assets-->
 </body>
 </html>
