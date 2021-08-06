@@ -39,19 +39,32 @@
                         <table class="table table-report -mt-2">
                             <thead>
                                 <tr>
-                                    <th class="text-center whitespace-nowrap">NOMBRE</th>
-                                    <th class="text-center whitespace-nowrap">STOCK</th>
+                                    <th class="text-center whitespace-nowrap">NOMBRE DEL PROYECTO</th>
+                                    <th class="text-center whitespace-nowrap">DESCRIPCION</th>
+                                    <th class="text-center whitespace-nowrap">RESPONSABLE</th>
                                     <th class="text-center whitespace-nowrap">ESTADO</th>
                                     <th class="text-center whitespace-nowrap">ACCIONES</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr class="intro-x">
-                                    <td>
-                                        <a href="#" class="font-medium whitespace-nowrap">Sony A7 III</a>
-                                        <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">Photography</div>
+                                    <td class="text-center">Nombre proyecto</td>
+                                    <td class="text-center">Desarrollo del proyecto</td>
+                                    <td class="text-center">Nombre responsable</td>                                   
+                                    <td class="w-40">
+                                        <div class="flex items-center justify-center text-theme-10"><i data-feather="check-square" class="w-4 h-4 mr-2"></i>Inactivo </div>
                                     </td>
-                                    <td class="text-center">50</td>
+                                    <td class="table-report__action w-56">
+                                        <div class="flex justify-center items-center">
+                                            <a class="flex items-center mr-3" href="javascript:;"><i data-feather="check-square" class="w-4 h-4 mr-1"></i>Editar </a>
+                                            <a class="flex items-center text-theme-24" href="javascript:;" data-toggle="modal" data-target="#delete-confirmation-modal"><i data-feather="trash-2" class="w-4 h-4 mr-1"></i>Eliminar</a>
+                                        </div>
+                                    </td>
+                                </tr> 
+                                <tr class="intro-x">
+                                    <td class="text-center">Nombre proyecto</td>
+                                    <td class="text-center">Desarrollo del proyecto</td>
+                                    <td class="text-center">Nombre responsable</td>                                   
                                     <td class="w-40">
                                         <div class="flex items-center justify-center text-theme-10"><i data-feather="check-square" class="w-4 h-4 mr-2"></i>Inactivo </div>
                                     </td>
@@ -63,11 +76,9 @@
                                     </td>
                                 </tr>
                                 <tr class="intro-x">
-                                    <td>
-                                        <a href="#" class="font-medium whitespace-nowrap">Sony A7 III</a>
-                                        <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">Photography</div>
-                                    </td>
-                                    <td class="text-center">50</td>
+                                    <td class="text-center">Nombre proyecto</td>
+                                    <td class="text-center">Desarrollo del proyecto</td>
+                                    <td class="text-center">Nombre responsable</td>                                   
                                     <td class="w-40">
                                         <div class="flex items-center justify-center text-theme-10"><i data-feather="check-square" class="w-4 h-4 mr-2"></i>Inactivo </div>
                                     </td>
@@ -79,11 +90,9 @@
                                     </td>
                                 </tr>
                                 <tr class="intro-x">
-                                    <td>
-                                        <a href="#" class="font-medium whitespace-nowrap">Sony A7 III</a>
-                                        <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">Photography</div>
-                                    </td>
-                                    <td class="text-center">50</td>
+                                    <td class="text-center">Nombre proyecto</td>
+                                    <td class="text-center">Desarrollo del proyecto</td>
+                                    <td class="text-center">Nombre responsable</td>                                   
                                     <td class="w-40">
                                         <div class="flex items-center justify-center text-theme-10"><i data-feather="check-square" class="w-4 h-4 mr-2"></i>Inactivo </div>
                                     </td>
@@ -94,38 +103,6 @@
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="intro-x">
-                                    <td>
-                                        <a href="#" class="font-medium whitespace-nowrap">Sony A7 III</a>
-                                        <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">Photography</div>
-                                    </td>
-                                    <td class="text-center">50</td>
-                                    <td class="w-40">
-                                        <div class="flex items-center justify-center text-theme-10"><i data-feather="check-square" class="w-4 h-4 mr-2"></i>Inactivo </div>
-                                    </td>
-                                    <td class="table-report__action w-56">
-                                        <div class="flex justify-center items-center">
-                                            <a class="flex items-center mr-3" href="javascript:;"><i data-feather="check-square" class="w-4 h-4 mr-1"></i>Editar </a>
-                                            <a class="flex items-center text-theme-24" href="javascript:;" data-toggle="modal" data-target="#delete-confirmation-modal"><i data-feather="trash-2" class="w-4 h-4 mr-1"></i>Eliminar</a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="intro-x">
-                                    <td>
-                                        <a href="#" class="font-medium whitespace-nowrap">Sony A7 III</a>
-                                        <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">Photography</div>
-                                    </td>
-                                    <td class="text-center">50</td>
-                                    <td class="w-40">
-                                        <div class="flex items-center justify-center text-theme-10"><i data-feather="check-square" class="w-4 h-4 mr-2"></i>Inactivo </div>
-                                    </td>
-                                    <td class="table-report__action w-56">
-                                        <div class="flex justify-center items-center">
-                                            <a class="flex items-center mr-3" href="javascript:;"><i data-feather="check-square" class="w-4 h-4 mr-1"></i>Editar </a>
-                                            <a class="flex items-center text-theme-24" href="javascript:;" data-toggle="modal" data-target="#delete-confirmation-modal"><i data-feather="trash-2" class="w-4 h-4 mr-1"></i>Eliminar</a>
-                                        </div>
-                                    </td>
-                                </tr>                                                          
                             </tbody>
                         </table>
                     </div>

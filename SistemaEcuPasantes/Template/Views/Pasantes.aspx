@@ -13,7 +13,7 @@
                 </h2>
                 <div class="grid grid-cols-12 gap-6 mt-5">
                     <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2">
-                        <button class="btn btn-primary shadow-md mr-2">Nuevo Pasante</button>
+                        <a href="FormularioPasantes.aspx" class="btn btn-primary shadow-md mr-2">Nuevo Pasante</a>
                         <div class="dropdown">
                             <button class="dropdown-toggle btn px-2 box text-gray-700 dark:text-gray-300" aria-expanded="false">
                                 <span class="w-5 h-5 flex items-center justify-center"><i class="w-4 h-4" data-feather="plus"></i></span>
@@ -39,19 +39,41 @@
                         <table class="table table-report -mt-2">
                             <thead>
                                 <tr>
-                                    <th class="text-center whitespace-nowrap">NOMBRE</th>
-                                    <th class="text-center whitespace-nowrap">STOCK</th>
+                                    <th class="text-center whitespace-nowrap">APELLIDOS</th>
+                                    <th class="text-center whitespace-nowrap">NOMBRES</th>
+                                    <th class="text-center whitespace-nowrap">CEDULA</th>
+                                    <th class="text-center whitespace-nowrap">CELULAR</th>
+                                    <th class="text-center whitespace-nowrap">CORREO</th>
+                                    <th class="text-center whitespace-nowrap">UNIVERSIDAD</th>
                                     <th class="text-center whitespace-nowrap">ESTADO</th>
-                                    <th class="text-center whitespace-nowrap">ACCIONES</th>
+                                    <th class="text-center whitespace-nowrap">ACCIÓN</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr class="intro-x">
-                                    <td>
-                                        <a href="#" class="font-medium whitespace-nowrap">Sony A7 III</a>
-                                        <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">Photography</div>
+                                    <td class="text-center">Ejemplo Ejemplo</td>
+                                    <td class="text-center">Ejemplo Ejemplo</td>
+                                    <td class="text-center">198542365-9</td>
+                                    <td class="text-center">09874563212</td>
+                                    <td class="text-center">ejemplo@gmail.com</td>
+                                    <td class="text-center">Tecnologico Superior Cordillera</td>
+                                    <td class="w-40">
+                                        <div class="flex items-center justify-center text-theme-10"><i data-feather="check-square" class="w-4 h-4 mr-2"></i>Inactivo </div>
                                     </td>
-                                    <td class="text-center">50</td>
+                                    <td class="table-report__action w-56">
+                                        <div class="flex justify-center items-center">
+                                            <a class="flex items-center mr-3" href="javascript:;"><i data-feather="check-square" class="w-4 h-4 mr-1"></i>Editar </a>
+                                            <a class="flex items-center text-theme-24" href="javascript:;" data-toggle="modal" data-target="#delete-confirmation-modal"><i data-feather="trash-2" class="w-4 h-4 mr-1"></i>Eliminar</a>
+                                        </div>
+                                    </td>
+                                </tr>  
+                                <tr class="intro-x">
+                                    <td class="text-center">Ejemplo Ejemplo</td>
+                                    <td class="text-center">Ejemplo Ejemplo</td>
+                                    <td class="text-center">198542365-9</td>
+                                    <td class="text-center">09874563212</td>
+                                    <td class="text-center">ejemplo@gmail.com</td>
+                                    <td class="text-center">Tecnologico Superior Cordillera</td>
                                     <td class="w-40">
                                         <div class="flex items-center justify-center text-theme-10"><i data-feather="check-square" class="w-4 h-4 mr-2"></i>Inactivo </div>
                                     </td>
@@ -63,11 +85,12 @@
                                     </td>
                                 </tr>
                                 <tr class="intro-x">
-                                    <td>
-                                        <a href="#" class="font-medium whitespace-nowrap">Sony A7 III</a>
-                                        <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">Photography</div>
-                                    </td>
-                                    <td class="text-center">50</td>
+                                    <td class="text-center">Ejemplo Ejemplo</td>
+                                    <td class="text-center">Ejemplo Ejemplo</td>
+                                    <td class="text-center">198542365-9</td>
+                                    <td class="text-center">09874563212</td>
+                                    <td class="text-center">ejemplo@gmail.com</td>
+                                    <td class="text-center">Tecnologico Superior Cordillera</td>
                                     <td class="w-40">
                                         <div class="flex items-center justify-center text-theme-10"><i data-feather="check-square" class="w-4 h-4 mr-2"></i>Inactivo </div>
                                     </td>
@@ -79,11 +102,12 @@
                                     </td>
                                 </tr>
                                 <tr class="intro-x">
-                                    <td>
-                                        <a href="#" class="font-medium whitespace-nowrap">Sony A7 III</a>
-                                        <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">Photography</div>
-                                    </td>
-                                    <td class="text-center">50</td>
+                                    <td class="text-center">Ejemplo Ejemplo</td>
+                                    <td class="text-center">Ejemplo Ejemplo</td>
+                                    <td class="text-center">198542365-9</td>
+                                    <td class="text-center">09874563212</td>
+                                    <td class="text-center">ejemplo@gmail.com</td>
+                                    <td class="text-center">Tecnologico Superior Cordillera</td>
                                     <td class="w-40">
                                         <div class="flex items-center justify-center text-theme-10"><i data-feather="check-square" class="w-4 h-4 mr-2"></i>Inactivo </div>
                                     </td>
@@ -94,38 +118,6 @@
                                         </div>
                                     </td>
                                 </tr>
-                                <tr class="intro-x">
-                                    <td>
-                                        <a href="#" class="font-medium whitespace-nowrap">Sony A7 III</a>
-                                        <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">Photography</div>
-                                    </td>
-                                    <td class="text-center">50</td>
-                                    <td class="w-40">
-                                        <div class="flex items-center justify-center text-theme-10"><i data-feather="check-square" class="w-4 h-4 mr-2"></i>Inactivo </div>
-                                    </td>
-                                    <td class="table-report__action w-56">
-                                        <div class="flex justify-center items-center">
-                                            <a class="flex items-center mr-3" href="javascript:;"><i data-feather="check-square" class="w-4 h-4 mr-1"></i>Editar </a>
-                                            <a class="flex items-center text-theme-24" href="javascript:;" data-toggle="modal" data-target="#delete-confirmation-modal"><i data-feather="trash-2" class="w-4 h-4 mr-1"></i>Eliminar</a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="intro-x">
-                                    <td>
-                                        <a href="#" class="font-medium whitespace-nowrap">Sony A7 III</a>
-                                        <div class="text-gray-600 text-xs whitespace-nowrap mt-0.5">Photography</div>
-                                    </td>
-                                    <td class="text-center">50</td>
-                                    <td class="w-40">
-                                        <div class="flex items-center justify-center text-theme-10"><i data-feather="check-square" class="w-4 h-4 mr-2"></i>Inactivo </div>
-                                    </td>
-                                    <td class="table-report__action w-56">
-                                        <div class="flex justify-center items-center">
-                                            <a class="flex items-center mr-3" href="javascript:;"><i data-feather="check-square" class="w-4 h-4 mr-1"></i>Editar </a>
-                                            <a class="flex items-center text-theme-24" href="javascript:;" data-toggle="modal" data-target="#delete-confirmation-modal"><i data-feather="trash-2" class="w-4 h-4 mr-1"></i>Eliminar</a>
-                                        </div>
-                                    </td>
-                                </tr>                                                          
                             </tbody>
                         </table>
                     </div>
