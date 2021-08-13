@@ -119,6 +119,8 @@
     <Content Include="Template\Template Principal\dist\vendors\mdi\css\materialdesignicons.min.css" />
     <Content Include="Template\Template Principal\dist\vendors\mdi\fonts\materialdesignicons-webfont.svg" />
     <Content Include="Template\Views\Crud_Formularios.aspx" />
+    <Content Include="Template\Views\FormularioPasantes.aspx" />
+    <Content Include="Template\Views\FormularioResponsables.aspx" />
     <Content Include="Template\Views\Horas.aspx" />
     <Content Include="Template\Views\Labores.aspx" />
     <Content Include="Template\Views\Pasantes.aspx" />
@@ -143,6 +145,20 @@
     </Compile>
     <Compile Include="Template\Views\Crud_Formularios.aspx.designer.cs">
       <DependentUpon>Crud_Formularios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Template\Views\FormularioPasantes.aspx.cs">
+      <DependentUpon>FormularioPasantes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\Views\FormularioPasantes.aspx.designer.cs">
+      <DependentUpon>FormularioPasantes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Template\Views\FormularioResponsables.aspx.cs">
+      <DependentUpon>FormularioResponsables.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\Views\FormularioResponsables.aspx.designer.cs">
+      <DependentUpon>FormularioResponsables.aspx</DependentUpon>
     </Compile>
     <Compile Include="Template\Views\Horas.aspx.cs">
       <DependentUpon>Horas.aspx</DependentUpon>
