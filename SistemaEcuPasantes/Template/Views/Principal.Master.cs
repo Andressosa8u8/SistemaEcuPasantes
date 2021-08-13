@@ -11,7 +11,15 @@ namespace SistemaEcuPasantes.Template.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(!IsPostBack)
+            {
+                lblFecha.Text = DateTime.Now.ToLongDateString();
+            }
+        }
 
+        protected void LnbCerrarSesion_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("../../index.aspx");
         }
     }
 }

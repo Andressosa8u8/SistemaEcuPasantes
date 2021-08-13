@@ -14,9 +14,9 @@ namespace SistemaEcuPasantes
 
         }
 
-        protected void btn_ingresar_Click(object sender, EventArgs e)
+        protected void btnIngresar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Template/Views/principal.aspx");
+            Response.Redirect("~/Template/Views/Principal.aspx");
         }
     }
 }

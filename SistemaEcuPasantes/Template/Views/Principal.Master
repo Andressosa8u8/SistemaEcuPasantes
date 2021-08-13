@@ -5,13 +5,12 @@
 <html>
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="../Template Principal/dist/images/ECU911.svg.png" rel="shortcut icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Icewall admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
-    <meta name="keywords" content="admin template, Icewall Admin Template, dashboard template, flat admin template, responsive admin template, web app">
-    <meta name="author" content="LEFT4CODE">
-    <title>Inicio - Sistemas Pasantes</title>
-    <link rel="stylesheet" href="../Template Principal/dist/css/app.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Inicio - Sistema Pasantes</title>
+    <link rel="stylesheet" href="../Template Principal/dist/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../Template Principal/dist/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../Template Principal/dist/css/style.css">
+    <link rel="shortcut icon" href="../Template Principal/dist/images/ECU911.svg.png" />
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -19,178 +18,118 @@
 </head>
 <body>
     <form runat="server">
-        <!-- BEGIN: Mobile Menu -->
-        <div class="mobile-menu md:hidden">
-            <div class="mobile-menu-bar">
-                <a href="#" class="flex mr-auto">
-                    <img alt="Icewall Tailwind HTML Admin Template" class="w-6" src="../Template Principal/dist/images/icon.three.png">
-                </a>
-                <a href="javascript:;" id="mobile-menu-toggler"><i data-feather="bar-chart-2" class="w-8 h-8 text-white transform -rotate-90"></i></a>
-            </div>
-            <ul class="border-t border-theme-2 py-5 hidden">
-                <li>
-                    <a href="Principal.aspx" class="menu menu--active">
-                        <div class="menu__icon"><i data-feather="home"></i></div>
-                        <div class="menu__title">Inicio</div>
-                    </a>                   
-                </li>               
-                <li>
-                    <a href="javascript:;.html" class="menu">
-                        <div class="menu__icon"><i data-feather="edit"></i></div>
-                        <div class="menu__title">Mantenimientos <i data-feather="chevron-down" class="menu__sub-icon"></i></div>
-                    </a>
-                    <ul class="">
-                        <li>
-                            <a href="Pasantes.aspx" class="menu">
-                                <div class="menu__icon"><i data-feather="activity"></i></div>
-                                <div class="menu__title">Lista de Pasantes</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Responsables.aspx" class="menu">
-                                <div class="menu__icon"><i data-feather="activity"></i></div>
-                                <div class="menu__title">Responsables</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Proyectos.aspx" class="menu">
-                                <div class="menu__icon"><i data-feather="activity"></i></div>
-                                <div class="menu__title">Proyectos</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Labores.aspx" class="menu">
-                                <div class="menu__icon"><i data-feather="activity"></i></div>
-                                <div class="menu__title">Labores</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Horas.aspx" class="menu">
-                                <div class="menu__icon"><i data-feather="activity"></i></div>
-                                <div class="menu__title">Horas</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Tareas.aspx" class="menu">
-                                <div class="menu__icon"><i data-feather="activity"></i></div>
-                                <div class="menu__title">Tareas</div>
-                            </a>
-                        </li>
-                    </ul>
-                </li>                
-            </ul>
-        </div>
-        <!-- END: Mobile Menu -->
-        <!-- BEGIN: Top Bar -->
-        <div class="top-bar-boxed border-b border-theme-2 -mt-7 md:-mt-5 -mx-3 sm:-mx-8 px-3 sm:px-8 md:pt-0 mb-12">
-            <div class="h-full flex items-center">
-                <!-- BEGIN: Logo -->
-                <a href="Principal.aspx" class="-intro-x hidden md:flex">
-                    <img alt="Icewall Tailwind HTML Admin Template" class="w-6" src="../Template Principal/dist/images/ECU911.svg.png">
-                    <span class="text-white text-lg ml-3">Sistema<span class="font-medium"> Pasantes</span> </span>
-                </a>
-                <!-- END: Logo -->
-                <!-- BEGIN: Breadcrumb -->
-                <div class="-intro-x breadcrumb mr-auto"><a href="Principal.aspx">Principal</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i><a href="Principal.aspx" class="breadcrumb--active">Inicio</a> </div>
-                <!-- END: Breadcrumb -->
-                <!-- BEGIN: Account Menu -->
-                <div class="intro-x dropdown w-8 h-8">
-                    <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in scale-110" role="button" aria-expanded="false">
-                        <img alt="Icewall Tailwind HTML Admin Template" src="../Template Principal/dist/images/icon-usu.png">
+        <div class="container-scroller d-flex">
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav">
+                    <li class="nav-item sidebar-category">
+                        <p>Menu</p>
+                        <span></span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Principal.aspx">
+                            <i class="mdi mdi-view-quilt menu-icon"></i>
+                            <span class="menu-title">Inicio</span>
+                        </a>
+                    </li>
+                    <li class="nav-item sidebar-category">
+                        <p>Cruds</p>
+                        <span></span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                            <i class="mdi mdi-account-multiple-plus menu-icon"></i>
+                            <span class="menu-title">Mantenimientos</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="ui-basic">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"><a class="nav-link" href="Horas.aspx">Horas</a></li>
+                                <li class="nav-item"><a class="nav-link" href="Labores.aspx">Labores</a></li>
+                                <li class="nav-item"><a class="nav-link" href="Pasantes.aspx">Pasantes</a></li>
+                                <li class="nav-item"><a class="nav-link" href="Proyectos.aspx">Proyectos</a></li>
+                                <li class="nav-item"><a class="nav-link" href="Responsables.aspx">Resposables</a></li>
+                                <li class="nav-item"><a class="nav-link" href="Tareas.aspx">Tareas</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="container-fluid page-body-wrapper">
+                <nav class="navbar col-lg-12 col-12 px-0 py-0 py-lg-4 d-flex flex-row">
+                    <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+                        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+                            <span class="mdi mdi-menu"></span>
+                        </button>
+                        <div class="navbar-brand-wrapper">
+                            <a class="navbar-brand brand-logo" href="Principal.aspx">
+                                <img src="../Template Principal/dist/images/ECU911.svg.png" style="width:50px" alt="logo" /></a>
+                            <a class="navbar-brand brand-logo-mini" href="Principal.aspx">
+                                <img src="../Template Principal/dist/images/ECU911.svg.png" style="width:50px" alt="logo" /></a>
+                        </div>
+                        <h4 class="font-weight-bold mb-0 d-none d-md-block mt-1" style="color:black;">Welcome back, Brandon Haynes</h4>
+                        <ul class="navbar-nav navbar-nav-right">
+                            <li class="nav-item">
+                                <h4 class="mb-0 font-weight-bold d-none d-xl-block">
+                                    <asp:Label ID="lblFecha" style="text-transform:uppercase; color:black;" runat="server" Text=""></asp:Label>
+                                </h4>
+                            </li>
+                        </ul>
+                        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                            <span class="mdi mdi-menu"></span>
+                        </button>
                     </div>
-                    <div class="dropdown-menu w-56">
-                        <div class="dropdown-menu__content box bg-theme-11 dark:bg-dark-6 text-white">
-                            <div class="p-4 border-b border-theme-12 dark:border-dark-3">
-                                <div class="font-medium">Usuario</div>
-                                <div class="text-xs text-theme-13 mt-0.5 dark:text-gray-600">Nombre de usuario</div>
-                            </div>
-                            <div class="p-2 border-t border-theme-12 dark:border-dark-3">
-                                <a href="../../index.aspx" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 dark:hover:bg-dark-3 rounded-md"><i data-feather="toggle-right" class="w-4 h-4 mr-2"></i>Salir </a>
+                    <div class="navbar-menu-wrapper navbar-search-wrapper d-none d-lg-flex align-items-center">
+                        <ul class="navbar-nav mr-lg-2">
+                            <li class="nav-item nav-search d-none d-lg-block">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search Here..." aria-label="search" aria-describedby="search">
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav navbar-nav-right">
+                            <li class="nav-item nav-profile dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+                                    <img src="../Template Principal/dist/images/faces/face5.jpg" alt="profile" />
+                                    <span class="nav-profile-name">Eleanor Richardson</span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+                                    <a class="dropdown-item">
+                                        <i class="mdi mdi-settings text-primary"></i>
+                                        Settings
+                                    </a>
+                                     <a class="dropdown-item" href="../../index.aspx">
+                                        <i class="mdi mdi-logout text-primary"></i>
+                                        Logout
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="main-panel">
+                    <div class="content-wrapper">
+                        <asp:ContentPlaceHolder ID="cph_mensaje" runat="server"></asp:ContentPlaceHolder>
+                        <asp:ContentPlaceHolder ID="cph_contenido" runat="server"></asp:ContentPlaceHolder>
+                    </div>
+                    <footer class="footer">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                                    <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright ©ECU911 2021</span>
+                                    <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Servicio <a href="https://www.ecu911.gob.ec/" target="_blank">Integrado de Seguridad</a> ECU 911</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </footer>
                 </div>
-                <!-- END: Account Menu -->
             </div>
         </div>
-        <!-- END: Top Bar -->
-        <div class="wrapper">
-            <div class="wrapper-box">
-                <!-- BEGIN: Side Menu -->
-                <nav class="side-nav">
-                    <ul>
-                        <li>
-                            <a href="Principal.aspx" class="side-menu side-menu--active">
-                                <div class="side-menu__icon"><i data-feather="home"></i></div>
-                                <div class="side-menu__title">
-                                    Inicio 
-                                </div>
-                            </a>
-                        </li>                        
-                        <li class="side-nav__devider my-6"></li>
-                        <li>
-                            <a href="javascript:;.html" class="side-menu">
-                                <div class="side-menu__icon"><i data-feather="edit"></i></div>
-                                <div class="side-menu__title">
-                                    Mantenimientos                                   
-                                <div class="side-menu__sub-icon"><i data-feather="chevron-down"></i></div>
-                                </div>
-                            </a>
-                            <ul class="">
-                                <li>
-                                    <a href="Pasantes.aspx" class="side-menu">
-                                        <div class="side-menu__icon"><i data-feather="activity"></i></div>
-                                        <div class="side-menu__title">Lista de Pasantes</div>
-                                    </a>
-                                </li>                            
-                                <li>
-                                    <a href="Responsables.aspx" class="side-menu">
-                                        <div class="side-menu__icon"><i data-feather="activity"></i></div>
-                                        <div class="side-menu__title">Responsables</div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="Proyectos.aspx" class="side-menu">
-                                        <div class="side-menu__icon"><i data-feather="activity"></i></div>
-                                        <div class="side-menu__title">Proyectos</div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="Labores.aspx" class="side-menu">
-                                        <div class="side-menu__icon"><i data-feather="activity"></i></div>
-                                        <div class="side-menu__title">Labores</div>
-                                    </a>
-                                </li>                                
-                                <li>
-                                    <a href="Horas.aspx" class="side-menu">
-                                        <div class="side-menu__icon"><i data-feather="activity"></i></div>
-                                        <div class="side-menu__title">Horas</div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="Tareas.aspx" class="side-menu">
-                                        <div class="side-menu__icon"><i data-feather="activity"></i></div>
-                                        <div class="side-menu__title">Tareas</div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- END: Side Menu -->
-                <!-- BEGIN: Content -->
-                <div class="content">
-                    <asp:ContentPlaceHolder ID="cph_mensaje" runat="server"></asp:ContentPlaceHolder>
-                    <asp:ContentPlaceHolder ID="cph_contenido" runat="server"></asp:ContentPlaceHolder>
-                </div>
-                <!-- END: Content -->
-            </div>
-        </div>
+        <script src="../Template Principal/dist/vendors/js/vendor.bundle.base.js"></script>
+        <script src="../Template Principal/dist/vendors/chart.js/Chart.min.js"></script>
+        <script src="../Template Principal/dist/js/off-canvas.js"></script>
+        <script src="../Template Principal/dist/js/hoverable-collapse.js"></script>
+        <script src="../Template Principal/dist/js/template.js"></script>
+        <script src="../Template Principal/dist/js/dashboard.js"></script>
     </form>
-    <!-- BEGIN: JS Assets-->
-        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=["your-google-map-api"]&libraries=places"></script>
-        <script src="../Template Principal/dist/js/app.js"></script>
-        <!-- END: JS Assets-->
 </body>
 </html>
