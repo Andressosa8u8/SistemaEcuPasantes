@@ -15,17 +15,7 @@ namespace SistemaEcuPasantes.Template.Views
         {
             if (!IsPostBack)
             {
-                cargarUsuario();
-            }
-        }
-        private void cargarUsuario()
-        {
-            List<Tbl_Usuario> listaUsu = new List<Tbl_Usuario>();
-            listaUsu = Cn_Usuario.obtenerUsuarios();
-            if (listaUsu != null)
-            {
-                grvUsuarios.DataSource = listaUsu;
-                grvUsuarios.DataBind();
+                
             }
         }
     }

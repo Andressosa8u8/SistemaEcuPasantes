@@ -128,7 +128,7 @@
     <Content Include="Template\Views\Principal.aspx" />
     <Content Include="Template\Views\Proyectos.aspx" />
     <Content Include="Template\Views\Responsables.aspx" />
-    <Content Include="Template\Views\Tareas.aspx" />
+    <Content Include="Template\Views\Usuarios.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -210,12 +210,12 @@
     <Compile Include="Template\Views\Responsables.aspx.designer.cs">
       <DependentUpon>Responsables.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Template\Views\Tareas.aspx.cs">
-      <DependentUpon>Tareas.aspx</DependentUpon>
+    <Compile Include="Template\Views\Usuarios.aspx.cs">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Template\Views\Tareas.aspx.designer.cs">
-      <DependentUpon>Tareas.aspx</DependentUpon>
+    <Compile Include="Template\Views\Usuarios.aspx.designer.cs">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

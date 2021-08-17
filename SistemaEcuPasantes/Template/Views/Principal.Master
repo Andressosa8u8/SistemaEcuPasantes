@@ -48,7 +48,7 @@
                                 <li class="nav-item"><a class="nav-link" href="Pasantes.aspx">Pasantes</a></li>
                                 <li class="nav-item"><a class="nav-link" href="Proyectos.aspx">Proyectos</a></li>
                                 <li class="nav-item"><a class="nav-link" href="Responsables.aspx">Resposables</a></li>
-                                <li class="nav-item"><a class="nav-link" href="Tareas.aspx">Tareas</a></li>
+                                <li class="nav-item"><a class="nav-link" href="Usuarios.aspx">Usuarios</a></li>
                             </ul>
                         </div>
                     </li>
