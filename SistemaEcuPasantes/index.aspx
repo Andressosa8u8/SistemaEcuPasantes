@@ -42,7 +42,7 @@
                                                         <i class="mdi mdi-account-outline text-primary"></i>
                                                     </span>
                                                 </div>
-                                                <asp:TextBox ID="txtUser" type="text" class="form-control form-control-lg border-left-0" placeholder="Username" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtUser" type="text" CssClass="form-control form-control-lg border-left-0" placeholder="Username" runat="server"></asp:TextBox>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -53,20 +53,20 @@
                                                         <i class="mdi mdi-lock-outline text-primary"></i>
                                                     </span>
                                                 </div>
-                                                <asp:TextBox ID="txtPass" type="password" class="form-control form-control-lg border-left-0" placeholder="Password" runat="server"></asp:TextBox>
+                                                <asp:TextBox ID="txtPass" type="password" CssClass="form-control form-control-lg border-left-0" placeholder="Password" runat="server"></asp:TextBox>
                                             </div>
                                         </div>
                                         <div class="my-2 d-flex justify-content-between align-items-center">
                                             <div class="form-check">
                                                 <label class="form-check-label text-muted">
-                                                    <asp:TextBox ID="TextBox1" type="checkbox" class="form-check-input" runat="server"></asp:TextBox>
+                                                    <asp:TextBox ID="TextBox1" type="checkbox" CssClass="form-check-input" runat="server"></asp:TextBox>
                                                     Mostrar tu contraseña
                                                 </label>
                                             </div>
                                             <a href="#" class="auth-link text-black">Olvidaste Tu Contraseña?</a>
                                         </div>
                                         <div class="my-3">
-                                            <asp:Button ID="btnIngresar" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" OnClick="btnIngresar_Click" runat="server" Text="INICIAR SESION" />
+                                            <asp:Button ID="btnIngresar" CssClass="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" OnClick="btnIngresar_Click" runat="server" Text="INICIAR SESION" />
                                         </div>
                                     </ContentTemplate>
                                 </asp:UpdatePanel>
