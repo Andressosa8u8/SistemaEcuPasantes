@@ -32,26 +32,28 @@ namespace SistemaEcuPasantes
             //byte[] hash = md5.ComputeHash(inputBytes);
             //TxtPass.Text = BitConverter.ToString(hash).Replace("-", "");
 
-            bool existenom = Cn_Usuario.autentificarxNom(txtUser.Text);
-            bool existe = Cn_Usuario.autentificar(txtUser.Text, txtPass.Text);
+            bool existenom = Cn_Responsables.autentificarxNom(txtUser.Text);
+            bool existe = Cn_Responsables.autentificar(txtUser.Text, txtPass.Text);
             {
                 if (existenom)
                 {
                     if (existe)
                     {
-                        Tbl_Usuario usuario = new Tbl_Usuario();
-                        usuario = Cn_Usuario.autentificarxLogin(txtUser.Text, txtPass.Text);
+                        Tbl_Responsable responsable = new Tbl_Responsable();
+                        responsable = Cn_Responsables.autentificarxLogin(txtUser.Text, txtPass.Text);
 
-                        int tusuario = Convert.ToInt32(usuario.tusu_id);
+                        int tusuario = Convert.ToInt32(responsable.tusu_id);
                         if (tusuario == 1)
                         {
-                            Session["Admin"] = usuario.usu_nomlogin.ToString();
+                            Session["Admin"] = responsable.Resp_id.ToString();
+                            Session["apellido"] = responsable.Resp_apellido.ToString();
+                            Session["nombre"] = responsable.Resp_nombre.ToString();
                             Response.Redirect("~/Template/Views/Principal.aspx");
                             Limpiar();
                         }
                         else
                         {
-                            Session["Usuario"] = usuario.usu_nomlogin.ToString();
+                            Session["Usuario"] = responsable.Resp_nombre.ToString();
                             Response.Redirect("~/Template/Views/Principal.aspx");
                             Limpiar();
                         }

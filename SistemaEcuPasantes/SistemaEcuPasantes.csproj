@@ -102,6 +102,7 @@
     <Content Include="Template\Template Principal\dist\images\faces\face7.jpg" />
     <Content Include="Template\Template Principal\dist\images\faces\face8.jpg" />
     <Content Include="Template\Template Principal\dist\images\faces\face9.jpg" />
+    <Content Include="Template\Template Principal\dist\images\faces\perfil.png" />
     <Content Include="Template\Template Principal\dist\images\favicon.png" />
     <Content Include="Template\Template Principal\dist\images\logo-mini.svg" />
     <Content Include="Template\Template Principal\dist\images\logo.svg" />
