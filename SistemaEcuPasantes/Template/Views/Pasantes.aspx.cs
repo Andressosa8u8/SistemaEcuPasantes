@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using CapaDatos;
+using CapaNegocio;
 
 namespace SistemaEcuPasantes.Template.Views
 {
@@ -11,7 +13,21 @@ namespace SistemaEcuPasantes.Template.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                cargarPasante();
+            }
+        }
 
+        private void cargarPasante()
+        {
+            List<Tbl_Pasantes> listaPas = new List<Tbl_Pasantes>();
+            listaPas = Cn_Pasantes.obtenerPasante();
+            if (listaPas != null)
+            {
+                grvPasantes.DataSource = listaPas;
+                grvPasantes.DataBind();
+            }
         }
     }
 }

@@ -15,7 +15,18 @@ namespace SistemaEcuPasantes.Template.Views
         {
             if (!IsPostBack)
             {
-                
+                cargarUsuario();
+            }
+        }
+
+        private void cargarUsuario()
+        {
+            List<Tbl_Horas> listaHoras = new List<Tbl_Horas>();
+            listaHoras = Cn_Horas.obtenerHoras();
+            if (listaHoras != null)
+            {
+                grvHoras.DataSource = listaHoras;
+                grvHoras.DataBind();
             }
         }
     }
