@@ -12,10 +12,20 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Horas</h4>
-                        <p class="card-description">
-                            Listado de <code>Horas</code>
-                        </p>
-                        <asp:GridView ID="grvHoras" AutoGenerateColumns="false" Width="100%" CssClass="table table-striped" GridLines="None" runat="server">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-9">
+                                    <p class="card-description">
+                                        Listado de <code>Horas</code>
+                                    </p>
+                                </div>
+                                <div class="col-3" align="right">
+                                    <asp:Button ID="btn_agregar" CssClass="btn btn-primary" runat="server" Text="Agregar Hora" OnClick="btn_agregar_Click" />
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <asp:GridView ID="grvHoras" AutoGenerateColumns="false" Width="100%" CssClass="table table-hover text-center" GridLines="None" runat="server">
                             <Columns>
                                 <asp:TemplateField HeaderText="Codigo">
                                     <ItemTemplate>
@@ -27,7 +37,7 @@
                                         <asp:Label ID="concepto" runat="server" Text='<%#Eval("concepto")%>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                <asp:TemplateField HeaderText="Cantidad">
+                                <asp:TemplateField HeaderText="Cantidad de Horas">
                                     <ItemTemplate>
                                         <asp:Label ID="cantidad" runat="server" Text='<%#Eval("cantidad")%>'></asp:Label>
                                     </ItemTemplate>
@@ -45,6 +55,16 @@
                                 <asp:TemplateField HeaderText="Estado">
                                     <ItemTemplate>
                                         <asp:Label ID="valida" runat="server" Text='<%#Eval("valida")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField>
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="btn_editar" CssClass="btn" runat="server">
+                                            <i class="fas fa-pen-alt"></i>                                       
+                                        </asp:LinkButton>
+                                        <asp:LinkButton ID="btn_eliminar" CssClass="btn" runat="server">
+                                            <i class="fas fa-trash-alt"></i>                                      
+                                        </asp:LinkButton>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                             </Columns>

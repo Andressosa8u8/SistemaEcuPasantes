@@ -29,5 +29,10 @@ namespace SistemaEcuPasantes.Template.Views
                 grvProyectos.DataBind();
             }
         }
+
+        protected void btn_agregar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Template/Views/FormularioProyectos.aspx");
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace SistemaEcuPasantes.Template.Views
 {
 
 
-    public partial class Pasantes
+    public partial class FormularioLabores
     {
 
         /// <summary>
@@ -31,23 +31,5 @@ namespace SistemaEcuPasantes.Template.Views
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
-
-        /// <summary>
-        /// Control btn_agregar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_agregar;
-
-        /// <summary>
-        /// Control grvPasantes.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grvPasantes;
     }
 }

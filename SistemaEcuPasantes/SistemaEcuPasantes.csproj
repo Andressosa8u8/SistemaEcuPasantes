@@ -121,7 +121,10 @@
     <Content Include="Template\Template Principal\dist\vendors\mdi\css\materialdesignicons.min.css" />
     <Content Include="Template\Template Principal\dist\vendors\mdi\fonts\materialdesignicons-webfont.svg" />
     <Content Include="Template\Views\Crud_Formularios.aspx" />
+    <Content Include="Template\Views\FormularioHoras.aspx" />
+    <Content Include="Template\Views\FormularioLabores.aspx" />
     <Content Include="Template\Views\FormularioPasantes.aspx" />
+    <Content Include="Template\Views\FormularioProyectos.aspx" />
     <Content Include="Template\Views\FormularioResponsables.aspx" />
     <Content Include="Template\Views\Horas.aspx" />
     <Content Include="Template\Views\Labores.aspx" />
@@ -147,12 +150,33 @@
     <Compile Include="Template\Views\Crud_Formularios.aspx.designer.cs">
       <DependentUpon>Crud_Formularios.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Template\Views\FormularioHoras.aspx.cs">
+      <DependentUpon>FormularioHoras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\Views\FormularioHoras.aspx.designer.cs">
+      <DependentUpon>FormularioHoras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Template\Views\FormularioLabores.aspx.cs">
+      <DependentUpon>FormularioLabores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\Views\FormularioLabores.aspx.designer.cs">
+      <DependentUpon>FormularioLabores.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Template\Views\FormularioPasantes.aspx.cs">
       <DependentUpon>FormularioPasantes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Template\Views\FormularioPasantes.aspx.designer.cs">
       <DependentUpon>FormularioPasantes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Template\Views\FormularioProyectos.aspx.cs">
+      <DependentUpon>FormularioProyectos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\Views\FormularioProyectos.aspx.designer.cs">
+      <DependentUpon>FormularioProyectos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Template\Views\FormularioResponsables.aspx.cs">
       <DependentUpon>FormularioResponsables.aspx</DependentUpon>

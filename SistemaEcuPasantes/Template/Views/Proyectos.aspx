@@ -12,11 +12,21 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Proyectos</h4>
-                        <p class="card-description">
-                            Listado de <code>Proyectos</code>
-                        </p>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-9">
+                                    <p class="card-description">
+                                        Listado de <code>Proyectos</code>
+                                    </p>
+                                </div>
+                                <div class="col-3" align="right">
+                                    <asp:Button ID="btn_agregar" CssClass="btn btn-primary" runat="server" Text="Agregar Proyecto" OnClick="btn_agregar_Click" />
+                                </div>
+                            </div>
+                        </div>
+                        <br />                       
                         <div class="table-responsive">
-                            <asp:GridView ID="grvProyectos" AutoGenerateColumns="False" CssClass="table table-striped text-center" GridLines="None" Width="100%" runat="server">
+                            <asp:GridView ID="grvProyectos" AutoGenerateColumns="False" CssClass="table table-hover text-center" GridLines="None" Width="100%" runat="server">
                                 <Columns>
                                     <asp:TemplateField HeaderText="Codigo">
                                         <ItemTemplate>
@@ -33,6 +43,16 @@
                                             <asp:Label ID="Proyecto_descripcion" runat="server" Text='<%#Eval("Proyecto_descripcion")%>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
+                                    <asp:TemplateField>
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="btn_editar" CssClass="btn" runat="server">
+                                            <i class="fas fa-pen-alt"></i>                                       
+                                        </asp:LinkButton>
+                                        <asp:LinkButton ID="btn_eliminar" CssClass="btn" runat="server">
+                                            <i class="fas fa-trash-alt"></i>                                      
+                                        </asp:LinkButton>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
                                 </Columns>
                             </asp:GridView>
                         </div>

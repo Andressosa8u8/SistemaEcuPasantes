@@ -11,11 +11,21 @@
             <div class="col-lg-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Pasantes</h4>
-                        <p class="card-description">
-                            Listado de <code>Pasantes</code>
-                        </p>
-                        <asp:GridView ID="grvPasantes" AutoGenerateColumns="false" Width="100%" CssClass="table table-striped" GridLines="None" runat="server">
+                        <h4 class="card-title">Pasantes</h4>                        
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-9">
+                                    <p class="card-description">
+                                        Listado de <code>Pasantes</code>
+                                    </p>
+                                </div>
+                                <div class="col-3" align="right">
+                                    <asp:Button ID="btn_agregar" CssClass="btn btn-primary" runat="server" Text="Agregar Pasante" OnClick="btn_agregar_Click" />
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <asp:GridView ID="grvPasantes" AutoGenerateColumns="false" Width="100%" CssClass="table table-hover text-center" GridLines="None" runat="server">
                             <Columns>
                                 <asp:TemplateField HeaderText="Codigo">
                                     <ItemTemplate>
@@ -70,6 +80,16 @@
                                 <asp:TemplateField HeaderText="Estado">
                                     <ItemTemplate>
                                         <asp:Label ID="Activo" runat="server" Text='<%#Eval("Activo")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField>
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="btn_editar" CssClass="btn" runat="server">
+                                            <i class="fas fa-pen-alt"></i>                                       
+                                        </asp:LinkButton>
+                                        <asp:LinkButton ID="btn_eliminar" CssClass="btn" runat="server">
+                                            <i class="fas fa-trash-alt"></i>                                      
+                                        </asp:LinkButton>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                             </Columns>
