@@ -7,54 +7,66 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="cph_contenido" runat="server">
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
-            <div class="container">
-                <div class="intro-y flex items-center mt-8">
-                    <h2 class="text-lg font-medium mr-auto">Formulario de Responsables</h2>                   
+            <div class="card">
+                <div class="card-header">
+                    <h4>Formulario Pasantes</h4>
                 </div>
-                <div class="grid grid-cols-12 gap-6 mt-5">
-                    <div class="intro-y col-span-12 lg:col-span-6">
-                        <!-- BEGIN: Form Layout -->
-                        <div class="intro-y box p-5">
-                            <div>
-                                <label class="form-label">Nombres</label>
-                                <input type="text" class="form-control w-full">
-                            </div> 
-                            <div>
-                                <label class="form-label">Apellidos</label>
-                                <input type="text" class="form-control w-full">
-                            </div>
-                            <div>
-                                <label class="form-label">Cedula</label>
-                                <input type="text" class="form-control w-full">
-                            </div>
-                            <div>
-                                <label class="form-label">Area de Trabajo</label>
-                                <input type="text" class="form-control w-full">
-                            </div>
-                            <div>
-                                <label class="form-label">Cargo</label>
-                                <input type="text" class="form-control w-full">
-                            </div>
-                            <div>
-                                <label class="form-label">Celular</label>
-                                <input type="text" class="form-control w-full">
-                            </div>
-                            <div>
-                                <label class="form-label">Correo</label>
-                                <input type="text" class="form-control w-full">
-                            </div>
-                            <div>
-                                <label class="form-label">Id Telegram</label>
-                                <input type="text" class="form-control w-full">
-                            </div>
-                            <div class="text-right mt-5">
-                                <a href="Responsables.aspx" class="btn btn-outline-secondary w-24 mr-1">Regresar</a>
-                                <a href="#" class="btn btn-outline-secondary w-24 mr-1">Cancelar</a>
-                                <a href="#" class="btn btn-primary w-24">Guardar</a>
-                            </div>
-                        </div>
-                        <!-- END: Form Layout -->
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Nombres</label>
+                        <asp:TextBox ID="txtNombre" type="text" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
+                    <div class="form-group">
+                        <label>Apellidos</label>
+                        <asp:TextBox ID="txtApellido" type="text" CssClass="form-control" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
+                        <label>Cedula</label>
+                        <asp:TextBox ID="txtCedula" type="number" CssClass="form-control" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
+                        <label>Area</label>
+                        <asp:TextBox ID="txtArea" type="text" CssClass="form-control" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
+                        <label>Cargo</label>
+                        <asp:TextBox ID="txtCargo" type="text" CssClass="form-control" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
+                        <label>Celular</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                            </div>
+                            <asp:TextBox ID="txtCelular" type="number" CssClass="form-control phone-number" runat="server"></asp:TextBox>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Correo</label>
+                        <asp:TextBox ID="txtEmail" type="email" CssClass="form-control" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
+                        <label>Usuario</label>
+                        <asp:TextBox ID="txtUser" type="text" CssClass="form-control" runat="server"></asp:TextBox>
+                    </div>
+                    <div class="form-group">
+                        <label>Contraseña</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                            </div>
+                            <asp:TextBox ID="txtPass" CssClass="form-control pwstrength" type="password" data-indicator="pwindicator" runat="server"></asp:TextBox>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-right">
+                    <asp:Button ID="btnCancelar" CssClass="btn btn-outline-secondary btn-fw" OnClick="btnCancelar_Click" runat="server" Text="Cancelar" />
+                    <asp:Button ID="btnModificar" CssClass="btn btn-primary" runat="server" OnClick="btnModificar_Click" Text="Modificar" Visible="False" />
+                    <asp:Button ID="btnGuardar" CssClass="btn btn-primary" runat="server" OnClick="btnGuardar_Click" Text="Guardar" />
                 </div>
             </div>
         </ContentTemplate>

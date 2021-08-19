@@ -42,12 +42,12 @@ namespace CapaDatos
     partial void InsertTbl_Proyecto(Tbl_Proyecto instance);
     partial void UpdateTbl_Proyecto(Tbl_Proyecto instance);
     partial void DeleteTbl_Proyecto(Tbl_Proyecto instance);
-    partial void InsertTbl_TipoUsuario(Tbl_TipoUsuario instance);
-    partial void UpdateTbl_TipoUsuario(Tbl_TipoUsuario instance);
-    partial void DeleteTbl_TipoUsuario(Tbl_TipoUsuario instance);
     partial void InsertTbl_Responsable(Tbl_Responsable instance);
     partial void UpdateTbl_Responsable(Tbl_Responsable instance);
     partial void DeleteTbl_Responsable(Tbl_Responsable instance);
+    partial void InsertTbl_TipoUsuario(Tbl_TipoUsuario instance);
+    partial void UpdateTbl_TipoUsuario(Tbl_TipoUsuario instance);
+    partial void DeleteTbl_TipoUsuario(Tbl_TipoUsuario instance);
     #endregion
 		
 		public DataClasses1DataContext() : 
@@ -112,19 +112,19 @@ namespace CapaDatos
 			}
 		}
 		
-		public System.Data.Linq.Table<Tbl_TipoUsuario> Tbl_TipoUsuario
-		{
-			get
-			{
-				return this.GetTable<Tbl_TipoUsuario>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Tbl_Responsable> Tbl_Responsable
 		{
 			get
 			{
 				return this.GetTable<Tbl_Responsable>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Tbl_TipoUsuario> Tbl_TipoUsuario
+		{
+			get
+			{
+				return this.GetTable<Tbl_TipoUsuario>();
 			}
 		}
 	}
@@ -297,7 +297,7 @@ namespace CapaDatos
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_Labores_Tbl_Horas", Storage="_Tbl_Labores", ThisKey="Labor_id", OtherKey="Labor_id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_Labores_Tbl_Horas", Storage="_Tbl_Labores", ThisKey="Labor_id", OtherKey="Labor_id", IsForeignKey=true, DeleteRule="CASCADE")]
 		public Tbl_Labores Tbl_Labores
 		{
 			get
@@ -543,7 +543,7 @@ namespace CapaDatos
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_Pasantes_Tbl_Labores", Storage="_Tbl_Pasantes", ThisKey="Pasantes_id", OtherKey="Pasantes_id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_Pasantes_Tbl_Labores", Storage="_Tbl_Pasantes", ThisKey="Pasantes_id", OtherKey="Pasantes_id", IsForeignKey=true, DeleteRule="CASCADE")]
 		public Tbl_Pasantes Tbl_Pasantes
 		{
 			get
@@ -577,7 +577,7 @@ namespace CapaDatos
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_Proyecto_Tbl_Labores", Storage="_Tbl_Proyecto", ThisKey="Proyecto_id", OtherKey="Proyecto_id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_Proyecto_Tbl_Labores", Storage="_Tbl_Proyecto", ThisKey="Proyecto_id", OtherKey="Proyecto_id", IsForeignKey=true, DeleteRule="CASCADE")]
 		public Tbl_Proyecto Tbl_Proyecto
 		{
 			get
@@ -1134,7 +1134,7 @@ namespace CapaDatos
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_Responsable_Tbl_Proyecto", Storage="_Tbl_Responsable", ThisKey="Resp_id", OtherKey="Resp_id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_Responsable_Tbl_Proyecto", Storage="_Tbl_Responsable", ThisKey="Resp_id", OtherKey="Resp_id", IsForeignKey=true, DeleteRule="CASCADE")]
 		public Tbl_Responsable Tbl_Responsable
 		{
 			get
@@ -1198,144 +1198,6 @@ namespace CapaDatos
 		{
 			this.SendPropertyChanging();
 			entity.Tbl_Proyecto = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Tbl_TipoUsuario")]
-	public partial class Tbl_TipoUsuario : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _tusu_id;
-		
-		private string _tusu_nom;
-		
-		private System.Nullable<char> _tusu_estado;
-		
-		private EntitySet<Tbl_Responsable> _Tbl_Responsable;
-		
-    #region Definiciones de métodos de extensibilidad
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Ontusu_idChanging(int value);
-    partial void Ontusu_idChanged();
-    partial void Ontusu_nomChanging(string value);
-    partial void Ontusu_nomChanged();
-    partial void Ontusu_estadoChanging(System.Nullable<char> value);
-    partial void Ontusu_estadoChanged();
-    #endregion
-		
-		public Tbl_TipoUsuario()
-		{
-			this._Tbl_Responsable = new EntitySet<Tbl_Responsable>(new Action<Tbl_Responsable>(this.attach_Tbl_Responsable), new Action<Tbl_Responsable>(this.detach_Tbl_Responsable));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tusu_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int tusu_id
-		{
-			get
-			{
-				return this._tusu_id;
-			}
-			set
-			{
-				if ((this._tusu_id != value))
-				{
-					this.Ontusu_idChanging(value);
-					this.SendPropertyChanging();
-					this._tusu_id = value;
-					this.SendPropertyChanged("tusu_id");
-					this.Ontusu_idChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tusu_nom", DbType="VarChar(100)")]
-		public string tusu_nom
-		{
-			get
-			{
-				return this._tusu_nom;
-			}
-			set
-			{
-				if ((this._tusu_nom != value))
-				{
-					this.Ontusu_nomChanging(value);
-					this.SendPropertyChanging();
-					this._tusu_nom = value;
-					this.SendPropertyChanged("tusu_nom");
-					this.Ontusu_nomChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tusu_estado", DbType="Char(1)")]
-		public System.Nullable<char> tusu_estado
-		{
-			get
-			{
-				return this._tusu_estado;
-			}
-			set
-			{
-				if ((this._tusu_estado != value))
-				{
-					this.Ontusu_estadoChanging(value);
-					this.SendPropertyChanging();
-					this._tusu_estado = value;
-					this.SendPropertyChanged("tusu_estado");
-					this.Ontusu_estadoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_TipoUsuario_Tbl_Responsable", Storage="_Tbl_Responsable", ThisKey="tusu_id", OtherKey="tusu_id")]
-		public EntitySet<Tbl_Responsable> Tbl_Responsable
-		{
-			get
-			{
-				return this._Tbl_Responsable;
-			}
-			set
-			{
-				this._Tbl_Responsable.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Tbl_Responsable(Tbl_Responsable entity)
-		{
-			this.SendPropertyChanging();
-			entity.Tbl_TipoUsuario = this;
-		}
-		
-		private void detach_Tbl_Responsable(Tbl_Responsable entity)
-		{
-			this.SendPropertyChanging();
-			entity.Tbl_TipoUsuario = null;
 		}
 	}
 	
@@ -1691,7 +1553,7 @@ namespace CapaDatos
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_TipoUsuario_Tbl_Responsable", Storage="_Tbl_TipoUsuario", ThisKey="tusu_id", OtherKey="tusu_id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_TipoUsuario_Tbl_Responsable", Storage="_Tbl_TipoUsuario", ThisKey="tusu_id", OtherKey="tusu_id", IsForeignKey=true, DeleteRule="CASCADE")]
 		public Tbl_TipoUsuario Tbl_TipoUsuario
 		{
 			get
@@ -1755,6 +1617,144 @@ namespace CapaDatos
 		{
 			this.SendPropertyChanging();
 			entity.Tbl_Responsable = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Tbl_TipoUsuario")]
+	public partial class Tbl_TipoUsuario : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _tusu_id;
+		
+		private string _tusu_nom;
+		
+		private System.Nullable<char> _tusu_estado;
+		
+		private EntitySet<Tbl_Responsable> _Tbl_Responsable;
+		
+    #region Definiciones de métodos de extensibilidad
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Ontusu_idChanging(int value);
+    partial void Ontusu_idChanged();
+    partial void Ontusu_nomChanging(string value);
+    partial void Ontusu_nomChanged();
+    partial void Ontusu_estadoChanging(System.Nullable<char> value);
+    partial void Ontusu_estadoChanged();
+    #endregion
+		
+		public Tbl_TipoUsuario()
+		{
+			this._Tbl_Responsable = new EntitySet<Tbl_Responsable>(new Action<Tbl_Responsable>(this.attach_Tbl_Responsable), new Action<Tbl_Responsable>(this.detach_Tbl_Responsable));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tusu_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int tusu_id
+		{
+			get
+			{
+				return this._tusu_id;
+			}
+			set
+			{
+				if ((this._tusu_id != value))
+				{
+					this.Ontusu_idChanging(value);
+					this.SendPropertyChanging();
+					this._tusu_id = value;
+					this.SendPropertyChanged("tusu_id");
+					this.Ontusu_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tusu_nom", DbType="VarChar(100)")]
+		public string tusu_nom
+		{
+			get
+			{
+				return this._tusu_nom;
+			}
+			set
+			{
+				if ((this._tusu_nom != value))
+				{
+					this.Ontusu_nomChanging(value);
+					this.SendPropertyChanging();
+					this._tusu_nom = value;
+					this.SendPropertyChanged("tusu_nom");
+					this.Ontusu_nomChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tusu_estado", DbType="Char(1)")]
+		public System.Nullable<char> tusu_estado
+		{
+			get
+			{
+				return this._tusu_estado;
+			}
+			set
+			{
+				if ((this._tusu_estado != value))
+				{
+					this.Ontusu_estadoChanging(value);
+					this.SendPropertyChanging();
+					this._tusu_estado = value;
+					this.SendPropertyChanged("tusu_estado");
+					this.Ontusu_estadoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_TipoUsuario_Tbl_Responsable", Storage="_Tbl_Responsable", ThisKey="tusu_id", OtherKey="tusu_id")]
+		public EntitySet<Tbl_Responsable> Tbl_Responsable
+		{
+			get
+			{
+				return this._Tbl_Responsable;
+			}
+			set
+			{
+				this._Tbl_Responsable.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Tbl_Responsable(Tbl_Responsable entity)
+		{
+			this.SendPropertyChanging();
+			entity.Tbl_TipoUsuario = this;
+		}
+		
+		private void detach_Tbl_Responsable(Tbl_Responsable entity)
+		{
+			this.SendPropertyChanging();
+			entity.Tbl_TipoUsuario = null;
 		}
 	}
 }

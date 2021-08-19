@@ -18,14 +18,14 @@
                                         Listado de <code>Resposables</code>
                                     </p>
                                 </div>
-                                <div class="col-3" align="right">
+                                <div class="col-3" align="left">
                                     <asp:Button ID="btn_agregar" CssClass="btn btn-primary" runat="server" Text="Agregar Responsable" OnClick="btn_agregar_Click" />
                                 </div>
                             </div>
                         </div>
-                        <br />                        
+                        <br />
                         <div class="table-responsive">
-                            <asp:GridView ID="grvResponsables" AutoGenerateColumns="False" CssClass="table table-hover text-center" GridLines="None" Width="100%" runat="server">
+                            <asp:GridView ID="grvResponsables" AutoGenerateColumns="False" CssClass="table table-hover text-center" OnRowCommand="grvResponsables_RowCommand" GridLines="None" Width="100%" runat="server">
                                 <Columns>
                                     <asp:TemplateField HeaderText="Codigo">
                                         <ItemTemplate>
@@ -72,22 +72,25 @@
                                             <asp:Label ID="Resp_nomlogin" runat="server" Text='<%#Eval("Resp_nomlogin")%>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:TemplateField>
-                                    <ItemTemplate>
-                                        <asp:LinkButton ID="btn_editar" CssClass="btn" runat="server">
-                                            <i class="fas fa-pen-alt"></i>                                       
-                                        </asp:LinkButton>
-                                        <asp:LinkButton ID="btn_eliminar" CssClass="btn" runat="server">
-                                            <i class="fas fa-trash-alt"></i>                                      
-                                        </asp:LinkButton>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
+                                    <asp:TemplateField ItemStyle-Width="17" HeaderStyle-Width="17" HeaderText="">
+                                        <ItemTemplate>
+                                            <asp:LinkButton ID="lnbEditar" Width="16" Height="16" CommandArgument='<%#Eval("Resp_id")%>' CommandName="Editar" runat="server"><i class="fas fa-pen"></i></asp:LinkButton>
+                                        </ItemTemplate>
+                                        <HeaderStyle Width="17px" />
+                                        <ItemStyle Width="17px" />
+                                    </asp:TemplateField>
+                                    <asp:TemplateField ItemStyle-Width="17" HeaderStyle-Width="17">
+                                        <ItemTemplate>
+                                            <asp:LinkButton ID="lnbEliminar" Width="16" Height="16" CommandArgument='<%#Eval("Resp_id")%>' CommandName="Eliminar" runat="server"><i class="fas fa-trash"></i></asp:LinkButton>
+                                        </ItemTemplate>
+                                        <HeaderStyle Width="17px" />
+                                        <ItemStyle Width="17px" />
+                                    </asp:TemplateField>
                                 </Columns>
                             </asp:GridView>
                         </div>
                     </div>
                 </div>
-            </div>
             </div>
         </ContentTemplate>
     </asp:UpdatePanel>

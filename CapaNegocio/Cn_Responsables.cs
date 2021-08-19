@@ -30,6 +30,16 @@ namespace CapaNegocio
             var auto = dc.Tbl_Responsable.Any(resp => resp.Resp_estado == 'A' && resp.Resp_nomlogin == (nombre));
             return auto;
         }
+        public static Tbl_Responsable obtenerResponsablexId(int id)
+        {
+            var respid = dc.Tbl_Responsable.FirstOrDefault(resp => resp.Resp_id.Equals(id) && resp.Resp_estado == 'A');
+            return respid;
+        }
+        public static Tbl_Responsable obtenerResponsablexNombre(string nombre)
+        {
+            var respnom = dc.Tbl_Responsable.FirstOrDefault(resp => resp.Resp_nombre.Equals(nombre) && resp.Resp_estado == 'A');
+            return respnom;
+        }
         //metodo para verificar si existe el correo
         public static bool autentificarxCorreo(string nombre)
         {
@@ -47,6 +57,44 @@ namespace CapaNegocio
         {
             var contra = dc.Tbl_Responsable.Single(resp => resp.Resp_estado == 'A' && resp.Resp_correo.Equals(nombre));
             return contra;
+        }
+        public static void save(Tbl_Responsable resp)
+        {
+            try
+            {
+                resp.Resp_estado = 'A';
+                resp.tusu_id = 1;
+                dc.Tbl_Responsable.InsertOnSubmit(resp);
+                dc.SubmitChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static void modify(Tbl_Responsable resp)
+        {
+            try
+            {
+                dc.SubmitChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public static void delete(Tbl_Responsable resp)
+        {
+            try
+            {
+                resp.Resp_estado = 'I';
+                dc.SubmitChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

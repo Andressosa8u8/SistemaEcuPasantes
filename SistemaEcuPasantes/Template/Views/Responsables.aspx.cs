@@ -29,6 +29,27 @@ namespace SistemaEcuPasantes.Template.Views
             }
         }
 
+        
+
+        protected void grvResponsables_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            int codigo = Convert.ToInt32(e.CommandArgument);
+            if (e.CommandName == "Editar")
+            {
+                Response.Redirect("~/Template/Views/FormularioResponsables.aspx?cod=" + codigo, true);
+            }
+            else if (e.CommandName == "Eliminar")
+            {
+                Tbl_Responsable proe = new Tbl_Responsable();
+                proe = Cn_Responsables.obtenerResponsablexId(codigo);
+                if (proe != null)
+                {
+                    Cn_Responsables.delete(proe);
+                    cargarResponsable();
+                }
+            }
+        }
+
         protected void btn_agregar_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Template/Views/FormularioResponsables.aspx");

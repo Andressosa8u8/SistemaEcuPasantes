@@ -8,7 +8,7 @@
       <Column Name="fecha" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="Labor_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="valida" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
-      <Association Name="Tbl_Labores_Tbl_Horas" Member="Tbl_Labores" ThisKey="Labor_id" OtherKey="Labor_id" Type="Tbl_Labores" IsForeignKey="true" />
+      <Association Name="Tbl_Labores_Tbl_Horas" Member="Tbl_Labores" ThisKey="Labor_id" OtherKey="Labor_id" Type="Tbl_Labores" IsForeignKey="true" DeleteRule="CASCADE" />
     </Type>
   </Table>
   <Table Name="dbo.Tbl_Labores" Member="Tbl_Labores">
@@ -20,8 +20,8 @@
       <Column Name="Proyecto_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="nhoras" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Tbl_Labores_Tbl_Horas" Member="Tbl_Horas" ThisKey="Labor_id" OtherKey="Labor_id" Type="Tbl_Horas" />
-      <Association Name="Tbl_Pasantes_Tbl_Labores" Member="Tbl_Pasantes" ThisKey="Pasantes_id" OtherKey="Pasantes_id" Type="Tbl_Pasantes" IsForeignKey="true" />
-      <Association Name="Tbl_Proyecto_Tbl_Labores" Member="Tbl_Proyecto" ThisKey="Proyecto_id" OtherKey="Proyecto_id" Type="Tbl_Proyecto" IsForeignKey="true" />
+      <Association Name="Tbl_Pasantes_Tbl_Labores" Member="Tbl_Pasantes" ThisKey="Pasantes_id" OtherKey="Pasantes_id" Type="Tbl_Pasantes" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="Tbl_Proyecto_Tbl_Labores" Member="Tbl_Proyecto" ThisKey="Proyecto_id" OtherKey="Proyecto_id" Type="Tbl_Proyecto" IsForeignKey="true" DeleteRule="CASCADE" />
     </Type>
   </Table>
   <Table Name="dbo.Tbl_Pasantes" Member="Tbl_Pasantes">
@@ -48,15 +48,7 @@
       <Column Name="Resp_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Activo" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
       <Association Name="Tbl_Proyecto_Tbl_Labores" Member="Tbl_Labores" ThisKey="Proyecto_id" OtherKey="Proyecto_id" Type="Tbl_Labores" />
-      <Association Name="Tbl_Responsable_Tbl_Proyecto" Member="Tbl_Responsable" ThisKey="Resp_id" OtherKey="Resp_id" Type="Tbl_Responsable" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Tbl_TipoUsuario" Member="Tbl_TipoUsuario">
-    <Type Name="Tbl_TipoUsuario">
-      <Column Name="tusu_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="tusu_nom" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="tusu_estado" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
-      <Association Name="Tbl_TipoUsuario_Tbl_Responsable" Member="Tbl_Responsable" ThisKey="tusu_id" OtherKey="tusu_id" Type="Tbl_Responsable" />
+      <Association Name="Tbl_Responsable_Tbl_Proyecto" Member="Tbl_Responsable" ThisKey="Resp_id" OtherKey="Resp_id" Type="Tbl_Responsable" IsForeignKey="true" DeleteRule="CASCADE" />
     </Type>
   </Table>
   <Table Name="dbo.Tbl_Responsable" Member="Tbl_Responsable">
@@ -75,7 +67,15 @@
       <Column Name="Resp_estado" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
       <Column Name="tusu_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Tbl_Responsable_Tbl_Proyecto" Member="Tbl_Proyecto" ThisKey="Resp_id" OtherKey="Resp_id" Type="Tbl_Proyecto" />
-      <Association Name="Tbl_TipoUsuario_Tbl_Responsable" Member="Tbl_TipoUsuario" ThisKey="tusu_id" OtherKey="tusu_id" Type="Tbl_TipoUsuario" IsForeignKey="true" />
+      <Association Name="Tbl_TipoUsuario_Tbl_Responsable" Member="Tbl_TipoUsuario" ThisKey="tusu_id" OtherKey="tusu_id" Type="Tbl_TipoUsuario" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_TipoUsuario" Member="Tbl_TipoUsuario">
+    <Type Name="Tbl_TipoUsuario">
+      <Column Name="tusu_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tusu_nom" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tusu_estado" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Association Name="Tbl_TipoUsuario_Tbl_Responsable" Member="Tbl_Responsable" ThisKey="tusu_id" OtherKey="tusu_id" Type="Tbl_Responsable" />
     </Type>
   </Table>
 </Database>
