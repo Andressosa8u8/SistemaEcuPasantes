@@ -15,7 +15,7 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label>Cedula</label>
-                        <asp:TextBox ID="txtCedula" type="number" CssClass="form-control" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtCedula" OnTextChanged="txtCedula_TextChanged" AutoPostBack="true" type="number" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
                     <div class="form-group">
                         <label>Apellidos</label>

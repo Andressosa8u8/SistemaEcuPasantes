@@ -39,6 +39,7 @@ namespace CapaNegocio
             try
             {
                 Hor.valida = "A";
+                Hor.fecha = DateTime.Now;
                 dc.Tbl_Horas.InsertOnSubmit(Hor);
                 dc.SubmitChanges();
             }

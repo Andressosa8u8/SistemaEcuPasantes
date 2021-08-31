@@ -124,6 +124,11 @@ namespace SistemaEcuPasantes.Template.Views
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
+            guardar_modificar_datos(Convert.ToInt32(Request["cod"]));
+        }
+
+        protected void txtCedula_TextChanged(object sender, EventArgs e)
+        {
             bool existe = Cn_Pasantes.autentificarxCedula(Convert.ToInt32(txtCedula.Text));
             if (existe)
             {
@@ -133,11 +138,12 @@ namespace SistemaEcuPasantes.Template.Views
                 {
                     string js1 = "alert('Usuario existente..')";
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "script", js1, true);
+                    btnGuardar.Enabled = false;
                 }
             }
             else
             {
-                guardar_modificar_datos(Convert.ToInt32(Request["cod"]));
+                btnGuardar.Enabled = true;
             }
         }
     }

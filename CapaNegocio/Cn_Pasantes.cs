@@ -15,7 +15,7 @@ namespace CapaNegocio
         //metodo para retornar todos los Pasantess
         public static List<Tbl_Pasantes> obtenerPasantes()
         {
-            var lista = dc.Tbl_Pasantes.Where(pasa => pasa.Activo == "A");
+            var lista = dc.Tbl_Pasantes.Where(pasa => pasa.Activo == "A" || pasa.Activo == "P");
             return lista.ToList();
         }
         //metodo para verificar credenciales

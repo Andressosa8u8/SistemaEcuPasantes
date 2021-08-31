@@ -63,6 +63,7 @@ namespace CapaNegocio
             try
             {
                 resp.Resp_estado = "A";
+                resp.Resp_fecha = DateTime.Now;
                 resp.tusu_id = 1;
                 dc.Tbl_Responsable.InsertOnSubmit(resp);
                 dc.SubmitChanges();
