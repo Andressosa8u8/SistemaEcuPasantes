@@ -25,7 +25,7 @@
                             </div>
                         </div>
                         <br />
-                        <asp:GridView ID="grvHoras" AutoGenerateColumns="false" Width="100%" CssClass="table table-hover text-center" GridLines="None" runat="server">
+                        <asp:GridView ID="grvHoras" AutoGenerateColumns="false" OnRowCommand="grvHoras_RowCommand" Width="100%" CssClass="table table-hover text-center" GridLines="None" runat="server">
                             <Columns>
                                 <asp:TemplateField HeaderText="Codigo">
                                     <ItemTemplate>
@@ -57,15 +57,19 @@
                                         <asp:Label ID="valida" runat="server" Text='<%#Eval("valida")%>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                <asp:TemplateField>
+                                <asp:TemplateField ItemStyle-Width="17" HeaderStyle-Width="17" HeaderText="">
                                     <ItemTemplate>
-                                        <asp:LinkButton ID="btn_editar" CssClass="btn" runat="server">
-                                            <i class="fas fa-pen-alt"></i>                                       
-                                        </asp:LinkButton>
-                                        <asp:LinkButton ID="btn_eliminar" CssClass="btn" runat="server">
-                                            <i class="fas fa-trash-alt"></i>                                      
-                                        </asp:LinkButton>
+                                        <asp:LinkButton ID="lnbEditar" Width="16" Height="16" CommandArgument='<%#Eval("Horas_id")%>' CommandName="Editar" runat="server"><i class="fas fa-pen"></i></asp:LinkButton>
                                     </ItemTemplate>
+                                    <HeaderStyle Width="17px" />
+                                    <ItemStyle Width="17px" />
+                                </asp:TemplateField>
+                                <asp:TemplateField ItemStyle-Width="17" HeaderStyle-Width="17">
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="lnbEliminar" Width="16" Height="16" CommandArgument='<%#Eval("Horas_id")%>' CommandName="Eliminar" OnClientClick="return confirm('Esta seguro que desea eliminar este registro..')" runat="server"><i class="fas fa-trash"></i></asp:LinkButton>
+                                    </ItemTemplate>
+                                    <HeaderStyle Width="17px" />
+                                    <ItemStyle Width="17px" />
                                 </asp:TemplateField>
                             </Columns>
                         </asp:GridView>

@@ -14,24 +14,27 @@ namespace SistemaEcuPasantes.Template.Views
         private Tbl_Responsable respinfo = new Tbl_Responsable();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request["cod"] != null)
+            if (!IsPostBack)
             {
-                int codigo = Convert.ToInt32(Request["cod"]);
-                respinfo = Cn_Responsables.obtenerResponsablexId(codigo);
-                btnModificar.Visible = true;
-
-                if (respinfo != null)
+                if (Request["cod"] != null)
                 {
-                    txtNombre.Text = respinfo.Resp_nombre.ToString();
-                    txtApellido.Text = respinfo.Resp_apellido.ToString();
-                    txtCedula.Text = respinfo.Resp_cedula.ToString();
-                    txtArea.Text = respinfo.Resp_area.ToString();
-                    txtCargo.Text = respinfo.Resp_cargo.ToString();
-                    txtCelular.Text = respinfo.Resp_celular.ToString();
-                    txtEmail.Text = respinfo.Resp_correo.ToString();
-                    txtUser.Text = respinfo.Resp_nomlogin.ToString();
-                    txtPass.Text = respinfo.Resp_pass.ToString();
-                    btnGuardar.Visible = false;
+                    int codigo = Convert.ToInt32(Request["cod"]);
+                    respinfo = Cn_Responsables.obtenerResponsablexId(codigo);
+                    btnModificar.Visible = true;
+                    
+                    if (respinfo != null)
+                    {
+                        txtNombre.Text = respinfo.Resp_nombre.ToString();
+                        txtApellido.Text = respinfo.Resp_apellido.ToString();
+                        txtCedula.Text = respinfo.Resp_cedula.ToString();
+                        txtArea.Text = respinfo.Resp_area.ToString();
+                        txtCargo.Text = respinfo.Resp_cargo.ToString();
+                        txtCelular.Text = respinfo.Resp_celular.ToString();
+                        txtEmail.Text = respinfo.Resp_correo.ToString();
+                        txtUser.Text = respinfo.Resp_nomlogin.ToString();
+                        txtPass.Text = respinfo.Resp_pass.ToString();
+                        btnGuardar.Visible = false;
+                    }
                 }
             }
         }
@@ -50,7 +53,7 @@ namespace SistemaEcuPasantes.Template.Views
                 }
             }
         }
-        private void Guardar()
+        private void Guardar() 
         {
             try
             {

@@ -24,12 +24,12 @@
                                 </div>
                             </div>
                         </div>
-                        <br />                        
-                        <asp:GridView ID="grvLabores" AutoGenerateColumns="false" Width="100%" CssClass="table table-hover text-center" GridLines="None" runat="server">
+                        <br />
+                        <asp:GridView ID="grvLabores" AutoGenerateColumns="false" OnRowCommand="grvLabores_RowCommand" Width="100%" CssClass="table table-hover text-center" GridLines="None" runat="server">
                             <Columns>
                                 <asp:TemplateField HeaderText="Codigo">
                                     <ItemTemplate>
-                                        <asp:Label ID="Labor_id" runat="server" Text='<%#Eval("Pasantes_id")%>'></asp:Label>
+                                        <asp:Label ID="Labor_id" runat="server" Text='<%#Eval("Labor_id")%>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Descripción">
@@ -52,15 +52,19 @@
                                         <asp:Label ID="activo" runat="server" Text='<%#Eval("Activo")%>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                <asp:TemplateField>
+                                <asp:TemplateField ItemStyle-Width="17" HeaderStyle-Width="17" HeaderText="">
                                     <ItemTemplate>
-                                        <asp:LinkButton ID="btn_editar" CssClass="btn" runat="server">
-                                            <i class="fas fa-pen-alt"></i>                                       
-                                        </asp:LinkButton>
-                                        <asp:LinkButton ID="btn_eliminar" CssClass="btn" runat="server">
-                                            <i class="fas fa-trash-alt"></i>                                      
-                                        </asp:LinkButton>
+                                        <asp:LinkButton ID="lnbEditar" Width="16" Height="16" CommandArgument='<%#Eval("Labor_id")%>' CommandName="Editar" runat="server"><i class="fas fa-pen"></i></asp:LinkButton>
                                     </ItemTemplate>
+                                    <HeaderStyle Width="17px" />
+                                    <ItemStyle Width="17px" />
+                                </asp:TemplateField>
+                                <asp:TemplateField ItemStyle-Width="17" HeaderStyle-Width="17">
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="lnbEliminar" Width="16" Height="16" CommandArgument='<%#Eval("Labor_id")%>' CommandName="Eliminar" OnClientClick="return confirm('Esta seguro que desea eliminar este registro..')" runat="server"><i class="fas fa-trash"></i></asp:LinkButton>
+                                    </ItemTemplate>
+                                    <HeaderStyle Width="17px" />
+                                    <ItemStyle Width="17px" />
                                 </asp:TemplateField>
                             </Columns>
                         </asp:GridView>

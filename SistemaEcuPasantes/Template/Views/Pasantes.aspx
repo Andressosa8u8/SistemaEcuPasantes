@@ -25,7 +25,7 @@
                             </div>
                         </div>
                         <br />
-                        <asp:GridView ID="grvPasantes" AutoGenerateColumns="false" Width="100%" CssClass="table table-hover text-center" GridLines="None" runat="server">
+                        <asp:GridView ID="grvPasantes" OnRowCommand="grvPasantes_RowCommand" AutoGenerateColumns="false" CssClass="table table-hover text-center" GridLines="None" runat="server">
                             <Columns>
                                 <asp:TemplateField HeaderText="Codigo">
                                     <ItemTemplate>
@@ -67,6 +67,16 @@
                                         <asp:Label ID="Curriculum" runat="server" Text='<%#Eval("Curriculum")%>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
+                                <asp:TemplateField HeaderText="Certificado">
+                                    <ItemTemplate>
+                                        <asp:Label ID="Certificado" runat="server" Text='<%#Eval("Certificado")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="Area Designada">
+                                    <ItemTemplate>
+                                        <asp:Label ID="Area" runat="server" Text='<%#Eval("Area")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Numero de Semestre">
                                     <ItemTemplate>
                                         <asp:Label ID="Nsemestre" runat="server" Text='<%#Eval("Nsemestre")%>'></asp:Label>
@@ -82,15 +92,19 @@
                                         <asp:Label ID="Activo" runat="server" Text='<%#Eval("Activo")%>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                <asp:TemplateField>
+                                 <asp:TemplateField ItemStyle-Width="17" HeaderStyle-Width="17" HeaderText="">
                                     <ItemTemplate>
-                                        <asp:LinkButton ID="btn_editar" CssClass="btn" runat="server">
-                                            <i class="fas fa-pen-alt"></i>                                       
-                                        </asp:LinkButton>
-                                        <asp:LinkButton ID="btn_eliminar" CssClass="btn" runat="server">
-                                            <i class="fas fa-trash-alt"></i>                                      
-                                        </asp:LinkButton>
+                                        <asp:LinkButton ID="lnbEditar" Width="16" Height="16" CommandArgument='<%#Eval("Pasantes_id")%>' CommandName="Editar" runat="server"><i class="fas fa-pen"></i></asp:LinkButton>
                                     </ItemTemplate>
+                                    <HeaderStyle Width="17px" />
+                                    <ItemStyle Width="17px" />
+                                </asp:TemplateField>
+                                <asp:TemplateField ItemStyle-Width="17" HeaderStyle-Width="17">
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="lnbEliminar" Width="16" Height="16" CommandArgument='<%#Eval("Pasantes_id")%>' CommandName="Eliminar" OnClientClick="return confirm('Esta seguro que desea eliminar este registro..')" runat="server"><i class="fas fa-trash"></i></asp:LinkButton>
+                                    </ItemTemplate>
+                                    <HeaderStyle Width="17px" />
+                                    <ItemStyle Width="17px" />
                                 </asp:TemplateField>
                             </Columns>
                         </asp:GridView>

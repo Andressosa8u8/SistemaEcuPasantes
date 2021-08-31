@@ -15,11 +15,11 @@ namespace SistemaEcuPasantes.Template.Views
         {
             if (!IsPostBack)
             {
-                cargarUsuario();
+                cargarHoras();
             }
         }
 
-        private void cargarUsuario()
+        private void cargarHoras()
         {
             List<Tbl_Horas> listaHoras = new List<Tbl_Horas>();
             listaHoras = Cn_Horas.obtenerHoras();
@@ -33,6 +33,25 @@ namespace SistemaEcuPasantes.Template.Views
         protected void btn_agregar_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Template/Views/FormularioHoras.aspx");
+        }
+
+        protected void grvHoras_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            int codigo = Convert.ToInt32(e.CommandArgument);
+            if (e.CommandName == "Editar")
+            {
+                Response.Redirect("~/Template/Views/FormularioHoras.aspx?cod=" + codigo, true);
+            }
+            else if (e.CommandName == "Eliminar")
+            {
+                Tbl_Horas horpe = new Tbl_Horas();
+                horpe = Cn_Horas.obtenerHorasxId(codigo);
+                if (horpe != null)
+                {
+                    Cn_Horas.delete(horpe);
+                    cargarHoras();
+                }
+            }
         }
     }
 }

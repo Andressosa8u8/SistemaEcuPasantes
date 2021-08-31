@@ -70,6 +70,7 @@
   <ItemGroup>
     <Content Include="index.aspx" />
     <Content Include="Template\Template Principal\dist\css\style.css" />
+    <Content Include="Template\Template Principal\dist\css\sweetalert.css" />
     <Content Include="Template\Template Principal\dist\images\auth\lockscreen-bg.jpg" />
     <Content Include="Template\Template Principal\dist\images\auth\login-bg.jpg" />
     <Content Include="Template\Template Principal\dist\images\auth\Portada.png" />
@@ -114,6 +115,7 @@
     <Content Include="Template\Template Principal\dist\js\file-upload.js" />
     <Content Include="Template\Template Principal\dist\js\hoverable-collapse.js" />
     <Content Include="Template\Template Principal\dist\js\off-canvas.js" />
+    <Content Include="Template\Template Principal\dist\js\sweetalert.min.js" />
     <Content Include="Template\Template Principal\dist\js\template.js" />
     <Content Include="Template\Template Principal\dist\vendors\chart.js\Chart.min.js" />
     <Content Include="Template\Template Principal\dist\vendors\css\vendor.bundle.base.css" />
@@ -128,6 +130,7 @@
     <Content Include="Template\Views\FormularioResponsables.aspx" />
     <Content Include="Template\Views\Horas.aspx" />
     <Content Include="Template\Views\Labores.aspx" />
+    <Content Include="Template\Views\Participantes.aspx" />
     <Content Include="Template\Views\Pasantes.aspx" />
     <Content Include="Template\Views\Principal.aspx" />
     <Content Include="Template\Views\Proyectos.aspx" />
@@ -198,6 +201,13 @@
     </Compile>
     <Compile Include="Template\Views\Labores.aspx.designer.cs">
       <DependentUpon>Labores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Template\Views\Participantes.aspx.cs">
+      <DependentUpon>Participantes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\Views\Participantes.aspx.designer.cs">
+      <DependentUpon>Participantes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Template\Views\Pasantes.aspx.cs">
       <DependentUpon>Pasantes.aspx</DependentUpon>

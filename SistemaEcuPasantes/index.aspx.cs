@@ -62,7 +62,7 @@ namespace SistemaEcuPasantes
                     {
                         string intentos = (con + (Convert.ToInt32(Session["con"]))).ToString();
                         Session["Conantiguo"] = intentos.ToString();
-                        string js1 = "alert('Credenciales Incorrectas, Intentos: " + intentos + "')";
+                        string js1 = "alert('Credenciales Incorrectas!, Intento #"+intentos+"')";
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "script", js1, true);
                         txtPass.Text = "";
                         if (Convert.ToInt32(intentos) == 3)

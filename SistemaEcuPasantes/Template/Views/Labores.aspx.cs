@@ -34,5 +34,24 @@ namespace SistemaEcuPasantes.Template.Views
         {
             Response.Redirect("~/Template/Views/FormularioLabores.aspx");
         }
+
+        protected void grvLabores_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            int codigo = Convert.ToInt32(e.CommandArgument);
+            if (e.CommandName == "Editar")
+            {
+                Response.Redirect("~/Template/Views/FormularioLabores.aspx?cod=" + codigo, true);
+            }
+            else if (e.CommandName == "Eliminar")
+            {
+                Tbl_Labores labpe = new Tbl_Labores();
+                labpe = Cn_Labores.obtenerLaboresxId(codigo);
+                if (labpe != null)
+                {
+                    Cn_Labores.delete(labpe);
+                    cargarLabor();
+                }
+            }
+        }
     }
 }

@@ -34,5 +34,24 @@ namespace SistemaEcuPasantes.Template.Views
         {
             Response.Redirect("~/Template/Views/FormularioProyectos.aspx");
         }
+
+        protected void grvProyectos_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            int codigo = Convert.ToInt32(e.CommandArgument);
+            if (e.CommandName == "Editar")
+            {
+                Response.Redirect("~/Template/Views/FormularioProyectos.aspx?cod=" + codigo, true);
+            }
+            else if (e.CommandName == "Eliminar")
+            {
+                Tbl_Proyecto prope = new Tbl_Proyecto();
+                prope = Cn_Proyectos.obtenerProyectosxId(codigo);
+                if (prope != null)
+                {
+                    Cn_Proyectos.delete(prope);
+                    cargarProyectos();
+                }
+            }
+        }
     }
 }

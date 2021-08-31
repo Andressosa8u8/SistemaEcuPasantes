@@ -11,9 +11,7 @@
     <link rel="stylesheet" href="../Template Principal/dist/vendors/css/vendor.bundle.base.css">
     <link rel="stylesheet" href="../Template Principal/dist/css/style.css">
     <link rel="shortcut icon" href="../Template Principal/dist/images/ECU911.svg.png" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
@@ -52,6 +50,12 @@
                                 <li class="nav-item"><a class="nav-link" href="Responsables.aspx">Resposables</a></li>
                             </ul>
                         </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Participantes.aspx">
+                            <i class="mdi mdi-account-card-details menu-icon"></i>
+                            <span class="menu-title">Participantes</span>
+                        </a>
                     </li>
                 </ul>
             </nav>

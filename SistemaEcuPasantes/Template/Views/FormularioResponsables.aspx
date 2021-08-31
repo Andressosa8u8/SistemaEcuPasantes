@@ -9,7 +9,7 @@
         <ContentTemplate>
             <div class="card">
                 <div class="card-header">
-                    <h4>Formulario Pasantes</h4>
+                    <h4>Formulario Responsables</h4>
                 </div>
                 <div class="card-body">
                     <div class="form-group">

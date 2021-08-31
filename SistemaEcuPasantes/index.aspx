@@ -7,15 +7,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <title>Login - Sistema Pasantes</title>
-    <!-- base:css -->
     <link rel="stylesheet" href="Template/Template Principal/dist/vendors/mdi/css/materialdesignicons.min.css"/>
-    <link rel="stylesheet" href="Template/Template Principal/dist/vendors/css/vendor.bundle.base.css"/>
-    <!-- endinject -->
-    <!-- plugin css for this page -->
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
     <link rel="stylesheet" href="Template/Template Principal/dist/css/style.css"/>
-    <!-- endinject -->
     <link rel="shortcut icon" href="Template/Template Principal/dist/images/ECU911.svg.png" />
 </head>
 <body>
@@ -59,7 +52,7 @@
                                         <div class="my-2 d-flex justify-content-between align-items-center">
                                             <div class="form-check">
                                                 <label class="form-check-label text-muted">
-                                                    <asp:TextBox ID="TextBox1" type="checkbox" CssClass="form-check-input" runat="server"></asp:TextBox>
+                                                    <asp:TextBox ID="txtmostrar" type="checkbox" CssClass="form-check-input" runat="server" AutoPostBack="true"></asp:TextBox>
                                                     Mostrar tu contraseña
                                                 </label>
                                             </div>

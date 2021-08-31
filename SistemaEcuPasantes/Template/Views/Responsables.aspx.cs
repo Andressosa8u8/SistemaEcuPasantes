@@ -40,11 +40,11 @@ namespace SistemaEcuPasantes.Template.Views
             }
             else if (e.CommandName == "Eliminar")
             {
-                Tbl_Responsable proe = new Tbl_Responsable();
-                proe = Cn_Responsables.obtenerResponsablexId(codigo);
-                if (proe != null)
+                Tbl_Responsable respe = new Tbl_Responsable();
+                respe = Cn_Responsables.obtenerResponsablexId(codigo);
+                if (respe != null)
                 {
-                    Cn_Responsables.delete(proe);
+                    Cn_Responsables.delete(respe);
                     cargarResponsable();
                 }
             }

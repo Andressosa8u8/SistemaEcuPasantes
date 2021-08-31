@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Cn_Horas.cs" />
     <Compile Include="Cn_Labores.cs" />
+    <Compile Include="Cn_Participantes.cs" />
     <Compile Include="Cn_Pasantes.cs" />
     <Compile Include="Cn_Proyectos.cs" />
     <Compile Include="Cn_Responsables.cs" />

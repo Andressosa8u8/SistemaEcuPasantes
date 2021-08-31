@@ -15,7 +15,7 @@ namespace CapaNegocio
         //Metodos que nos sirven para traer toda la informacion
         public static List<Tbl_TipoUsuario> obtenerTusuarios()
         {
-            var lista = dc.Tbl_TipoUsuario.Where(tusu => tusu.tusu_estado == 'A');
+            var lista = dc.Tbl_TipoUsuario.Where(tusu => tusu.tusu_estado == "A");
             return lista.ToList();
         }
     }

@@ -22,7 +22,7 @@ namespace SistemaEcuPasantes.Template.Views
         private void cargarPasante()
         {
             List<Tbl_Pasantes> listaPas = new List<Tbl_Pasantes>();
-            listaPas = Cn_Pasantes.obtenerPasante();
+            listaPas = Cn_Pasantes.obtenerPasantes();
             if (listaPas != null)
             {
                 grvPasantes.DataSource = listaPas;
@@ -33,6 +33,25 @@ namespace SistemaEcuPasantes.Template.Views
         protected void btn_agregar_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Template/Views/FormularioPasantes.aspx");
+        }
+
+        protected void grvPasantes_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            int codigo = Convert.ToInt32(e.CommandArgument);
+            if (e.CommandName == "Editar")
+            {
+                Response.Redirect("~/Template/Views/FormularioPasantes.aspx?cod=" + codigo, true);
+            }
+            else if (e.CommandName == "Eliminar")
+            {
+                Tbl_Pasantes pasape = new Tbl_Pasantes();
+                pasape = Cn_Pasantes.obtenerPasantesxId(codigo);
+                if (pasape != null)
+                {
+                    Cn_Pasantes.delete(pasape);
+                    cargarPasante();
+                }
+            }
         }
     }
 }

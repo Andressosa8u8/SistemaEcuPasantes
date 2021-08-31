@@ -25,7 +25,7 @@ namespace SistemaEcuPasantes.Template.Views
                 {
                     Response.Redirect("../../index.aspx");
                 }
-                lblFecha.Text = DateTime.Now.ToLongDateString();
+                lblFecha.Text = DateTime.Now.ToString("QUITO,d 'DE' MMMM 'DEL' yyyy");
             }
         }
 
