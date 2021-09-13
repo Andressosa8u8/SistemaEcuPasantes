@@ -32,7 +32,7 @@ namespace CapaNegocio
         }
         public static Tbl_Pasantes obtenerPasantesxId(int id)
         {
-            var pasaid = dc.Tbl_Pasantes.FirstOrDefault(pasa => pasa.Pasantes_id.Equals(id) && pasa.Activo == "A");
+            var pasaid = dc.Tbl_Pasantes.FirstOrDefault(pasa => pasa.Pasantes_id.Equals(id) && pasa.Activo == "A" || pasa.Activo == "P");
             return pasaid;
         }
         public static Tbl_Pasantes obtenerPasantesxNombre(string nombre)

@@ -49,7 +49,7 @@
                         <asp:TextBox ID="txtCurriculum" type="text" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
                     <div class="form-group">
-                        <label>Certificado</label>
+                        <label>Acuerdo de confidencialidad</label>
                         <asp:TextBox ID="txtCertificado" type="text" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
                     <div class="form-group">

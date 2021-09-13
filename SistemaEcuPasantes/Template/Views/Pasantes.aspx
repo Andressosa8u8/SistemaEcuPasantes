@@ -25,7 +25,7 @@
                             </div>
                         </div>
                         <br />
-                        <asp:GridView ID="grvPasantes" OnRowCommand="grvPasantes_RowCommand" AutoGenerateColumns="false" CssClass="table table-hover text-center" GridLines="None" runat="server">
+                        <asp:GridView ID="grvPasantes" OnRowCommand="grvPasantes_RowCommand" AutoGenerateColumns="false" CssClass="table table-hover text-center table-responsive" GridLines="None" runat="server">
                             <Columns>
                                 <asp:TemplateField HeaderText="Codigo">
                                     <ItemTemplate>
@@ -67,7 +67,7 @@
                                         <asp:Label ID="Curriculum" runat="server" Text='<%#Eval("Curriculum")%>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                <asp:TemplateField HeaderText="Certificado">
+                                <asp:TemplateField HeaderText="Acuerdo de confidencialidad">
                                     <ItemTemplate>
                                         <asp:Label ID="Certificado" runat="server" Text='<%#Eval("Certificado")%>'></asp:Label>
                                     </ItemTemplate>

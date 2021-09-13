@@ -11,6 +11,7 @@ namespace SistemaEcuPasantes.Template.Views
 {
     public partial class Participantes : System.Web.UI.Page
     {
+        DataClasses1DataContext dc = new DataClasses1DataContext();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -21,7 +22,6 @@ namespace SistemaEcuPasantes.Template.Views
 
         private void cargarParticipantes()
         {
-            DataClasses1DataContext dc = new DataClasses1DataContext();
             var query = from p in dc.Tbl_Pasantes 
                         join l in dc.Tbl_Labores on p.Pasantes_id equals l.Pasantes_id
                         join pr in dc.Tbl_Proyecto on l.Proyecto_id equals pr.Proyecto_id
@@ -40,13 +40,7 @@ namespace SistemaEcuPasantes.Template.Views
 
         protected void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            BuscarPorU(txtBuscar.Text.ToString());
-            
-        }
-        public void BuscarPorU(string universidad)
-        {
-            DataClasses1DataContext dc = new DataClasses1DataContext();
-            if (universidad == "")
+            if (txtBuscar.Text == "")
             {
                 cargarParticipantes();
             }
@@ -55,7 +49,7 @@ namespace SistemaEcuPasantes.Template.Views
                 var query = from p in dc.Tbl_Pasantes
                             join l in dc.Tbl_Labores on p.Pasantes_id equals l.Pasantes_id
                             join pr in dc.Tbl_Proyecto on l.Proyecto_id equals pr.Proyecto_id
-                            where p.Universidad == universidad
+                            where p.Universidad == txtBuscar.Text || pr.Proyecto_concepto == txtBuscar.Text
                             orderby p.Universidad
                             select new
                             {
@@ -65,7 +59,7 @@ namespace SistemaEcuPasantes.Template.Views
                                 pr.Proyecto_concepto,
                                 pr.Proyecto_descripcion
                             };
-                if(query != null)
+                if (query != null)
                 {
                     grvParticipantes.DataSource = query.ToList();
                     grvParticipantes.DataBind();

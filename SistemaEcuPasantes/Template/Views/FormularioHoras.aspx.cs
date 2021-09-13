@@ -91,6 +91,7 @@ namespace SistemaEcuPasantes.Template.Views
                 horinfo.Labor_id = Convert.ToInt32(ddlLabor.SelectedValue);
 
                 Cn_Horas.save(horinfo);
+
                 string js1 = "alert('Datos Guardados Con Exito..')";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "script", js1, true);
                 Response.Redirect("~/Template/Views/Horas.aspx");

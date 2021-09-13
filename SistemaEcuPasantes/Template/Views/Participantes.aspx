@@ -20,21 +20,19 @@
                                 </div>
                                 <div class="col-3">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail">Buscar</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend bg-transparent">
                                                 <span class="input-group-text bg-transparent border-right-0">
                                                     <i class="mdi mdi-magnify text-primary"></i>
                                                 </span>
                                             </div>
-                                            <asp:TextBox ID="txtBuscar" type="text" CssClass="form-control form-control-lg border-left-0" AutoPostBack="true" OnTextChanged="txtBuscar_TextChanged" placeholder="Buscar Participantes..." runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="txtBuscar" type="text" CssClass="form-control form-control-lg border-left-0" AutoPostBack="true" OnTextChanged="txtBuscar_TextChanged" placeholder="Buscar Participantes Por Universidad..." runat="server"></asp:TextBox>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <br />
-                        <asp:GridView ID="grvParticipantes" AutoGenerateColumns="false" Width="100%" CssClass="table table-hover text-center" GridLines="None" runat="server">
+                        <asp:GridView ID="grvParticipantes" runat="server" AllowPaging="false" AutoGenerateColumns="false" CssClass="table table-hover text-center" GridLines="None" Width="100%">
                             <Columns>
                                 <asp:TemplateField HeaderText="Apellidos">
                                     <ItemTemplate>
@@ -63,6 +61,7 @@
                                 </asp:TemplateField>
                             </Columns>
                         </asp:GridView>
+                        <br />
                     </div>
                 </div>
             </div>
