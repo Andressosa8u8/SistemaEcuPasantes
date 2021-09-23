@@ -43,5 +43,16 @@ namespace CapaDatos.Properties {
                 return ((string)(this["Ecu911PasantesConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ANDRES-SOSA\\SQLEXPRESS;Initial Catalog=Ecu911Pasantes;Integrated Secu" +
+            "rity=True")]
+        public string Ecu911PasantesConnectionString2 {
+            get {
+                return ((string)(this["Ecu911PasantesConnectionString2"]));
+            }
+        }
     }
 }

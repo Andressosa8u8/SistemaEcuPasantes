@@ -47,6 +47,11 @@
                                         <asp:Label ID="Proyecto_id" runat="server" Text='<%#Eval("Proyecto_id")%>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
+                                <asp:TemplateField HeaderText="Numero de Horas del Proyecto">
+                                    <ItemTemplate>
+                                        <asp:Label ID="Proyecto_id" runat="server" Text='<%#Eval("nhoras")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Estado">
                                     <ItemTemplate>
                                         <asp:Label ID="activo" runat="server" Text='<%#Eval("Activo")%>'></asp:Label>

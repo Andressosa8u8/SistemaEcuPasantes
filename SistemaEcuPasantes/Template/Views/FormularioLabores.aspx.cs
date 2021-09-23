@@ -28,6 +28,7 @@ namespace SistemaEcuPasantes.Template.Views
                         txtDescripcion.Text = labinfo.concepto.ToString();
                         ddlPasantes.SelectedValue = labinfo.Pasantes_id.ToString();
                         ddlProyecto.SelectedValue = labinfo.Proyecto_id.ToString();
+                        txtNumHoras.Text = labinfo.nhoras.ToString();
                         btnGuardar.Visible = false;
                     }
                 }
@@ -81,6 +82,7 @@ namespace SistemaEcuPasantes.Template.Views
                 labinfo.concepto = txtDescripcion.Text;
                 labinfo.Pasantes_id = Convert.ToInt32(ddlPasantes.SelectedValue);
                 labinfo.Proyecto_id = Convert.ToInt32(ddlProyecto.SelectedValue);
+                labinfo.nhoras = Convert.ToInt32(txtNumHoras.Text);
 
                 Cn_Labores.modify(labinfo);
                 string js1 = "alert('Datos Modificados Con Exito..')";
@@ -102,6 +104,7 @@ namespace SistemaEcuPasantes.Template.Views
                 labinfo.concepto = txtDescripcion.Text;
                 labinfo.Pasantes_id = Convert.ToInt32(ddlPasantes.SelectedValue);
                 labinfo.Proyecto_id = Convert.ToInt32(ddlProyecto.SelectedValue);
+                labinfo.nhoras = Convert.ToInt32(txtNumHoras.Text);
 
                 Cn_Labores.save(labinfo);
                 string js1 = "alert('Datos Guardados Con Exito..')";

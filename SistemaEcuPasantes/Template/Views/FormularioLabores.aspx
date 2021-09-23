@@ -24,6 +24,10 @@
                         <label>Proyecto</label>
                         <asp:DropDownList ID="ddlProyecto" CssClass="form-control" runat="server"></asp:DropDownList>
                     </div>
+                    <div class="form-group">
+                        <label>Numero de Horas</label>
+                        <asp:TextBox ID="txtNumHoras"  CssClass="form-control" runat="server" TextMode="Number"></asp:TextBox>
+                    </div>
                 </div>
                 <div class="card-footer text-right">
                     <asp:Button ID="btnCancelar" CssClass="btn btn-outline-secondary btn-fw" OnClick="btnCancelar_Click" runat="server" Text="Cancelar" />
