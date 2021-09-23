@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Ecu911Pasantes" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=Ecu911Pasantes;Integrated Security=True" SettingsObjectName="CapaDatos.Properties.Settings" SettingsPropertyName="Ecu911PasantesConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=MAYCKYANDER\MAYCKYANDER;Initial Catalog=Ecu911Pasantes;Integrated Security=True" SettingsObjectName="CapaDatos.Properties.Settings" SettingsPropertyName="Ecu911PasantesConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Tbl_TipoUsuario" Member="Tbl_TipoUsuario">
     <Type Name="Tbl_TipoUsuario">
       <Column Name="tusu_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -40,6 +40,19 @@
       <Association Name="Tbl_Responsable_Tbl_Proyecto" Member="Tbl_Responsable" ThisKey="Resp_id" OtherKey="Resp_id" Type="Tbl_Responsable" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.Tbl_Labores" Member="Tbl_Labores">
+    <Type Name="Tbl_Labores">
+      <Column Name="Labor_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="activo" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="concepto" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Pasantes_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Proyecto_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nhoras" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Tbl_Labores_Tbl_Horas" Member="Tbl_Horas" ThisKey="Labor_id" OtherKey="Labor_id" Type="Tbl_Horas" />
+      <Association Name="Tbl_Proyecto_Tbl_Labores" Member="Tbl_Proyecto" ThisKey="Proyecto_id" OtherKey="Proyecto_id" Type="Tbl_Proyecto" IsForeignKey="true" />
+      <Association Name="Tbl_Pasantes_Tbl_Labores" Member="Tbl_Pasantes" ThisKey="Pasantes_id" OtherKey="Pasantes_id" Type="Tbl_Pasantes" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.Tbl_Pasantes" Member="Tbl_Pasantes">
     <Type Name="Tbl_Pasantes">
       <Column Name="Pasantes_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -61,19 +74,6 @@
       <Association Name="Tbl_TipoUsuario_Tbl_Pasantes" Member="Tbl_TipoUsuario" ThisKey="tusu_id" OtherKey="tusu_id" Type="Tbl_TipoUsuario" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.Tbl_Labores" Member="Tbl_Labores">
-    <Type Name="Tbl_Labores">
-      <Column Name="Labor_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="activo" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
-      <Column Name="concepto" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
-      <Column Name="Pasantes_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Proyecto_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="nhoras" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="Tbl_Labores_Tbl_Horas" Member="Tbl_Horas" ThisKey="Labor_id" OtherKey="Labor_id" Type="Tbl_Horas" />
-      <Association Name="Tbl_Pasantes_Tbl_Labores" Member="Tbl_Pasantes" ThisKey="Pasantes_id" OtherKey="Pasantes_id" Type="Tbl_Pasantes" IsForeignKey="true" />
-      <Association Name="Tbl_Proyecto_Tbl_Labores" Member="Tbl_Proyecto" ThisKey="Proyecto_id" OtherKey="Proyecto_id" Type="Tbl_Proyecto" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.Tbl_Horas" Member="Tbl_Horas">
     <Type Name="Tbl_Horas">
       <Column Name="Horas_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -85,4 +85,23 @@
       <Association Name="Tbl_Labores_Tbl_Horas" Member="Tbl_Labores" ThisKey="Labor_id" OtherKey="Labor_id" Type="Tbl_Labores" IsForeignKey="true" />
     </Type>
   </Table>
+  <Function Name="dbo.NumeroDeHoras" Method="NumeroDeHoras">
+    <ElementType Name="NumeroDeHorasResult">
+      <Column Name="Apellidos" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Nombres" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="concepto" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="nhoras" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="horasA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.BuscarPorNumeroDeHoras" Method="BuscarPorNumeroDeHoras">
+    <Parameter Name="Apellidos" Parameter="apellidos" Type="System.String" DbType="VarChar(100)" />
+    <ElementType Name="BuscarPorNumeroDeHorasResult">
+      <Column Name="Apellidos" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Nombres" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="concepto" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="nhoras" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="horasA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

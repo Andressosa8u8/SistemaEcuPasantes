@@ -32,5 +32,16 @@ namespace CapaDatos.Properties {
                 return ((string)(this["Ecu911PasantesConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MAYCKYANDER\\MAYCKYANDER;Initial Catalog=Ecu911Pasantes;Integrated Sec" +
+            "urity=True")]
+        public string Ecu911PasantesConnectionString1 {
+            get {
+                return ((string)(this["Ecu911PasantesConnectionString1"]));
+            }
+        }
     }
 }

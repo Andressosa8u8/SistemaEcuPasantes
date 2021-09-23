@@ -51,10 +51,20 @@
                             </ul>
                         </div>
                     </li>
+                    <li class="nav-item sidebar-category">
+                        <p>Reportes</p>
+                        <span></span>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Participantes.aspx">
                             <i class="mdi mdi-account-card-details menu-icon"></i>
                             <span class="menu-title">Participantes</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Numero_Horas.aspx">
+                            <i class="mdi mdi-av-timer menu-icon"></i>
+                            <span class="menu-title">Numero de Horas</span>
                         </a>
                     </li>
                 </ul>
