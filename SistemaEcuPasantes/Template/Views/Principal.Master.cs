@@ -16,9 +16,9 @@ namespace SistemaEcuPasantes.Template.Views
                 if (Session["Admin"] != null)
                 {
                     string usulogeado = Session["Admin"].ToString();
-                    string resNom = Session["nombre"].ToString();
-                    string resApe = Session["apellido"].ToString();
-                    Lbl_nombre.Text = "Bienvenido " + resNom + " " + resApe;
+                    //string resNom = Session["nombre"].ToString();
+                    //string resApe = Session["apellido"].ToString();
+                    Lbl_nombre.Text = "Bienvenido " /*+ resNom + " " + resApe*/;
                     //Lblnombre.Text = resApe + " " + resNom;
                 }
                 else

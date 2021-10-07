@@ -47,9 +47,9 @@
                                         <asp:Label ID="fecha" runat="server" Text='<%#Eval("fecha")%>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                <asp:TemplateField HeaderText="Codigo de Labor">
+                                <asp:TemplateField HeaderText="Labor">
                                     <ItemTemplate>
-                                        <asp:Label ID="Labor_id" runat="server" Text='<%#Eval("Labor_id")%>'></asp:Label>
+                                        <asp:Label ID="concepto" runat="server" Text='<%#Eval("concepto")%>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Estado">

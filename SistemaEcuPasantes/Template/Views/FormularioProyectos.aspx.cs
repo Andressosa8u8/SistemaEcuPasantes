@@ -12,7 +12,7 @@ namespace SistemaEcuPasantes.Template.Views
     public partial class FormularioProyectos : System.Web.UI.Page
     {
         private Tbl_Proyecto proinfo = new Tbl_Proyecto();
-
+        DataClasses1DataContext dc = new DataClasses1DataContext();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -37,11 +37,9 @@ namespace SistemaEcuPasantes.Template.Views
 
         private void cargarResponsables()
         {
-            List<Tbl_Responsable> listaresp = new List<Tbl_Responsable>();
-            listaresp = Cn_Responsables.obtenerResposables();
-            listaresp.Insert(0, new Tbl_Responsable() { Resp_apellido = "Seleccione..." });
-            ddlResponsable.DataSource = listaresp;
-            ddlResponsable.DataTextField = "Resp_apellido";
+            var listaresp = dc.responsables();
+            ddlResponsable.DataSource = listaresp.ToList();
+            ddlResponsable.DataTextField = "responsables";
             ddlResponsable.DataValueField = "Resp_id";
             ddlResponsable.DataBind();
         }

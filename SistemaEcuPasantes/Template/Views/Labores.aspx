@@ -37,14 +37,14 @@
                                         <asp:Label ID="concepto" runat="server" Text='<%#Eval("concepto")%>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                <asp:TemplateField HeaderText="Codigo de Pasante">
+                                <asp:TemplateField HeaderText="Pasante">
                                     <ItemTemplate>
-                                        <asp:Label ID="Pasantes_id" runat="server" Text='<%#Eval("Pasantes_id")%>'></asp:Label>
+                                        <asp:Label ID="pasante" runat="server" Text='<%#Eval("pasante")%>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                <asp:TemplateField HeaderText="Codigo de Proyecto">
+                                <asp:TemplateField HeaderText="Proyecto">
                                     <ItemTemplate>
-                                        <asp:Label ID="Proyecto_id" runat="server" Text='<%#Eval("Proyecto_id")%>'></asp:Label>
+                                        <asp:Label ID="Proyecto_concepto" runat="server" Text='<%#Eval("Proyecto_concepto")%>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Numero de Horas del Proyecto">

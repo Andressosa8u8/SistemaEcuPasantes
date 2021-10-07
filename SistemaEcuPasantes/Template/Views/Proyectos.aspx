@@ -43,6 +43,16 @@
                                             <asp:Label ID="Proyecto_descripcion" runat="server" Text='<%#Eval("Proyecto_descripcion")%>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Responsable">
+                                        <ItemTemplate>
+                                            <asp:Label ID="responsable" runat="server" Text='<%#Eval("responsable")%>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField HeaderText="Estado">
+                                        <ItemTemplate>
+                                            <asp:Label ID="Activo" runat="server" Text='<%#Eval("Activo")%>'></asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
                                     <asp:TemplateField ItemStyle-Width="17" HeaderStyle-Width="17" HeaderText="">
                                         <ItemTemplate>
                                             <asp:LinkButton ID="lnbEditar" Width="16" Height="16" CommandArgument='<%#Eval("Proyecto_id")%>' CommandName="Editar" runat="server"><i class="fas fa-pen"></i></asp:LinkButton>

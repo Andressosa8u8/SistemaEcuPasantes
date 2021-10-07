@@ -22,7 +22,8 @@
                     </div>
                     <div class="form-group">
                         <label>Responsable</label>
-                        <asp:DropDownList ID="ddlResponsable" CssClass="form-control" runat="server"></asp:DropDownList>
+                        <asp:DropDownList ID="ddlResponsable" CssClass="form-control" runat="server">
+                        </asp:DropDownList>
                     </div>
                 </div>
                 <div class="card-footer text-right">

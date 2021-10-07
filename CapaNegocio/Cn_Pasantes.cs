@@ -68,7 +68,6 @@ namespace CapaNegocio
             try
             {
                 pasa.Activo = "P";
-                pasa.tusu_id = 2;
                 pasa.Fecha = DateTime.Now;
                 dc.Tbl_Pasantes.InsertOnSubmit(pasa);
                 dc.SubmitChanges();

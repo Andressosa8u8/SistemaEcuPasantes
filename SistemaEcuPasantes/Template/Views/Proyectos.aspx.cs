@@ -11,6 +11,7 @@ namespace SistemaEcuPasantes.Template.Views
 {
     public partial class Proyectos : System.Web.UI.Page
     {
+        DataClasses1DataContext dc = new DataClasses1DataContext();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -21,11 +22,10 @@ namespace SistemaEcuPasantes.Template.Views
 
         private void cargarProyectos()
         {
-            List<Tbl_Proyecto> listaPro = new List<Tbl_Proyecto>();
-            listaPro = Cn_Proyectos.obtenerProyectos();
+            var listaPro = dc.proyectos();
             if (listaPro != null)
             {
-                grvProyectos.DataSource = listaPro;
+                grvProyectos.DataSource = listaPro.ToList();
                 grvProyectos.DataBind();
             }
         }

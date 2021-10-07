@@ -32,29 +32,32 @@ namespace SistemaEcuPasantes
             //byte[] hash = md5.ComputeHash(inputBytes);
             //TxtPass.Text = BitConverter.ToString(hash).Replace("-", "");
 
-            bool existenom = Cn_Responsables.autentificarxNom(txtUser.Text);
-            bool existe = Cn_Responsables.autentificar(txtUser.Text, txtPass.Text);
+            bool existenom = Cn_Usuarios.autentificarxNom(txtUser.Text);
+            bool existe = Cn_Usuarios.autentificar(txtUser.Text, txtPass.Text);
             {
                 if (existenom)
                 {
                     if (existe)
                     {
+                        Tbl_Usuario usuario = new Tbl_Usuario();
                         Tbl_Responsable responsable = new Tbl_Responsable();
-                        responsable = Cn_Responsables.autentificarxLogin(txtUser.Text, txtPass.Text);
+                        Tbl_Pasantes pasantes = new Tbl_Pasantes();
+                        usuario = Cn_Usuarios.autentificarxLogin(txtUser.Text, txtPass.Text);
 
-                        int tusuario = Convert.ToInt32(responsable.tusu_id);
+                        int tusuario = Convert.ToInt32(usuario.tusu_id);
                         if (tusuario == 1)
                         {
-                            Session["Admin"] = responsable.Resp_id.ToString();
-                            Session["apellido"] = responsable.Resp_apellido.ToString();
-                            Session["nombre"] = responsable.Resp_nombre.ToString();
+                            Session["Admin"] = usuario.Usu_id.ToString();
+                            //Session["nombre"] = responsable.Resp_nombre.ToString();
+                            //Session["apellido"] = responsable.Resp_apellido.ToString();
                             Response.Redirect("~/Template/Views/Principal.aspx");
                             Limpiar();
                         }
                         else
                         {
-                            Session["Usuario"] = responsable.Resp_nombre.ToString();
-                            Response.Redirect("~/Template/Views/Principal.aspx");
+                            Session["Usuario"] = usuario.Usu_id.ToString();
+                            
+                            Response.Redirect("~/Template/Views_Pasantes/Numero_Horas.aspx");
                             Limpiar();
                         }
                     }

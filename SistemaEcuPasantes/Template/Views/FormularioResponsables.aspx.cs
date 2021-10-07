@@ -31,8 +31,6 @@ namespace SistemaEcuPasantes.Template.Views
                         txtCargo.Text = respinfo.Resp_cargo.ToString();
                         txtCelular.Text = respinfo.Resp_celular.ToString();
                         txtEmail.Text = respinfo.Resp_correo.ToString();
-                        txtUser.Text = respinfo.Resp_nomlogin.ToString();
-                        txtPass.Text = respinfo.Resp_pass.ToString();
                         btnGuardar.Visible = false;
                     }
                 }
@@ -65,8 +63,6 @@ namespace SistemaEcuPasantes.Template.Views
                 respinfo.Resp_cargo = txtCargo.Text;
                 respinfo.Resp_celular = txtCelular.Text;
                 respinfo.Resp_correo = txtEmail.Text;
-                respinfo.Resp_nomlogin = txtUser.Text;
-                respinfo.Resp_pass = txtPass.Text;
 
                 Cn_Responsables.save(respinfo);
                 string js1 = "alert('Datos Guardados Con Exito..')";
@@ -90,8 +86,6 @@ namespace SistemaEcuPasantes.Template.Views
                 respmd.Resp_cargo = txtCargo.Text;
                 respmd.Resp_celular = txtCelular.Text;
                 respmd.Resp_correo = txtEmail.Text;
-                respmd.Resp_nomlogin = txtUser.Text;
-                respmd.Resp_pass = txtPass.Text;
 
                 Cn_Responsables.modify(respmd);
                 string js1 = "alert('Datos Modificados Con Exito..')";

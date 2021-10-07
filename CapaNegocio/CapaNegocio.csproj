@@ -49,6 +49,7 @@
     <Compile Include="Cn_Proyectos.cs" />
     <Compile Include="Cn_Responsables.cs" />
     <Compile Include="Cn_TipoUsuario.cs" />
+    <Compile Include="Cn_Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

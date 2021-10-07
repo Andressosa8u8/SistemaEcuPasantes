@@ -67,11 +67,6 @@
                                             <asp:Label ID="Resp_correo" runat="server" Text='<%#Eval("Resp_correo")%>'></asp:Label>
                                         </ItemTemplate>
                                     </asp:TemplateField>
-                                    <asp:TemplateField HeaderText="Usuario">
-                                        <ItemTemplate>
-                                            <asp:Label ID="Resp_nomlogin" runat="server" Text='<%#Eval("Resp_nomlogin")%>'></asp:Label>
-                                        </ItemTemplate>
-                                    </asp:TemplateField>
                                     <asp:TemplateField ItemStyle-Width="17" HeaderStyle-Width="17" HeaderText="">
                                         <ItemTemplate>
                                             <asp:LinkButton ID="lnbEditar" Width="16" Height="16" CommandArgument='<%#Eval("Resp_id")%>' CommandName="Editar" runat="server"><i class="fas fa-pen"></i></asp:LinkButton>

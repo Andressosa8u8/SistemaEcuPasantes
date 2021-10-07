@@ -11,6 +11,7 @@ namespace SistemaEcuPasantes.Template.Views
 {
     public partial class Labores : System.Web.UI.Page
     {
+        DataClasses1DataContext dc = new DataClasses1DataContext();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -21,11 +22,10 @@ namespace SistemaEcuPasantes.Template.Views
 
         private void cargarLabor()
         {
-            List<Tbl_Labores> listaLab = new List<Tbl_Labores>();
-            listaLab = Cn_Labores.obtenerLabor();
+            var listaLab = dc.labores();
             if (listaLab != null)
             {
-                grvLabores.DataSource = listaLab;
+                grvLabores.DataSource = listaLab.ToList();
                 grvLabores.DataBind();
             }
         }

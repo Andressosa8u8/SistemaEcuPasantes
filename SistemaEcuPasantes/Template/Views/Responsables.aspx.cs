@@ -21,7 +21,7 @@ namespace SistemaEcuPasantes.Template.Views
         private void cargarResponsable()
         {
             List<Tbl_Responsable> listaResp = new List<Tbl_Responsable>();
-            listaResp = Cn_Responsables.obtenerResposables();
+            listaResp = Cn_Responsables.obtenerResponsables();
             if (listaResp != null)
             {
                 grvResponsables.DataSource = listaResp;

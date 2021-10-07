@@ -12,7 +12,7 @@ namespace SistemaEcuPasantes.Template.Views
     public partial class FormularioLabores : System.Web.UI.Page
     {
         private Tbl_Labores labinfo = new Tbl_Labores();
-
+        DataClasses1DataContext dc = new DataClasses1DataContext();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -50,11 +50,9 @@ namespace SistemaEcuPasantes.Template.Views
 
         private void cargarPasantes()
         {
-            List<Tbl_Pasantes> listaPro = new List<Tbl_Pasantes>();
-            listaPro = Cn_Pasantes.obtenerPasantes();
-            listaPro.Insert(0, new Tbl_Pasantes() { Apellidos = "Seleccione..." });
-            ddlPasantes.DataSource = listaPro;
-            ddlPasantes.DataTextField = "Apellidos";
+            var listaPro = dc.pasantes();
+            ddlPasantes.DataSource = listaPro.ToList();
+            ddlPasantes.DataTextField = "pasantes";
             ddlPasantes.DataValueField = "Pasantes_id";
             ddlPasantes.DataBind();
         }

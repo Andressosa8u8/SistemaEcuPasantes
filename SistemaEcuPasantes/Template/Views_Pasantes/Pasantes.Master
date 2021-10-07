@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Principal.master.cs" Inherits="SistemaEcuPasantes.Template.Views.Principal" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Pasantes.master.cs" Inherits="SistemaEcuPasantes.Template.Views_Pasantes.Pasantes" %>
 
 <!DOCTYPE html>
 
@@ -26,40 +26,14 @@
                         <span></span>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Principal.aspx">
+                        <a class="nav-link" href="#">
                             <i class="mdi mdi-view-quilt menu-icon"></i>
                             <span class="menu-title">Inicio</span>
                         </a>
                     </li>
                     <li class="nav-item sidebar-category">
-                        <p>Cruds</p>
-                        <span></span>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                            <i class="mdi mdi-account-multiple-plus menu-icon"></i>
-                            <span class="menu-title">Mantenimientos</span>
-                            <i class="menu-arrow"></i>
-                        </a>
-                        <div class="collapse" id="ui-basic">
-                            <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"><a class="nav-link" href="Horas.aspx">Horas</a></li>
-                                <li class="nav-item"><a class="nav-link" href="Labores.aspx">Labores</a></li>
-                                <li class="nav-item"><a class="nav-link" href="Pasantes.aspx">Pasantes</a></li>
-                                <li class="nav-item"><a class="nav-link" href="Proyectos.aspx">Proyectos</a></li>
-                                <li class="nav-item"><a class="nav-link" href="Responsables.aspx">Responsables</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item sidebar-category">
                         <p>Reportes</p>
                         <span></span>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Participantes.aspx">
-                            <i class="mdi mdi-account-card-details menu-icon"></i>
-                            <span class="menu-title">Participantes</span>
-                        </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Numero_Horas.aspx">
@@ -152,3 +126,4 @@
     </form>
 </body>
 </html>
+

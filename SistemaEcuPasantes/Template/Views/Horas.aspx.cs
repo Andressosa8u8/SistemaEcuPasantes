@@ -11,6 +11,7 @@ namespace SistemaEcuPasantes.Template.Views
 {
     public partial class Horas : System.Web.UI.Page
     {
+        DataClasses1DataContext dc = new DataClasses1DataContext();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -21,11 +22,10 @@ namespace SistemaEcuPasantes.Template.Views
 
         private void cargarHoras()
         {
-            List<Tbl_Horas> listaHoras = new List<Tbl_Horas>();
-            listaHoras = Cn_Horas.obtenerHoras();
+            var listaHoras = dc.horas();
             if (listaHoras != null)
             {
-                grvHoras.DataSource = listaHoras;
+                grvHoras.DataSource = listaHoras.ToList();
                 grvHoras.DataBind();
             }
         }
