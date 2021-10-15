@@ -29,7 +29,6 @@ namespace SistemaEcuPasantes.Template.Views
                 grvPasantes.DataBind();
             }
         }
-
         protected void btn_agregar_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Template/Views/FormularioPasantes.aspx");
@@ -49,6 +48,16 @@ namespace SistemaEcuPasantes.Template.Views
                 if (pasape != null)
                 {
                     Cn_Pasantes.delete(pasape);
+                    cargarPasante();
+                }
+            }
+            else if(e.CommandName == "Actualizar")
+            {
+                Tbl_Pasantes pasaes = new Tbl_Pasantes();
+                pasaes = Cn_Pasantes.obtenerPasantesxId(codigo);
+                if (pasaes != null)
+                {
+                    Cn_Pasantes.status(pasaes);
                     cargarPasante();
                 }
             }

@@ -15,7 +15,7 @@ namespace CapaNegocio
         //metodo para retornar todos los usuarios
         public static List<Tbl_Horas> obtenerHoras()
         {
-            var lista = dc.Tbl_Horas.Where(hor => hor.valida == "A");
+            var lista = dc.Tbl_Horas.Where(hor => hor.valida == "A" || hor.valida == "P");
             return lista.ToList();
         }
         public static Tbl_Horas obtenerHorasxId(int id)
@@ -38,7 +38,7 @@ namespace CapaNegocio
         {
             try
             {
-                Hor.valida = "A";
+                Hor.valida = "P";
                 Hor.fecha = DateTime.Now;
                 dc.Tbl_Horas.InsertOnSubmit(Hor);
                 dc.SubmitChanges();
@@ -70,6 +70,18 @@ namespace CapaNegocio
             catch (Exception ex)
             {
                 throw new ArgumentException("Los datos no han sido eliminados <br/>" + ex.Message);
+            }
+        }
+        public static void status(Tbl_Horas Hor)
+        {
+            try
+            {
+                Hor.valida = "A";
+                dc.SubmitChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException("El estado no ha sido actualizado <br/>" + ex.Message);
             }
         }
     }

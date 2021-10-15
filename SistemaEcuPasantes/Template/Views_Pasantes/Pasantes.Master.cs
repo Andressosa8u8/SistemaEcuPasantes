@@ -13,16 +13,19 @@ namespace SistemaEcuPasantes.Template.Views_Pasantes
         {
             if (!IsPostBack)
             {
-                string usulogeado = Session["Usuario"].ToString();
-                //string pasNom = Session["nombre"].ToString();
-                //string pasApe = Session["apellido"].ToString();
-                Lbl_nombre.Text = "Bienvenido " /*+ pasNom + " " + pasApe*/;
+                if (Session["Usuario"] != null)
+                {
+                    string usulogeado = Session["Usuario"].ToString();
+                    //string pasNom = Session["nombre"].ToString();
+                    //string pasApe = Session["apellido"].ToString();
+                    Lbl_nombre.Text = "Bienvenido " /*+ pasNom + " " + pasApe*/;
+                }
+                else
+                {
+                    Response.Redirect("../../index.aspx");
+                }
+                lblFecha.Text = DateTime.Now.ToString("QUITO,d 'DE' MMMM 'DEL' yyyy");
             }
-            else
-            {
-                Response.Redirect("../../index.aspx");
-            }
-            lblFecha.Text = DateTime.Now.ToString("QUITO,d 'DE' MMMM 'DEL' yyyy");
         }
 
         protected void lnbCerrarSession_Click(object sender, EventArgs e)

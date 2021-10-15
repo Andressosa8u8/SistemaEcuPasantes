@@ -18,6 +18,9 @@
                                         Numero de <code>Horas</code>
                                     </p>
                                 </div>
+                                <div class="col-3" align="right">
+                                    <asp:Button ID="btn_agregar" CssClass="btn btn-primary" runat="server" Text="Agregar Horas" OnClick="btn_agregar_Click" />
+                                </div>
                                 <div class="col-3">
                                     <div class="form-group">
                                         <div class="input-group">
@@ -26,7 +29,7 @@
                                                     <i class="mdi mdi-magnify text-primary"></i>
                                                 </span>
                                             </div>
-                                            <asp:TextBox ID="txtBuscar" type="text" CssClass="form-control form-control-lg border-left-0"  AutoPostBack="true" placeholder="Buscar Pasantes Por Apellido..." runat="server"></asp:TextBox>
+                                            <%--<asp:TextBox ID="txtBuscar" type="text" CssClass="form-control form-control-lg border-left-0"  AutoPostBack="true" placeholder="Buscar Pasantes Por Apellido..." runat="server"></asp:TextBox>--%>
                                         </div>
                                     </div>
                                 </div>

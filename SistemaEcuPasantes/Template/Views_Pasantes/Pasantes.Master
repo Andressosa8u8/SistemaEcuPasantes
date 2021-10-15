@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../Template Principal/dist/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="../Template Principal/dist/vendors/css/vendor.bundle.base.css">
     <link rel="stylesheet" href="../Template Principal/dist/css/style.css">
+    <link rel="stylesheet" href="../Template Principal/dist/css/asistencia.css">
     <link rel="shortcut icon" href="../Template Principal/dist/images/ECU911.svg.png" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -32,7 +33,17 @@
                         </a>
                     </li>
                     <li class="nav-item sidebar-category">
-                        <p>Reportes</p>
+                        <p>Asistencias</p>
+                        <span></span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="AsistenciaPasante.aspx">
+                            <i class="mdi mdi-alarm-check menu-icon"></i>
+                            <span class="menu-title">Asistencia</span>
+                        </a>
+                    </li>
+                    <li class="nav-item sidebar-category">
+                        <p>Horas</p>
                         <span></span>
                     </li>
                     <li class="nav-item">

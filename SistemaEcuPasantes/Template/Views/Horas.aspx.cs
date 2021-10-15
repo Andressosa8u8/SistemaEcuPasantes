@@ -30,11 +30,6 @@ namespace SistemaEcuPasantes.Template.Views
             }
         }
 
-        protected void btn_agregar_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("~/Template/Views/FormularioHoras.aspx");
-        }
-
         protected void grvHoras_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             int codigo = Convert.ToInt32(e.CommandArgument);
@@ -49,6 +44,16 @@ namespace SistemaEcuPasantes.Template.Views
                 if (horpe != null)
                 {
                     Cn_Horas.delete(horpe);
+                    cargarHoras();
+                }
+            }
+            else if (e.CommandName == "Actualizar")
+            {
+                Tbl_Horas hores = new Tbl_Horas();
+                hores = Cn_Horas.obtenerHorasxId(codigo);
+                if (hores != null)
+                {
+                    Cn_Horas.status(hores);
                     cargarHoras();
                 }
             }

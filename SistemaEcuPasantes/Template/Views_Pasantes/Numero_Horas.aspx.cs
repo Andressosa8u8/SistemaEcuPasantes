@@ -23,5 +23,10 @@ namespace SistemaEcuPasantes.Template.Views_Pasantes
             grvNumHoras.DataSource = query.ToList();
             grvNumHoras.DataBind();
         }
+
+        protected void btn_agregar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Template/Views_Pasantes/Ingreso_horas.aspx");
+        }
     }
 }

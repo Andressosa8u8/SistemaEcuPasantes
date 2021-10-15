@@ -101,5 +101,17 @@ namespace CapaNegocio
                 throw new ArgumentException("Los datos no han sido eliminados <br/>" + ex.Message);
             }
         }
+        public static void status(Tbl_Pasantes pasa)
+        {
+            try
+            {
+                pasa.Activo = "A";
+                dc.SubmitChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException("El estado no ha sido actualizado <br/>" + ex.Message);
+            }
+        }
     }
 }

@@ -106,6 +106,13 @@
                                     <HeaderStyle Width="17px" />
                                     <ItemStyle Width="17px" />
                                 </asp:TemplateField>
+                                <asp:TemplateField ItemStyle-Width="17" HeaderStyle-Width="17">
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="lnbActualizar" Width="16" Height="16" CommandArgument='<%#Eval("Pasantes_id")%>' CommandName="Actualizar" OnClientClick="return confirm('Esta seguro que desea Actualizar este registro..')" runat="server"><i class="fas fa-check"></i></asp:LinkButton>
+                                    </ItemTemplate>
+                                    <HeaderStyle Width="17px" />
+                                    <ItemStyle Width="17px" />
+                                </asp:TemplateField>
                             </Columns>
                         </asp:GridView>
                     </div>

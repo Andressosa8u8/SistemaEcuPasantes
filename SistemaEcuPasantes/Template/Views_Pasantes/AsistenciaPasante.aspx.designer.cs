@@ -11,7 +11,7 @@ namespace SistemaEcuPasantes.Template.Views_Pasantes
 {
 
 
-    public partial class Numero_Horas
+    public partial class AsistenciaPasante
     {
 
         /// <summary>
@@ -33,21 +33,21 @@ namespace SistemaEcuPasantes.Template.Views_Pasantes
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
 
         /// <summary>
-        /// Control btn_agregar.
+        /// Control txtAsistencia.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_agregar;
+        protected global::System.Web.UI.WebControls.TextBox txtAsistencia;
 
         /// <summary>
-        /// Control grvNumHoras.
+        /// Control btnAsistencia.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grvNumHoras;
+        protected global::System.Web.UI.WebControls.Button btnAsistencia;
     }
 }

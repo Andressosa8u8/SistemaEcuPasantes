@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="index.aspx" />
+    <Content Include="Template\Template Principal\dist\css\asistencia.css" />
     <Content Include="Template\Template Principal\dist\css\style.css" />
     <Content Include="Template\Template Principal\dist\css\sweetalert.css" />
     <Content Include="Template\Template Principal\dist\images\auth\lockscreen-bg.jpg" />
@@ -136,6 +137,8 @@
     <Content Include="Template\Views\Principal.aspx" />
     <Content Include="Template\Views\Proyectos.aspx" />
     <Content Include="Template\Views\Responsables.aspx" />
+    <Content Include="Template\Views_Pasantes\AsistenciaPasante.aspx" />
+    <Content Include="Template\Views_Pasantes\Ingreso_horas.aspx" />
     <Content Include="Template\Views_Pasantes\Numero_Horas.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -148,6 +151,27 @@
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Template\Views\Horas.aspx.cs">
+      <DependentUpon>Horas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\Views\Horas.aspx.designer.cs">
+      <DependentUpon>Horas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Template\Views_Pasantes\AsistenciaPasante.aspx.cs">
+      <DependentUpon>AsistenciaPasante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\Views_Pasantes\AsistenciaPasante.aspx.designer.cs">
+      <DependentUpon>AsistenciaPasante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Template\Views_Pasantes\Ingreso_horas.aspx.cs">
+      <DependentUpon>Ingreso_horas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\Views_Pasantes\Ingreso_horas.aspx.designer.cs">
+      <DependentUpon>Ingreso_horas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Template\Views_Pasantes\Numero_Horas.aspx.cs">
       <DependentUpon>Numero_Horas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -203,13 +227,6 @@
     </Compile>
     <Compile Include="Template\Views\FormularioResponsables.aspx.designer.cs">
       <DependentUpon>FormularioResponsables.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Template\Views\Horas.aspx.cs">
-      <DependentUpon>Horas.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Template\Views\Horas.aspx.designer.cs">
-      <DependentUpon>Horas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Template\Views\Labores.aspx.cs">
       <DependentUpon>Labores.aspx</DependentUpon>

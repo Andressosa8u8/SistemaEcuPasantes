@@ -1,5 +1,4 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template/Views/Principal.Master" AutoEventWireup="true" CodeBehind="Horas.aspx.cs" Inherits="SistemaEcuPasantes.Template.Views.Horas" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cph_mensaje" runat="server">
@@ -19,9 +18,9 @@
                                         Listado de <code>Horas</code>
                                     </p>
                                 </div>
-                                <div class="col-3" align="right">
+                                <%--<div class="col-3" align="right">
                                     <asp:Button ID="btn_agregar" CssClass="btn btn-primary" runat="server" Text="Agregar Hora" OnClick="btn_agregar_Click" />
-                                </div>
+                                </div>--%>
                             </div>
                         </div>
                         <br />
@@ -71,11 +70,18 @@
                                     <HeaderStyle Width="17px" />
                                     <ItemStyle Width="17px" />
                                 </asp:TemplateField>
+                                <asp:TemplateField ItemStyle-Width="17" HeaderStyle-Width="17">
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="lnbActualizar" Width="16" Height="16" CommandArgument='<%#Eval("Horas_id")%>' CommandName="Actualizar" OnClientClick="return confirm('Esta seguro que desea Actualizar este registro..')" runat="server"><i class="fas fa-check"></i></asp:LinkButton>
+                                    </ItemTemplate>
+                                    <HeaderStyle Width="17px" />
+                                    <ItemStyle Width="17px" />
+                                </asp:TemplateField>
                             </Columns>
                         </asp:GridView>
+                        </div>
                     </div>
                 </div>
-            </div>
         </ContentTemplate>
     </asp:UpdatePanel>
 </asp:Content>

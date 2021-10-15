@@ -11,7 +11,7 @@ namespace SistemaEcuPasantes.Template.Views_Pasantes
 {
 
 
-    public partial class Numero_Horas
+    public partial class Ingreso_horas
     {
 
         /// <summary>
@@ -33,21 +33,57 @@ namespace SistemaEcuPasantes.Template.Views_Pasantes
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
 
         /// <summary>
-        /// Control btn_agregar.
+        /// Control txtCantidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_agregar;
+        protected global::System.Web.UI.WebControls.TextBox txtCantidad;
 
         /// <summary>
-        /// Control grvNumHoras.
+        /// Control txtConcepto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grvNumHoras;
+        protected global::System.Web.UI.WebControls.TextBox txtConcepto;
+
+        /// <summary>
+        /// Control ddlLabor.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlLabor;
+
+        /// <summary>
+        /// Control btnCancelar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCancelar;
+
+        /// <summary>
+        /// Control btnModificar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnModificar;
+
+        /// <summary>
+        /// Control btnGuardar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnGuardar;
     }
 }
