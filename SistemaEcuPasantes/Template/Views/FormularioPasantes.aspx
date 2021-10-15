@@ -64,6 +64,10 @@
                         <label>Universidad</label>
                         <asp:TextBox ID="txtUniversidad" type="text" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
+                    <div class="form-group">
+                        <label>Codigo</label>
+                        <asp:TextBox ID="txtCodigo" type="text" CssClass="form-control" runat="server"></asp:TextBox>
+                    </div>
                 </div>
                 <div class="card-footer text-right">
                     <asp:Button ID="btnCancelar" CssClass="btn btn-outline-secondary btn-fw" OnClick="btnCancelar_Click" runat="server" Text="Cancelar" />

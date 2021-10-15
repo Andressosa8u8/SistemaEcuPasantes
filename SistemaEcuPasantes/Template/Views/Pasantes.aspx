@@ -87,6 +87,11 @@
                                         <asp:Label ID="Universidad" runat="server" Text='<%#Eval("Universidad")%>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
+                                <asp:TemplateField HeaderText="Codigo">
+                                    <ItemTemplate>
+                                        <asp:Label ID="Codigo" runat="server" Text='<%#Eval("CodigoPa")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Estado">
                                     <ItemTemplate>
                                         <asp:Label ID="Activo" runat="server" Text='<%#Eval("Activo")%>'></asp:Label>

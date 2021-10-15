@@ -36,6 +36,7 @@ namespace SistemaEcuPasantes.Template.Views
                         txtArea.Text = pasinfo.Area.ToString();
                         txtNivel.Text = pasinfo.Nsemestre.ToString();
                         txtUniversidad.Text = pasinfo.Universidad.ToString();
+                        txtCodigo.Text = pasinfo.CodigoPa.ToString();
                         btnGuardar.Visible = false;
                     }
                 }
@@ -72,6 +73,7 @@ namespace SistemaEcuPasantes.Template.Views
                 pasinfo.Area = txtArea.Text;
                 pasinfo.Nsemestre = Convert.ToInt32(txtNivel.Text);
                 pasinfo.Universidad = txtUniversidad.Text;
+                pasinfo.CodigoPa = txtCodigo.Text;
 
                 Cn_Pasantes.save(pasinfo);
                 string js1 = "alert('Datos Guardados Con Exito..')";
@@ -99,6 +101,7 @@ namespace SistemaEcuPasantes.Template.Views
                 pasmd.Area = txtArea.Text;
                 pasmd.Nsemestre = Convert.ToInt32(txtNivel.Text);
                 pasmd.Universidad = txtUniversidad.Text;
+                pasmd.CodigoPa = txtCodigo.Text;
 
                 Cn_Pasantes.modify(pasmd);
                 string js1 = "alert('Datos Modificados Con Exito..')";
