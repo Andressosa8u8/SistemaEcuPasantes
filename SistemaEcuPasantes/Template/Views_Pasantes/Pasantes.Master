@@ -52,6 +52,16 @@
                             <span class="menu-title">Numero de Horas</span>
                         </a>
                     </li>
+                    <li class="nav-item sidebar-category">
+                        <p>Acuerdo</p>
+                        <span></span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Acuerdo.aspx">    
+                            <i class="fas fa-american-sign-language-interpreting menu-icon"></i>
+                            <span class="menu-title">Acuerdo</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <div class="container-fluid page-body-wrapper">

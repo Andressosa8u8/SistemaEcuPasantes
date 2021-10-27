@@ -138,6 +138,7 @@
     <Content Include="Template\Views\Principal.aspx" />
     <Content Include="Template\Views\Proyectos.aspx" />
     <Content Include="Template\Views\Responsables.aspx" />
+    <Content Include="Template\Views_Pasantes\Acuerdo.aspx" />
     <Content Include="Template\Views_Pasantes\AsistenciaPasante.aspx" />
     <Content Include="Template\Views_Pasantes\Ingreso_horas.aspx" />
     <Content Include="Template\Views_Pasantes\Numero_Horas.aspx" />
@@ -165,6 +166,13 @@
     </Compile>
     <Compile Include="Template\Views\Horas.aspx.designer.cs">
       <DependentUpon>Horas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Template\Views_Pasantes\Acuerdo.aspx.cs">
+      <DependentUpon>Acuerdo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\Views_Pasantes\Acuerdo.aspx.designer.cs">
+      <DependentUpon>Acuerdo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Template\Views_Pasantes\AsistenciaPasante.aspx.cs">
       <DependentUpon>AsistenciaPasante.aspx</DependentUpon>
