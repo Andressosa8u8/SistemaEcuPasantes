@@ -111,6 +111,7 @@
     <Content Include="Template\Template Principal\dist\images\other\ECU911Panel.png" />
     <Content Include="Template\Template Principal\dist\images\other\navbar-cover.jpg" />
     <Content Include="Template\Template Principal\dist\images\other\navbar-cover2.jpg" />
+    <Content Include="Template\Template Principal\dist\images\Republica del ecuador.png" />
     <Content Include="Template\Template Principal\dist\js\chart.js" />
     <Content Include="Template\Template Principal\dist\js\dashboard.js" />
     <Content Include="Template\Template Principal\dist\js\file-upload.js" />
@@ -139,6 +140,7 @@
     <Content Include="Template\Views\Responsables.aspx" />
     <Content Include="Template\Views_Pasantes\Acuerdo.aspx" />
     <Content Include="Template\Views_Pasantes\AsistenciaPasante.aspx" />
+    <Content Include="Template\Views_Pasantes\Certificado.aspx" />
     <Content Include="Template\Views_Pasantes\Ingreso_horas.aspx" />
     <Content Include="Template\Views_Pasantes\Numero_Horas.aspx" />
     <Content Include="Web.config" />
@@ -172,6 +174,13 @@
     </Compile>
     <Compile Include="Template\Views_Pasantes\AsistenciaPasante.aspx.designer.cs">
       <DependentUpon>AsistenciaPasante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Template\Views_Pasantes\Certificado.aspx.cs">
+      <DependentUpon>Certificado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template\Views_Pasantes\Certificado.aspx.designer.cs">
+      <DependentUpon>Certificado.aspx</DependentUpon>
     </Compile>
     <Compile Include="Template\Views_Pasantes\Ingreso_horas.aspx.cs">
       <DependentUpon>Ingreso_horas.aspx</DependentUpon>

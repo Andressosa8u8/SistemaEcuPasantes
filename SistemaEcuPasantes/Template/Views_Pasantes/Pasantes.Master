@@ -53,13 +53,19 @@
                         </a>
                     </li>
                     <li class="nav-item sidebar-category">
-                        <p>Acuerdo</p>
+                        <p>Documentos</p>
                         <span></span>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Acuerdo.aspx">    
                             <i class="fas fa-american-sign-language-interpreting menu-icon"></i>
                             <span class="menu-title">Acuerdo</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Certificado.aspx">    
+                            <i class="fas fa-stamp menu-icon"></i>
+                            <span class="menu-title">Certificado</span>
                         </a>
                     </li>
                 </ul>
