@@ -25,7 +25,7 @@
                             </div>
                         </div>
                         <br />
-                        <asp:GridView ID="grvHoras" AutoGenerateColumns="false" OnRowCommand="grvHoras_RowCommand" Width="100%" CssClass="table table-hover text-center" GridLines="None" runat="server">
+                        <asp:GridView ID="grvHoras" OnRowCommand="grvHoras_RowCommand" AutoGenerateColumns="false" Width="100%" CssClass="table table-hover text-center" GridLines="None" runat="server">
                             <Columns>
                                 <asp:TemplateField HeaderText="Codigo">
                                     <ItemTemplate>

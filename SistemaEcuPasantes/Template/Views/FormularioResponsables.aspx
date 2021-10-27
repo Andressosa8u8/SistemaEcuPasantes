@@ -47,21 +47,6 @@
                         <label>Correo</label>
                         <asp:TextBox ID="txtEmail" type="email" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
-                    <div class="form-group">
-                        <label>Usuario</label>
-                        <asp:TextBox ID="txtUser" type="text" CssClass="form-control" runat="server"></asp:TextBox>
-                    </div>
-                    <div class="form-group">
-                        <label>Contraseña</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">
-                                    <i class="fas fa-lock"></i>
-                                </div>
-                            </div>
-                            <asp:TextBox ID="txtPass" CssClass="form-control pwstrength" type="password" data-indicator="pwindicator" runat="server"></asp:TextBox>
-                        </div>
-                    </div>
                 </div>
                 <div class="card-footer text-right">
                     <asp:Button ID="btnCancelar" CssClass="btn btn-outline-secondary btn-fw" OnClick="btnCancelar_Click" runat="server" Text="Cancelar" />

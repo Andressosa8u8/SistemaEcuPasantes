@@ -67,6 +67,12 @@
                             <span class="menu-title">Numero de Horas</span>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Asistencias.aspx">
+                            <i class="mdi mdi-alarm-check menu-icon"></i>
+                            <span class="menu-title">Asistencias</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <div class="container-fluid page-body-wrapper">
