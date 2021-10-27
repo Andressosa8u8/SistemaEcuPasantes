@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Ecu911Pasantes" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=Ecu911Pasantes;Integrated Security=True" SettingsObjectName="CapaDatos.Properties.Settings" SettingsPropertyName="Ecu911PasantesConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=MAYCKYANDER\MAYCKYANDER;Initial Catalog=Ecu911Pasantes;Integrated Security=True" SettingsObjectName="CapaDatos.Properties.Settings" SettingsPropertyName="Ecu911PasantesConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Tbl_Asistencia" Member="Tbl_Asistencia">
     <Type Name="Tbl_Asistencia">
       <Column Name="asistencia_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -49,6 +49,7 @@
       <Column Name="Nsemestre" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Universidad" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
       <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Codigo_Pasante" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Column Name="Activo" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
       <Column Name="CodigoPa" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="Usu_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -104,24 +105,33 @@
       <Association Name="Tbl_TipoUsuario_Tbl_Usuario" Member="Tbl_TipoUsuario" ThisKey="tusu_id" OtherKey="tusu_id" Type="Tbl_TipoUsuario" IsForeignKey="true" />
     </Type>
   </Table>
-  <Function Name="dbo.BuscarPorNumeroDeHoras" Method="BuscarPorNumeroDeHoras">
-    <Parameter Name="Apellidos" Parameter="apellidos" Type="System.String" DbType="VarChar(100)" />
-    <ElementType Name="BuscarPorNumeroDeHorasResult">
-      <Column Name="Apellidos" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="Nombres" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+  <Function Name="dbo.responsables" Method="responsables">
+    <ElementType Name="responsablesResult">
+      <Column Name="Resp_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="responsables" Type="System.String" DbType="VarChar(201)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.proyectos" Method="proyectos">
+    <ElementType Name="proyectosResult">
+      <Column Name="Proyecto_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Proyecto_concepto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Proyecto_descripcion" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="responsable" Type="System.String" DbType="VarChar(201)" CanBeNull="true" />
+      <Column Name="Activo" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.pasantes" Method="pasantes">
+    <ElementType Name="pasantesResult">
+      <Column Name="Pasantes_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pasantes" Type="System.String" DbType="VarChar(201)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.NumeroDeHorasPasantes" Method="NumeroDeHorasPasantes">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="NumeroDeHorasPasantesResult">
       <Column Name="concepto" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
       <Column Name="nhoras" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="horasA" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.horas" Method="horas">
-    <ElementType Name="horasResult">
-      <Column Name="Horas_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="concepto" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="cantidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="concepto1" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
-      <Column Name="valida" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.labores" Method="labores">
@@ -154,33 +164,35 @@
       <Column Name="horasA" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.pasantes" Method="pasantes">
-    <ElementType Name="pasantesResult">
-      <Column Name="Pasantes_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="pasantes" Type="System.String" DbType="VarChar(201)" CanBeNull="true" />
+  <Function Name="dbo.horas" Method="horas">
+    <ElementType Name="horasResult">
+      <Column Name="Horas_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="concepto" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="cantidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="concepto1" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="valida" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.NumeroDeHorasPasantes" Method="NumeroDeHorasPasantes">
-    <Parameter Name="id" Type="System.Int32" DbType="Int" />
-    <ElementType Name="NumeroDeHorasPasantesResult">
+  <Function Name="dbo.BuscarPorNumeroDeHoras" Method="BuscarPorNumeroDeHoras">
+    <Parameter Name="Apellidos" Parameter="apellidos" Type="System.String" DbType="VarChar(100)" />
+    <ElementType Name="BuscarPorNumeroDeHorasResult">
+      <Column Name="Apellidos" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Nombres" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="concepto" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
       <Column Name="nhoras" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="horasA" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.proyectos" Method="proyectos">
-    <ElementType Name="proyectosResult">
-      <Column Name="Proyecto_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Proyecto_concepto" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="Proyecto_descripcion" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="responsable" Type="System.String" DbType="VarChar(201)" CanBeNull="true" />
-      <Column Name="Activo" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.responsables" Method="responsables">
-    <ElementType Name="responsablesResult">
-      <Column Name="Resp_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="responsables" Type="System.String" DbType="VarChar(201)" CanBeNull="true" />
+  <Function Name="dbo.Asistencias" Method="Asistencias">
+    <ElementType Name="AsistenciasResult">
+      <Column Name="Asistencia_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Pasante" Type="System.String" DbType="VarChar(201)" CanBeNull="true" />
+      <Column Name="Codigo_Pasante" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="fecha_hora" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Tipo" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Estado" Type="System.Char" DbType="NChar(1)" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>
