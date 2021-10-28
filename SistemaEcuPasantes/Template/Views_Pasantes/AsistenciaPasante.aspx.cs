@@ -24,15 +24,33 @@ namespace SistemaEcuPasantes.Template.Views_Pasantes
             try
             {
                 asisinfo = new Tbl_Asistencia();
-                asisinfo.codigo_pasante = txtAsistencia.Text;
+                asisinfo.Codigo_Pasante = txtAsistencia.Text;
                 Cn_Asistencia.save(asisinfo);
-                string js1 = "alert('Asistencia registrada con existo..')";
+                string js1 = "alert('Ingreso registrado con existo..')";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "script", js1, true);
                 txtAsistencia.Text = "";
             }
             catch (Exception ex)
             {
-                string js1 = "alert('Asistencia no registrada.." + ex.Message + "')";
+                string js1 = "alert('Ingreso no registrado.." + ex.Message + "')";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "script", js1, true);
+                txtAsistencia.Text = "";
+            }
+        }
+        private void Modificar(Tbl_Asistencia asismd)
+        {
+            try
+            {
+                asismd.Actividades = txtActividades.Text;
+                Cn_Asistencia.modify(asismd);
+                string js1 = "alert('Salida registrada con existo..')";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "script", js1, true);
+                txtAsistencia.Text = "";
+                txtActividades.Text = "";
+            }
+            catch (Exception ex)
+            {
+                string js1 = "alert('Salida no registrada.." + ex.Message + "')";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "script", js1, true);
                 txtAsistencia.Text = "";
             }

@@ -14,9 +14,12 @@
                         <div id="container" class="container">
                             <h2>ASISTENCIA</h2>
                             <p>Ingresa tu ID de asistencia</p>
-                            <asp:TextBox ID="txtAsistencia" type="text" placeholder="ID de asistencia" required="required" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtAsistencia"  type="text" placeholder="ID de asistencia" required="required" runat="server"></asp:TextBox>
                             <%--<input type="email" placeholder="ID de asistencia" required>--%>
-                            <br>
+                            <br />
+                            <br />
+                            <asp:TextBox ID="txtActividades" Rows="3" TextMode="MultiLine" CssClass="actividades" type="text" placeholder="Ingrese sus actividades" required="required" runat="server"></asp:TextBox>
+                            <br />
                             <asp:Button ID="btnAsistencia" OnClick="btnAsistencia_Click" CssClass="registar" runat="server" Text="Registrar" />
                             <%--<button>Registrar</button>--%>
                         </div>

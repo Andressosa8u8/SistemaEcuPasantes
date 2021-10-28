@@ -87,22 +87,13 @@ namespace SistemaEcuPasantes.Template.Views
         protected global::System.Web.UI.WebControls.TextBox txtCarrera;
 
         /// <summary>
-        /// Control txtCurriculum.
+        /// Control fuCurriculum.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCurriculum;
-
-        /// <summary>
-        /// Control txtCertificado.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCertificado;
+        protected global::System.Web.UI.WebControls.FileUpload fuCurriculum;
 
         /// <summary>
         /// Control txtArea.
@@ -132,13 +123,22 @@ namespace SistemaEcuPasantes.Template.Views
         protected global::System.Web.UI.WebControls.TextBox txtUniversidad;
 
         /// <summary>
-        /// Control txtCodigo.
+        /// Control txtCodPa.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCodigo;
+        protected global::System.Web.UI.WebControls.TextBox txtCodPa;
+
+        /// <summary>
+        /// Control txtCodEcu.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCodEcu;
 
         /// <summary>
         /// Control btnCancelar.

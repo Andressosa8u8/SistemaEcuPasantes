@@ -150,32 +150,25 @@ namespace CapaDatos
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.responsables")]
-		public ISingleResult<responsablesResult> responsables()
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Asistencias")]
+		public ISingleResult<AsistenciasResult> Asistencias()
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<responsablesResult>)(result.ReturnValue));
+			return ((ISingleResult<AsistenciasResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.proyectos")]
-		public ISingleResult<proyectosResult> proyectos()
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.horas")]
+		public ISingleResult<horasResult> horas()
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<proyectosResult>)(result.ReturnValue));
+			return ((ISingleResult<horasResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.pasantes")]
-		public ISingleResult<pasantesResult> pasantes()
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.BuscarPorNumeroDeHoras")]
+		public ISingleResult<BuscarPorNumeroDeHorasResult> BuscarPorNumeroDeHoras([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Apellidos", DbType="VarChar(100)")] string apellidos)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<pasantesResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.NumeroDeHorasPasantes")]
-		public ISingleResult<NumeroDeHorasPasantesResult> NumeroDeHorasPasantes([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id);
-			return ((ISingleResult<NumeroDeHorasPasantesResult>)(result.ReturnValue));
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), apellidos);
+			return ((ISingleResult<BuscarPorNumeroDeHorasResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.labores")]
@@ -199,25 +192,32 @@ namespace CapaDatos
 			return ((ISingleResult<NumeroDeHorasResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.horas")]
-		public ISingleResult<horasResult> horas()
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.NumeroDeHorasPasantes")]
+		public ISingleResult<NumeroDeHorasPasantesResult> NumeroDeHorasPasantes([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<horasResult>)(result.ReturnValue));
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id);
+			return ((ISingleResult<NumeroDeHorasPasantesResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.BuscarPorNumeroDeHoras")]
-		public ISingleResult<BuscarPorNumeroDeHorasResult> BuscarPorNumeroDeHoras([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Apellidos", DbType="VarChar(100)")] string apellidos)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), apellidos);
-			return ((ISingleResult<BuscarPorNumeroDeHorasResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Asistencias")]
-		public ISingleResult<AsistenciasResult> Asistencias()
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.pasantes")]
+		public ISingleResult<pasantesResult> pasantes()
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<AsistenciasResult>)(result.ReturnValue));
+			return ((ISingleResult<pasantesResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.proyectos")]
+		public ISingleResult<proyectosResult> proyectos()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<proyectosResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.responsables")]
+		public ISingleResult<responsablesResult> responsables()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<responsablesResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -227,157 +227,270 @@ namespace CapaDatos
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _asistencia_id;
+		private int _Asistencia_id;
 		
-		private string _codigo_pasante;
+		private System.Nullable<int> _Usu_id;
 		
-		private System.Nullable<System.DateTime> _fecha_hora;
+		private string _Codigo_Pasante;
 		
-		private string _tipo;
+		private System.Nullable<System.DateTime> _Fecha;
 		
-		private System.Nullable<System.DateTime> _fecha;
+		private System.Nullable<System.DateTime> _HoraEntrada;
 		
-		private System.Nullable<char> _estado;
+		private System.Nullable<System.DateTime> _HoraSalida;
+		
+		private string _Actividades;
+		
+		private string _Tipo;
+		
+		private string _Estado;
+		
+		private EntityRef<Tbl_Usuario> _Tbl_Usuario;
 		
     #region Definiciones de métodos de extensibilidad
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void Onasistencia_idChanging(int value);
-    partial void Onasistencia_idChanged();
-    partial void Oncodigo_pasanteChanging(string value);
-    partial void Oncodigo_pasanteChanged();
-    partial void Onfecha_horaChanging(System.Nullable<System.DateTime> value);
-    partial void Onfecha_horaChanged();
-    partial void OntipoChanging(string value);
-    partial void OntipoChanged();
-    partial void OnfechaChanging(System.Nullable<System.DateTime> value);
-    partial void OnfechaChanged();
-    partial void OnestadoChanging(System.Nullable<char> value);
-    partial void OnestadoChanged();
+    partial void OnAsistencia_idChanging(int value);
+    partial void OnAsistencia_idChanged();
+    partial void OnUsu_idChanging(System.Nullable<int> value);
+    partial void OnUsu_idChanged();
+    partial void OnCodigo_PasanteChanging(string value);
+    partial void OnCodigo_PasanteChanged();
+    partial void OnFechaChanging(System.Nullable<System.DateTime> value);
+    partial void OnFechaChanged();
+    partial void OnHoraEntradaChanging(System.Nullable<System.DateTime> value);
+    partial void OnHoraEntradaChanged();
+    partial void OnHoraSalidaChanging(System.Nullable<System.DateTime> value);
+    partial void OnHoraSalidaChanged();
+    partial void OnActividadesChanging(string value);
+    partial void OnActividadesChanged();
+    partial void OnTipoChanging(string value);
+    partial void OnTipoChanged();
+    partial void OnEstadoChanging(string value);
+    partial void OnEstadoChanged();
     #endregion
 		
 		public Tbl_Asistencia()
 		{
+			this._Tbl_Usuario = default(EntityRef<Tbl_Usuario>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_asistencia_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int asistencia_id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Asistencia_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Asistencia_id
 		{
 			get
 			{
-				return this._asistencia_id;
+				return this._Asistencia_id;
 			}
 			set
 			{
-				if ((this._asistencia_id != value))
+				if ((this._Asistencia_id != value))
 				{
-					this.Onasistencia_idChanging(value);
+					this.OnAsistencia_idChanging(value);
 					this.SendPropertyChanging();
-					this._asistencia_id = value;
-					this.SendPropertyChanged("asistencia_id");
-					this.Onasistencia_idChanged();
+					this._Asistencia_id = value;
+					this.SendPropertyChanged("Asistencia_id");
+					this.OnAsistencia_idChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_codigo_pasante", DbType="NChar(20)")]
-		public string codigo_pasante
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Usu_id", DbType="Int")]
+		public System.Nullable<int> Usu_id
 		{
 			get
 			{
-				return this._codigo_pasante;
+				return this._Usu_id;
 			}
 			set
 			{
-				if ((this._codigo_pasante != value))
+				if ((this._Usu_id != value))
 				{
-					this.Oncodigo_pasanteChanging(value);
+					if (this._Tbl_Usuario.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnUsu_idChanging(value);
 					this.SendPropertyChanging();
-					this._codigo_pasante = value;
-					this.SendPropertyChanged("codigo_pasante");
-					this.Oncodigo_pasanteChanged();
+					this._Usu_id = value;
+					this.SendPropertyChanged("Usu_id");
+					this.OnUsu_idChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fecha_hora", DbType="DateTime")]
-		public System.Nullable<System.DateTime> fecha_hora
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Codigo_Pasante", DbType="VarChar(20)")]
+		public string Codigo_Pasante
 		{
 			get
 			{
-				return this._fecha_hora;
+				return this._Codigo_Pasante;
 			}
 			set
 			{
-				if ((this._fecha_hora != value))
+				if ((this._Codigo_Pasante != value))
 				{
-					this.Onfecha_horaChanging(value);
+					this.OnCodigo_PasanteChanging(value);
 					this.SendPropertyChanging();
-					this._fecha_hora = value;
-					this.SendPropertyChanged("fecha_hora");
-					this.Onfecha_horaChanged();
+					this._Codigo_Pasante = value;
+					this.SendPropertyChanged("Codigo_Pasante");
+					this.OnCodigo_PasanteChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tipo", DbType="NChar(10)")]
-		public string tipo
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fecha", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Fecha
 		{
 			get
 			{
-				return this._tipo;
+				return this._Fecha;
 			}
 			set
 			{
-				if ((this._tipo != value))
+				if ((this._Fecha != value))
 				{
-					this.OntipoChanging(value);
+					this.OnFechaChanging(value);
 					this.SendPropertyChanging();
-					this._tipo = value;
-					this.SendPropertyChanged("tipo");
-					this.OntipoChanged();
+					this._Fecha = value;
+					this.SendPropertyChanged("Fecha");
+					this.OnFechaChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fecha", DbType="Date")]
-		public System.Nullable<System.DateTime> fecha
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HoraEntrada", DbType="DateTime")]
+		public System.Nullable<System.DateTime> HoraEntrada
 		{
 			get
 			{
-				return this._fecha;
+				return this._HoraEntrada;
 			}
 			set
 			{
-				if ((this._fecha != value))
+				if ((this._HoraEntrada != value))
 				{
-					this.OnfechaChanging(value);
+					this.OnHoraEntradaChanging(value);
 					this.SendPropertyChanging();
-					this._fecha = value;
-					this.SendPropertyChanged("fecha");
-					this.OnfechaChanged();
+					this._HoraEntrada = value;
+					this.SendPropertyChanged("HoraEntrada");
+					this.OnHoraEntradaChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_estado", DbType="NChar(1)")]
-		public System.Nullable<char> estado
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HoraSalida", DbType="DateTime")]
+		public System.Nullable<System.DateTime> HoraSalida
 		{
 			get
 			{
-				return this._estado;
+				return this._HoraSalida;
 			}
 			set
 			{
-				if ((this._estado != value))
+				if ((this._HoraSalida != value))
 				{
-					this.OnestadoChanging(value);
+					this.OnHoraSalidaChanging(value);
 					this.SendPropertyChanging();
-					this._estado = value;
-					this.SendPropertyChanged("estado");
-					this.OnestadoChanged();
+					this._HoraSalida = value;
+					this.SendPropertyChanged("HoraSalida");
+					this.OnHoraSalidaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Actividades", DbType="Text", UpdateCheck=UpdateCheck.Never)]
+		public string Actividades
+		{
+			get
+			{
+				return this._Actividades;
+			}
+			set
+			{
+				if ((this._Actividades != value))
+				{
+					this.OnActividadesChanging(value);
+					this.SendPropertyChanging();
+					this._Actividades = value;
+					this.SendPropertyChanged("Actividades");
+					this.OnActividadesChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tipo", DbType="VarChar(20)")]
+		public string Tipo
+		{
+			get
+			{
+				return this._Tipo;
+			}
+			set
+			{
+				if ((this._Tipo != value))
+				{
+					this.OnTipoChanging(value);
+					this.SendPropertyChanging();
+					this._Tipo = value;
+					this.SendPropertyChanged("Tipo");
+					this.OnTipoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Estado", DbType="VarChar(1)")]
+		public string Estado
+		{
+			get
+			{
+				return this._Estado;
+			}
+			set
+			{
+				if ((this._Estado != value))
+				{
+					this.OnEstadoChanging(value);
+					this.SendPropertyChanging();
+					this._Estado = value;
+					this.SendPropertyChanged("Estado");
+					this.OnEstadoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_Usuario_Tbl_Asistencia", Storage="_Tbl_Usuario", ThisKey="Usu_id", OtherKey="Usu_id", IsForeignKey=true)]
+		public Tbl_Usuario Tbl_Usuario
+		{
+			get
+			{
+				return this._Tbl_Usuario.Entity;
+			}
+			set
+			{
+				Tbl_Usuario previousValue = this._Tbl_Usuario.Entity;
+				if (((previousValue != value) 
+							|| (this._Tbl_Usuario.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Tbl_Usuario.Entity = null;
+						previousValue.Tbl_Asistencia.Remove(this);
+					}
+					this._Tbl_Usuario.Entity = value;
+					if ((value != null))
+					{
+						value.Tbl_Asistencia.Add(this);
+						this._Usu_id = value.Usu_id;
+					}
+					else
+					{
+						this._Usu_id = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("Tbl_Usuario");
 				}
 			}
 		}
@@ -940,11 +1053,11 @@ namespace CapaDatos
 		
 		private string _Curriculum;
 		
-		private string _Certificado;
+		private string _Acuerdo;
 		
 		private string _Area;
 		
-		private System.Nullable<int> _Nsemestre;
+		private string _Nsemestre;
 		
 		private string _Universidad;
 		
@@ -954,7 +1067,7 @@ namespace CapaDatos
 		
 		private string _Activo;
 		
-		private string _CodigoPa;
+		private string _CodigoEcu;
 		
 		private System.Nullable<int> _Usu_id;
 		
@@ -982,11 +1095,11 @@ namespace CapaDatos
     partial void OnCarreraChanged();
     partial void OnCurriculumChanging(string value);
     partial void OnCurriculumChanged();
-    partial void OnCertificadoChanging(string value);
-    partial void OnCertificadoChanged();
+    partial void OnAcuerdoChanging(string value);
+    partial void OnAcuerdoChanged();
     partial void OnAreaChanging(string value);
     partial void OnAreaChanged();
-    partial void OnNsemestreChanging(System.Nullable<int> value);
+    partial void OnNsemestreChanging(string value);
     partial void OnNsemestreChanged();
     partial void OnUniversidadChanging(string value);
     partial void OnUniversidadChanged();
@@ -996,8 +1109,8 @@ namespace CapaDatos
     partial void OnCodigo_PasanteChanged();
     partial void OnActivoChanging(string value);
     partial void OnActivoChanged();
-    partial void OnCodigoPaChanging(string value);
-    partial void OnCodigoPaChanged();
+    partial void OnCodigoEcuChanging(string value);
+    partial void OnCodigoEcuChanged();
     partial void OnUsu_idChanging(System.Nullable<int> value);
     partial void OnUsu_idChanged();
     #endregion
@@ -1169,22 +1282,22 @@ namespace CapaDatos
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Certificado", DbType="VarChar(250)")]
-		public string Certificado
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Acuerdo", DbType="VarChar(20)")]
+		public string Acuerdo
 		{
 			get
 			{
-				return this._Certificado;
+				return this._Acuerdo;
 			}
 			set
 			{
-				if ((this._Certificado != value))
+				if ((this._Acuerdo != value))
 				{
-					this.OnCertificadoChanging(value);
+					this.OnAcuerdoChanging(value);
 					this.SendPropertyChanging();
-					this._Certificado = value;
-					this.SendPropertyChanged("Certificado");
-					this.OnCertificadoChanged();
+					this._Acuerdo = value;
+					this.SendPropertyChanged("Acuerdo");
+					this.OnAcuerdoChanged();
 				}
 			}
 		}
@@ -1209,8 +1322,8 @@ namespace CapaDatos
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nsemestre", DbType="Int")]
-		public System.Nullable<int> Nsemestre
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nsemestre", DbType="VarChar(20)")]
+		public string Nsemestre
 		{
 			get
 			{
@@ -1309,22 +1422,22 @@ namespace CapaDatos
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CodigoPa", DbType="VarChar(100)")]
-		public string CodigoPa
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CodigoEcu", DbType="VarChar(100)")]
+		public string CodigoEcu
 		{
 			get
 			{
-				return this._CodigoPa;
+				return this._CodigoEcu;
 			}
 			set
 			{
-				if ((this._CodigoPa != value))
+				if ((this._CodigoEcu != value))
 				{
-					this.OnCodigoPaChanging(value);
+					this.OnCodigoEcuChanging(value);
 					this.SendPropertyChanging();
-					this._CodigoPa = value;
-					this.SendPropertyChanged("CodigoPa");
-					this.OnCodigoPaChanged();
+					this._CodigoEcu = value;
+					this.SendPropertyChanged("CodigoEcu");
+					this.OnCodigoEcuChanged();
 				}
 			}
 		}
@@ -2177,6 +2290,8 @@ namespace CapaDatos
 		
 		private int _Usu_id;
 		
+		private string _Name;
+		
 		private string _User;
 		
 		private string _Password;
@@ -2184,6 +2299,8 @@ namespace CapaDatos
 		private string _Estado;
 		
 		private System.Nullable<int> _tusu_id;
+		
+		private EntitySet<Tbl_Asistencia> _Tbl_Asistencia;
 		
 		private EntitySet<Tbl_Pasantes> _Tbl_Pasantes;
 		
@@ -2197,6 +2314,8 @@ namespace CapaDatos
     partial void OnCreated();
     partial void OnUsu_idChanging(int value);
     partial void OnUsu_idChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
     partial void OnUserChanging(string value);
     partial void OnUserChanged();
     partial void OnPasswordChanging(string value);
@@ -2209,6 +2328,7 @@ namespace CapaDatos
 		
 		public Tbl_Usuario()
 		{
+			this._Tbl_Asistencia = new EntitySet<Tbl_Asistencia>(new Action<Tbl_Asistencia>(this.attach_Tbl_Asistencia), new Action<Tbl_Asistencia>(this.detach_Tbl_Asistencia));
 			this._Tbl_Pasantes = new EntitySet<Tbl_Pasantes>(new Action<Tbl_Pasantes>(this.attach_Tbl_Pasantes), new Action<Tbl_Pasantes>(this.detach_Tbl_Pasantes));
 			this._Tbl_Responsable = new EntitySet<Tbl_Responsable>(new Action<Tbl_Responsable>(this.attach_Tbl_Responsable), new Action<Tbl_Responsable>(this.detach_Tbl_Responsable));
 			this._Tbl_TipoUsuario = default(EntityRef<Tbl_TipoUsuario>);
@@ -2231,6 +2351,26 @@ namespace CapaDatos
 					this._Usu_id = value;
 					this.SendPropertyChanged("Usu_id");
 					this.OnUsu_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="VarChar(100)")]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this.OnNameChanging(value);
+					this.SendPropertyChanging();
+					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
 				}
 			}
 		}
@@ -2319,6 +2459,19 @@ namespace CapaDatos
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_Usuario_Tbl_Asistencia", Storage="_Tbl_Asistencia", ThisKey="Usu_id", OtherKey="Usu_id")]
+		public EntitySet<Tbl_Asistencia> Tbl_Asistencia
+		{
+			get
+			{
+				return this._Tbl_Asistencia;
+			}
+			set
+			{
+				this._Tbl_Asistencia.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Tbl_Usuario_Tbl_Pasantes", Storage="_Tbl_Pasantes", ThisKey="Usu_id", OtherKey="Usu_id")]
 		public EntitySet<Tbl_Pasantes> Tbl_Pasantes
 		{
@@ -2399,6 +2552,18 @@ namespace CapaDatos
 			}
 		}
 		
+		private void attach_Tbl_Asistencia(Tbl_Asistencia entity)
+		{
+			this.SendPropertyChanging();
+			entity.Tbl_Usuario = this;
+		}
+		
+		private void detach_Tbl_Asistencia(Tbl_Asistencia entity)
+		{
+			this.SendPropertyChanging();
+			entity.Tbl_Usuario = null;
+		}
+		
 		private void attach_Tbl_Pasantes(Tbl_Pasantes entity)
 		{
 			this.SendPropertyChanging();
@@ -2424,194 +2589,280 @@ namespace CapaDatos
 		}
 	}
 	
-	public partial class responsablesResult
+	public partial class AsistenciasResult
 	{
 		
-		private int _Resp_id;
+		private int _Asistencia_id;
 		
-		private string _responsables;
+		private string _Pasante;
 		
-		public responsablesResult()
+		private string _Codigo_Pasante;
+		
+		private System.Nullable<System.DateTime> _Fecha;
+		
+		private System.Nullable<System.TimeSpan> _HoraEntrada;
+		
+		private System.Nullable<System.TimeSpan> _HoraSalida;
+		
+		private string _Actividades;
+		
+		private string _Tipo;
+		
+		public AsistenciasResult()
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Resp_id", DbType="Int NOT NULL")]
-		public int Resp_id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Asistencia_id", DbType="Int NOT NULL")]
+		public int Asistencia_id
 		{
 			get
 			{
-				return this._Resp_id;
+				return this._Asistencia_id;
 			}
 			set
 			{
-				if ((this._Resp_id != value))
+				if ((this._Asistencia_id != value))
 				{
-					this._Resp_id = value;
+					this._Asistencia_id = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_responsables", DbType="VarChar(201)")]
-		public string responsables
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pasante", DbType="VarChar(201)")]
+		public string Pasante
 		{
 			get
 			{
-				return this._responsables;
+				return this._Pasante;
 			}
 			set
 			{
-				if ((this._responsables != value))
+				if ((this._Pasante != value))
 				{
-					this._responsables = value;
+					this._Pasante = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Codigo_Pasante", DbType="VarChar(20)")]
+		public string Codigo_Pasante
+		{
+			get
+			{
+				return this._Codigo_Pasante;
+			}
+			set
+			{
+				if ((this._Codigo_Pasante != value))
+				{
+					this._Codigo_Pasante = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fecha", DbType="Date")]
+		public System.Nullable<System.DateTime> Fecha
+		{
+			get
+			{
+				return this._Fecha;
+			}
+			set
+			{
+				if ((this._Fecha != value))
+				{
+					this._Fecha = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HoraEntrada", DbType="Time")]
+		public System.Nullable<System.TimeSpan> HoraEntrada
+		{
+			get
+			{
+				return this._HoraEntrada;
+			}
+			set
+			{
+				if ((this._HoraEntrada != value))
+				{
+					this._HoraEntrada = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HoraSalida", DbType="Time")]
+		public System.Nullable<System.TimeSpan> HoraSalida
+		{
+			get
+			{
+				return this._HoraSalida;
+			}
+			set
+			{
+				if ((this._HoraSalida != value))
+				{
+					this._HoraSalida = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Actividades", DbType="Text", UpdateCheck=UpdateCheck.Never)]
+		public string Actividades
+		{
+			get
+			{
+				return this._Actividades;
+			}
+			set
+			{
+				if ((this._Actividades != value))
+				{
+					this._Actividades = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tipo", DbType="VarChar(20)")]
+		public string Tipo
+		{
+			get
+			{
+				return this._Tipo;
+			}
+			set
+			{
+				if ((this._Tipo != value))
+				{
+					this._Tipo = value;
 				}
 			}
 		}
 	}
 	
-	public partial class proyectosResult
+	public partial class horasResult
 	{
 		
-		private int _Proyecto_id;
+		private int _Horas_id;
 		
-		private string _Proyecto_concepto;
+		private string _concepto;
 		
-		private string _Proyecto_descripcion;
+		private System.Nullable<int> _cantidad;
 		
-		private string _responsable;
+		private System.Nullable<System.DateTime> _fecha;
 		
-		private string _Activo;
+		private string _concepto1;
 		
-		public proyectosResult()
+		private string _valida;
+		
+		public horasResult()
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Proyecto_id", DbType="Int NOT NULL")]
-		public int Proyecto_id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Horas_id", DbType="Int NOT NULL")]
+		public int Horas_id
 		{
 			get
 			{
-				return this._Proyecto_id;
+				return this._Horas_id;
 			}
 			set
 			{
-				if ((this._Proyecto_id != value))
+				if ((this._Horas_id != value))
 				{
-					this._Proyecto_id = value;
+					this._Horas_id = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Proyecto_concepto", DbType="VarChar(100)")]
-		public string Proyecto_concepto
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_concepto", DbType="Text", UpdateCheck=UpdateCheck.Never)]
+		public string concepto
 		{
 			get
 			{
-				return this._Proyecto_concepto;
+				return this._concepto;
 			}
 			set
 			{
-				if ((this._Proyecto_concepto != value))
+				if ((this._concepto != value))
 				{
-					this._Proyecto_concepto = value;
+					this._concepto = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Proyecto_descripcion", DbType="Text", UpdateCheck=UpdateCheck.Never)]
-		public string Proyecto_descripcion
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cantidad", DbType="Int")]
+		public System.Nullable<int> cantidad
 		{
 			get
 			{
-				return this._Proyecto_descripcion;
+				return this._cantidad;
 			}
 			set
 			{
-				if ((this._Proyecto_descripcion != value))
+				if ((this._cantidad != value))
 				{
-					this._Proyecto_descripcion = value;
+					this._cantidad = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_responsable", DbType="VarChar(201)")]
-		public string responsable
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fecha", DbType="DateTime")]
+		public System.Nullable<System.DateTime> fecha
 		{
 			get
 			{
-				return this._responsable;
+				return this._fecha;
 			}
 			set
 			{
-				if ((this._responsable != value))
+				if ((this._fecha != value))
 				{
-					this._responsable = value;
+					this._fecha = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Activo", DbType="VarChar(1)")]
-		public string Activo
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_concepto1", DbType="VarChar(250)")]
+		public string concepto1
 		{
 			get
 			{
-				return this._Activo;
+				return this._concepto1;
 			}
 			set
 			{
-				if ((this._Activo != value))
+				if ((this._concepto1 != value))
 				{
-					this._Activo = value;
+					this._concepto1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_valida", DbType="VarChar(1)")]
+		public string valida
+		{
+			get
+			{
+				return this._valida;
+			}
+			set
+			{
+				if ((this._valida != value))
+				{
+					this._valida = value;
 				}
 			}
 		}
 	}
 	
-	public partial class pasantesResult
+	public partial class BuscarPorNumeroDeHorasResult
 	{
 		
-		private int _Pasantes_id;
+		private string _Apellidos;
 		
-		private string _pasantes;
-		
-		public pasantesResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pasantes_id", DbType="Int NOT NULL")]
-		public int Pasantes_id
-		{
-			get
-			{
-				return this._Pasantes_id;
-			}
-			set
-			{
-				if ((this._Pasantes_id != value))
-				{
-					this._Pasantes_id = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pasantes", DbType="VarChar(201)")]
-		public string pasantes
-		{
-			get
-			{
-				return this._pasantes;
-			}
-			set
-			{
-				if ((this._pasantes != value))
-				{
-					this._pasantes = value;
-				}
-			}
-		}
-	}
-	
-	public partial class NumeroDeHorasPasantesResult
-	{
+		private string _Nombres;
 		
 		private string _concepto;
 		
@@ -2619,8 +2870,40 @@ namespace CapaDatos
 		
 		private System.Nullable<int> _horasA;
 		
-		public NumeroDeHorasPasantesResult()
+		public BuscarPorNumeroDeHorasResult()
 		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Apellidos", DbType="VarChar(100)")]
+		public string Apellidos
+		{
+			get
+			{
+				return this._Apellidos;
+			}
+			set
+			{
+				if ((this._Apellidos != value))
+				{
+					this._Apellidos = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombres", DbType="VarChar(100)")]
+		public string Nombres
+		{
+			get
+			{
+				return this._Nombres;
+			}
+			set
+			{
+				if ((this._Nombres != value))
+				{
+					this._Nombres = value;
+				}
+			}
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_concepto", DbType="VarChar(250)")]
@@ -3002,128 +3285,8 @@ namespace CapaDatos
 		}
 	}
 	
-	public partial class horasResult
+	public partial class NumeroDeHorasPasantesResult
 	{
-		
-		private int _Horas_id;
-		
-		private string _concepto;
-		
-		private System.Nullable<int> _cantidad;
-		
-		private System.Nullable<System.DateTime> _fecha;
-		
-		private string _concepto1;
-		
-		private string _valida;
-		
-		public horasResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Horas_id", DbType="Int NOT NULL")]
-		public int Horas_id
-		{
-			get
-			{
-				return this._Horas_id;
-			}
-			set
-			{
-				if ((this._Horas_id != value))
-				{
-					this._Horas_id = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_concepto", DbType="Text", UpdateCheck=UpdateCheck.Never)]
-		public string concepto
-		{
-			get
-			{
-				return this._concepto;
-			}
-			set
-			{
-				if ((this._concepto != value))
-				{
-					this._concepto = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cantidad", DbType="Int")]
-		public System.Nullable<int> cantidad
-		{
-			get
-			{
-				return this._cantidad;
-			}
-			set
-			{
-				if ((this._cantidad != value))
-				{
-					this._cantidad = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fecha", DbType="DateTime")]
-		public System.Nullable<System.DateTime> fecha
-		{
-			get
-			{
-				return this._fecha;
-			}
-			set
-			{
-				if ((this._fecha != value))
-				{
-					this._fecha = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_concepto1", DbType="VarChar(250)")]
-		public string concepto1
-		{
-			get
-			{
-				return this._concepto1;
-			}
-			set
-			{
-				if ((this._concepto1 != value))
-				{
-					this._concepto1 = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_valida", DbType="VarChar(1)")]
-		public string valida
-		{
-			get
-			{
-				return this._valida;
-			}
-			set
-			{
-				if ((this._valida != value))
-				{
-					this._valida = value;
-				}
-			}
-		}
-	}
-	
-	public partial class BuscarPorNumeroDeHorasResult
-	{
-		
-		private string _Apellidos;
-		
-		private string _Nombres;
 		
 		private string _concepto;
 		
@@ -3131,40 +3294,8 @@ namespace CapaDatos
 		
 		private System.Nullable<int> _horasA;
 		
-		public BuscarPorNumeroDeHorasResult()
+		public NumeroDeHorasPasantesResult()
 		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Apellidos", DbType="VarChar(100)")]
-		public string Apellidos
-		{
-			get
-			{
-				return this._Apellidos;
-			}
-			set
-			{
-				if ((this._Apellidos != value))
-				{
-					this._Apellidos = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombres", DbType="VarChar(100)")]
-		public string Nombres
-		{
-			get
-			{
-				return this._Nombres;
-			}
-			set
-			{
-				if ((this._Nombres != value))
-				{
-					this._Nombres = value;
-				}
-			}
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_concepto", DbType="VarChar(250)")]
@@ -3216,135 +3347,187 @@ namespace CapaDatos
 		}
 	}
 	
-	public partial class AsistenciasResult
+	public partial class pasantesResult
 	{
 		
-		private int _Asistencia_id;
+		private int _Pasantes_id;
 		
-		private string _Pasante;
+		private string _pasantes;
 		
-		private string _Codigo_Pasante;
-		
-		private System.Nullable<System.DateTime> _Fecha;
-		
-		private System.Nullable<System.DateTime> _fecha_hora;
-		
-		private string _Tipo;
-		
-		private System.Nullable<char> _Estado;
-		
-		public AsistenciasResult()
+		public pasantesResult()
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Asistencia_id", DbType="Int NOT NULL")]
-		public int Asistencia_id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pasantes_id", DbType="Int NOT NULL")]
+		public int Pasantes_id
 		{
 			get
 			{
-				return this._Asistencia_id;
+				return this._Pasantes_id;
 			}
 			set
 			{
-				if ((this._Asistencia_id != value))
+				if ((this._Pasantes_id != value))
 				{
-					this._Asistencia_id = value;
+					this._Pasantes_id = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Pasante", DbType="VarChar(201)")]
-		public string Pasante
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pasantes", DbType="VarChar(201)")]
+		public string pasantes
 		{
 			get
 			{
-				return this._Pasante;
+				return this._pasantes;
 			}
 			set
 			{
-				if ((this._Pasante != value))
+				if ((this._pasantes != value))
 				{
-					this._Pasante = value;
+					this._pasantes = value;
+				}
+			}
+		}
+	}
+	
+	public partial class proyectosResult
+	{
+		
+		private int _Proyecto_id;
+		
+		private string _Proyecto_concepto;
+		
+		private string _Proyecto_descripcion;
+		
+		private string _responsable;
+		
+		private string _Activo;
+		
+		public proyectosResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Proyecto_id", DbType="Int NOT NULL")]
+		public int Proyecto_id
+		{
+			get
+			{
+				return this._Proyecto_id;
+			}
+			set
+			{
+				if ((this._Proyecto_id != value))
+				{
+					this._Proyecto_id = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Codigo_Pasante", DbType="NChar(20)")]
-		public string Codigo_Pasante
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Proyecto_concepto", DbType="VarChar(100)")]
+		public string Proyecto_concepto
 		{
 			get
 			{
-				return this._Codigo_Pasante;
+				return this._Proyecto_concepto;
 			}
 			set
 			{
-				if ((this._Codigo_Pasante != value))
+				if ((this._Proyecto_concepto != value))
 				{
-					this._Codigo_Pasante = value;
+					this._Proyecto_concepto = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fecha", DbType="Date")]
-		public System.Nullable<System.DateTime> Fecha
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Proyecto_descripcion", DbType="Text", UpdateCheck=UpdateCheck.Never)]
+		public string Proyecto_descripcion
 		{
 			get
 			{
-				return this._Fecha;
+				return this._Proyecto_descripcion;
 			}
 			set
 			{
-				if ((this._Fecha != value))
+				if ((this._Proyecto_descripcion != value))
 				{
-					this._Fecha = value;
+					this._Proyecto_descripcion = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fecha_hora", DbType="DateTime")]
-		public System.Nullable<System.DateTime> fecha_hora
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_responsable", DbType="VarChar(201)")]
+		public string responsable
 		{
 			get
 			{
-				return this._fecha_hora;
+				return this._responsable;
 			}
 			set
 			{
-				if ((this._fecha_hora != value))
+				if ((this._responsable != value))
 				{
-					this._fecha_hora = value;
+					this._responsable = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tipo", DbType="NChar(10)")]
-		public string Tipo
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Activo", DbType="VarChar(1)")]
+		public string Activo
 		{
 			get
 			{
-				return this._Tipo;
+				return this._Activo;
 			}
 			set
 			{
-				if ((this._Tipo != value))
+				if ((this._Activo != value))
 				{
-					this._Tipo = value;
+					this._Activo = value;
+				}
+			}
+		}
+	}
+	
+	public partial class responsablesResult
+	{
+		
+		private int _Resp_id;
+		
+		private string _responsables;
+		
+		public responsablesResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Resp_id", DbType="Int NOT NULL")]
+		public int Resp_id
+		{
+			get
+			{
+				return this._Resp_id;
+			}
+			set
+			{
+				if ((this._Resp_id != value))
+				{
+					this._Resp_id = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Estado", DbType="NChar(1)")]
-		public System.Nullable<char> Estado
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_responsables", DbType="VarChar(201)")]
+		public string responsables
 		{
 			get
 			{
-				return this._Estado;
+				return this._responsables;
 			}
 			set
 			{
-				if ((this._Estado != value))
+				if ((this._responsables != value))
 				{
-					this._Estado = value;
+					this._responsables = value;
 				}
 			}
 		}

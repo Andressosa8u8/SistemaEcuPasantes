@@ -69,7 +69,7 @@
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Acuerdo de confidencialidad">
                                     <ItemTemplate>
-                                        <asp:Label ID="Certificado" runat="server" Text='<%#Eval("Certificado")%>'></asp:Label>
+                                        <asp:Label ID="Acuerdo" runat="server" Text='<%#Eval("Acuerdo")%>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Area Designada">
@@ -87,11 +87,16 @@
                                         <asp:Label ID="Universidad" runat="server" Text='<%#Eval("Universidad")%>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                <asp:TemplateField HeaderText="Codigo">
+                                <asp:TemplateField HeaderText="Codigo de Asistencia">
                                     <ItemTemplate>
-                                        <asp:Label ID="Codigo" runat="server" Text='<%#Eval("CodigoPa")%>'></asp:Label>
+                                        <asp:Label ID="Codigo_Pasante" runat="server" Text='<%#Eval("Codigo_Pasante")%>'></asp:Label>
                                     </ItemTemplate>
-                                </asp:TemplateField>
+                                </asp:TemplateField> 
+                                <asp:TemplateField HeaderText="Codigo del Ecu">
+                                    <ItemTemplate>
+                                        <asp:Label ID="CodigoEcu" runat="server" Text='<%#Eval("CodigoEcu")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField> 
                                 <asp:TemplateField HeaderText="Estado">
                                     <ItemTemplate>
                                         <asp:Label ID="Activo" runat="server" Text='<%#Eval("Activo")%>'></asp:Label>

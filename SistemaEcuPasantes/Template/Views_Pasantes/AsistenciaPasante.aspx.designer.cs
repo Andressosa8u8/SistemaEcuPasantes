@@ -42,6 +42,15 @@ namespace SistemaEcuPasantes.Template.Views_Pasantes
         protected global::System.Web.UI.WebControls.TextBox txtAsistencia;
 
         /// <summary>
+        /// Control txtActividades.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtActividades;
+
+        /// <summary>
         /// Control btnAsistencia.
         /// </summary>
         /// <remarks>

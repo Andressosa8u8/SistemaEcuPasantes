@@ -31,12 +31,12 @@ namespace SistemaEcuPasantes.Template.Views
                         txtCelular.Text = pasinfo.Celular.ToString();
                         txtEmail.Text = pasinfo.Correo.ToString();
                         txtCarrera.Text = pasinfo.Carrera.ToString();
-                        txtCurriculum.Text = pasinfo.Curriculum.ToString();
-                        txtCertificado.Text = pasinfo.Certificado.ToString();
+                        
                         txtArea.Text = pasinfo.Area.ToString();
                         txtNivel.Text = pasinfo.Nsemestre.ToString();
                         txtUniversidad.Text = pasinfo.Universidad.ToString();
-                        txtCodigo.Text = pasinfo.CodigoPa.ToString();
+                        txtCodPa.Text = pasinfo.Codigo_Pasante.ToString();
+                        txtCodEcu.Text = pasinfo.CodigoEcu.ToString();
                         btnGuardar.Visible = false;
                     }
                 }
@@ -68,12 +68,16 @@ namespace SistemaEcuPasantes.Template.Views
                 pasinfo.Celular = Convert.ToInt32(txtCelular.Text);
                 pasinfo.Correo = txtEmail.Text;
                 pasinfo.Carrera = txtCarrera.Text;
-                pasinfo.Curriculum = txtCurriculum.Text;
-                pasinfo.Certificado = txtCertificado.Text;
+                if (!string.IsNullOrEmpty(fuCurriculum.FileName))
+                {
+                    fuCurriculum.SaveAs(Server.MapPath("/Template/Documentos/") + fuCurriculum.FileName);
+                }
+                pasinfo.Curriculum = fuCurriculum.FileName;
                 pasinfo.Area = txtArea.Text;
-                pasinfo.Nsemestre = Convert.ToInt32(txtNivel.Text);
+                pasinfo.Nsemestre = txtNivel.Text;
                 pasinfo.Universidad = txtUniversidad.Text;
-                pasinfo.CodigoPa = txtCodigo.Text;
+                pasinfo.Codigo_Pasante = txtCodPa.Text;
+                pasinfo.CodigoEcu = txtCodEcu.Text;
 
                 Cn_Pasantes.save(pasinfo);
                 string js1 = "alert('Datos Guardados Con Exito..')";
@@ -96,12 +100,12 @@ namespace SistemaEcuPasantes.Template.Views
                 pasmd.Celular = Convert.ToInt32(txtCelular.Text);
                 pasmd.Correo = txtEmail.Text;
                 pasmd.Carrera = txtCarrera.Text;
-                pasmd.Curriculum = txtCurriculum.Text;
-                pasmd.Certificado = txtCertificado.Text;
+                
                 pasmd.Area = txtArea.Text;
-                pasmd.Nsemestre = Convert.ToInt32(txtNivel.Text);
+                pasmd.Nsemestre = txtNivel.Text;
                 pasmd.Universidad = txtUniversidad.Text;
-                pasmd.CodigoPa = txtCodigo.Text;
+                pasmd.Codigo_Pasante = txtCodPa.Text;
+                pasmd.CodigoEcu = txtCodEcu.Text;
 
                 Cn_Pasantes.modify(pasmd);
                 string js1 = "alert('Datos Modificados Con Exito..')";

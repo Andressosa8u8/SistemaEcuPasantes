@@ -46,11 +46,8 @@
                     </div>
                     <div class="form-group">
                         <label>Curriculum</label>
-                        <asp:TextBox ID="txtCurriculum" type="text" CssClass="form-control" runat="server"></asp:TextBox>
-                    </div>
-                    <div class="form-group">
-                        <label>Acuerdo de confidencialidad</label>
-                        <asp:TextBox ID="txtCertificado" type="text" CssClass="form-control" runat="server"></asp:TextBox>
+                        <asp:FileUpload ID="fuCurriculum" CssClass="form-control" runat="server" />
+                        <%--<asp:TextBox ID="txtCurriculum" type="text" CssClass="form-control" runat="server"></asp:TextBox>--%>
                     </div>
                     <div class="form-group">
                         <label>Area Designada</label>
@@ -65,9 +62,17 @@
                         <asp:TextBox ID="txtUniversidad" type="text" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
                     <div class="form-group">
-                        <label>Codigo</label>
-                        <asp:TextBox ID="txtCodigo" type="text" CssClass="form-control" runat="server"></asp:TextBox>
+                        <label>Codigo de Asistencia</label>
+                        <asp:TextBox ID="txtCodPa" type="text" CssClass="form-control" runat="server"></asp:TextBox>
                     </div>
+                    <div class="form-group">
+                        <label>Codigo del Ecu</label>
+                        <asp:TextBox ID="txtCodEcu" type="text" CssClass="form-control" runat="server"></asp:TextBox>
+                    </div>
+                    <%--<div class="form-group">
+                        <asp:TextBox ID="TextBox1" type="checkbox" checked="checked" data-on-color="warning" data-off-color="danger" data-on-text="Enabled" data-off-text="Disabled" runat="server"></asp:TextBox>
+                    </div>
+                    <input type="checkbox" checked data-on-color="warning" data-off-color="danger" data-on-text="Enabled" data-off-text="Disabled" />--%>
                 </div>
                 <div class="card-footer text-right">
                     <asp:Button ID="btnCancelar" CssClass="btn btn-outline-secondary btn-fw" OnClick="btnCancelar_Click" runat="server" Text="Cancelar" />
