@@ -157,18 +157,18 @@ namespace CapaDatos
 			return ((ISingleResult<AsistenciasResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.horas")]
-		public ISingleResult<horasResult> horas()
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<horasResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.BuscarPorNumeroDeHoras")]
 		public ISingleResult<BuscarPorNumeroDeHorasResult> BuscarPorNumeroDeHoras([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Apellidos", DbType="VarChar(100)")] string apellidos)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), apellidos);
 			return ((ISingleResult<BuscarPorNumeroDeHorasResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.horas")]
+		public ISingleResult<horasResult> horas()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<horasResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.labores")]
@@ -2600,9 +2600,9 @@ namespace CapaDatos
 		
 		private System.Nullable<System.DateTime> _Fecha;
 		
-		private System.Nullable<System.TimeSpan> _HoraEntrada;
+		private System.Nullable<System.DateTime> _HoraEntrada;
 		
-		private System.Nullable<System.TimeSpan> _HoraSalida;
+		private System.Nullable<System.DateTime> _HoraSalida;
 		
 		private string _Actividades;
 		
@@ -2660,7 +2660,7 @@ namespace CapaDatos
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fecha", DbType="Date")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fecha", DbType="DateTime")]
 		public System.Nullable<System.DateTime> Fecha
 		{
 			get
@@ -2676,8 +2676,8 @@ namespace CapaDatos
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HoraEntrada", DbType="Time")]
-		public System.Nullable<System.TimeSpan> HoraEntrada
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HoraEntrada", DbType="DateTime")]
+		public System.Nullable<System.DateTime> HoraEntrada
 		{
 			get
 			{
@@ -2692,8 +2692,8 @@ namespace CapaDatos
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HoraSalida", DbType="Time")]
-		public System.Nullable<System.TimeSpan> HoraSalida
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HoraSalida", DbType="DateTime")]
+		public System.Nullable<System.DateTime> HoraSalida
 		{
 			get
 			{
@@ -2736,6 +2736,104 @@ namespace CapaDatos
 				if ((this._Tipo != value))
 				{
 					this._Tipo = value;
+				}
+			}
+		}
+	}
+	
+	public partial class BuscarPorNumeroDeHorasResult
+	{
+		
+		private string _Apellidos;
+		
+		private string _Nombres;
+		
+		private string _concepto;
+		
+		private System.Nullable<int> _nhoras;
+		
+		private System.Nullable<int> _horasA;
+		
+		public BuscarPorNumeroDeHorasResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Apellidos", DbType="VarChar(100)")]
+		public string Apellidos
+		{
+			get
+			{
+				return this._Apellidos;
+			}
+			set
+			{
+				if ((this._Apellidos != value))
+				{
+					this._Apellidos = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombres", DbType="VarChar(100)")]
+		public string Nombres
+		{
+			get
+			{
+				return this._Nombres;
+			}
+			set
+			{
+				if ((this._Nombres != value))
+				{
+					this._Nombres = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_concepto", DbType="VarChar(250)")]
+		public string concepto
+		{
+			get
+			{
+				return this._concepto;
+			}
+			set
+			{
+				if ((this._concepto != value))
+				{
+					this._concepto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nhoras", DbType="Int")]
+		public System.Nullable<int> nhoras
+		{
+			get
+			{
+				return this._nhoras;
+			}
+			set
+			{
+				if ((this._nhoras != value))
+				{
+					this._nhoras = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_horasA", DbType="Int")]
+		public System.Nullable<int> horasA
+		{
+			get
+			{
+				return this._horasA;
+			}
+			set
+			{
+				if ((this._horasA != value))
+				{
+					this._horasA = value;
 				}
 			}
 		}
@@ -2852,104 +2950,6 @@ namespace CapaDatos
 				if ((this._valida != value))
 				{
 					this._valida = value;
-				}
-			}
-		}
-	}
-	
-	public partial class BuscarPorNumeroDeHorasResult
-	{
-		
-		private string _Apellidos;
-		
-		private string _Nombres;
-		
-		private string _concepto;
-		
-		private System.Nullable<int> _nhoras;
-		
-		private System.Nullable<int> _horasA;
-		
-		public BuscarPorNumeroDeHorasResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Apellidos", DbType="VarChar(100)")]
-		public string Apellidos
-		{
-			get
-			{
-				return this._Apellidos;
-			}
-			set
-			{
-				if ((this._Apellidos != value))
-				{
-					this._Apellidos = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombres", DbType="VarChar(100)")]
-		public string Nombres
-		{
-			get
-			{
-				return this._Nombres;
-			}
-			set
-			{
-				if ((this._Nombres != value))
-				{
-					this._Nombres = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_concepto", DbType="VarChar(250)")]
-		public string concepto
-		{
-			get
-			{
-				return this._concepto;
-			}
-			set
-			{
-				if ((this._concepto != value))
-				{
-					this._concepto = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nhoras", DbType="Int")]
-		public System.Nullable<int> nhoras
-		{
-			get
-			{
-				return this._nhoras;
-			}
-			set
-			{
-				if ((this._nhoras != value))
-				{
-					this._nhoras = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_horasA", DbType="Int")]
-		public System.Nullable<int> horasA
-		{
-			get
-			{
-				return this._horasA;
-			}
-			set
-			{
-				if ((this._horasA != value))
-				{
-					this._horasA = value;
 				}
 			}
 		}

@@ -17,7 +17,7 @@ namespace CapaNegocio
             {
                 asis.Estado = "A";
                 asis.HoraEntrada = Convert.ToDateTime(DateTime.Now.ToString("HH:mm:ss"));
-                asis.Fecha = DateTime.Now;
+                asis.Fecha = Convert.ToDateTime(DateTime.Now.ToString("dd/MM/yyyy"));
                 asis.Tipo = "Solo Ingreso";
                 dc.Tbl_Asistencia.InsertOnSubmit(asis);
                 dc.SubmitChanges();

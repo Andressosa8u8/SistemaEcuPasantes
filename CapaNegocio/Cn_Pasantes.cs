@@ -45,10 +45,20 @@ namespace CapaNegocio
             var pasaced = dc.Tbl_Pasantes.FirstOrDefault(pasa => pasa.Cedula.Equals(cedula) && pasa.Activo == "A");
             return pasaced;
         }
+        public static Tbl_Pasantes obtenerPasantesxUsuario(int Usu)
+        {
+            var pasaced = dc.Tbl_Pasantes.FirstOrDefault(pasa => pasa.Usu_id.Equals(Usu) && pasa.Acuerdo == "no aceptado" && pasa.Activo == "A");
+            return pasaced;
+        }
         //metodo para verificar si existe el correo
         public static bool autentificarxCorreo(string nombre)
         {
             var auto = dc.Tbl_Pasantes.Any(pasa => pasa.Activo == "A" && pasa.Correo == (nombre));
+            return auto;
+        }
+        public static bool autentificarxUsuario(int Usu)
+        {
+            var auto = dc.Tbl_Pasantes.Any(pasa => pasa.Usu_id.Equals(Usu) && pasa.Acuerdo == "aceptado" && pasa.Activo == "A");
             return auto;
         }
         //metodo para traer el objeto
@@ -99,6 +109,18 @@ namespace CapaNegocio
             catch (Exception ex)
             {
                 throw new ArgumentException("Los datos no han sido eliminados <br/>" + ex.Message);
+            }
+        }
+        public static void acuerdo(Tbl_Pasantes pasa)
+        {
+            try
+            {
+                pasa.Acuerdo = "aceptado";
+                dc.SubmitChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new ArgumentException("Los datos no han sido actualizados <br/>" + ex.Message);
             }
         }
         public static void status(Tbl_Pasantes pasa)

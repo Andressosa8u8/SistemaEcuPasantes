@@ -18,7 +18,7 @@
                             <%--<input type="email" placeholder="ID de asistencia" required>--%>
                             <br />
                             <br />
-                            <asp:TextBox ID="txtActividades" Rows="3" TextMode="MultiLine" CssClass="actividades" type="text" placeholder="Ingrese sus actividades" required="required" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtActividades" Rows="3" TextMode="MultiLine" CssClass="actividades" type="text" placeholder="Ingrese sus actividades" runat="server"></asp:TextBox>
                             <br />
                             <asp:Button ID="btnAsistencia" OnClick="btnAsistencia_Click" CssClass="registar" runat="server" Text="Registrar" />
                             <%--<button>Registrar</button>--%>

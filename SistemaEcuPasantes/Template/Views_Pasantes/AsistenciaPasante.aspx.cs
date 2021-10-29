@@ -16,14 +16,16 @@ namespace SistemaEcuPasantes.Template.Views_Pasantes
         {
             if (!IsPostBack)
             {
-
+                txtActividades.Visible = false;
             }
         }
         private void Guardar()
         {
             try
             {
+                string usulogeado = Session["Usuario"].ToString();
                 asisinfo = new Tbl_Asistencia();
+                asisinfo.Usu_id = Convert.ToInt32(usulogeado);
                 asisinfo.Codigo_Pasante = txtAsistencia.Text;
                 Cn_Asistencia.save(asisinfo);
                 string js1 = "alert('Ingreso registrado con existo..')";
@@ -41,7 +43,9 @@ namespace SistemaEcuPasantes.Template.Views_Pasantes
         {
             try
             {
+                string usulogeado = Session["Usuario"].ToString();
                 asismd.Actividades = txtActividades.Text;
+                asismd.Usu_id = Convert.ToInt32(usulogeado);
                 Cn_Asistencia.modify(asismd);
                 string js1 = "alert('Salida registrada con existo..')";
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "script", js1, true);

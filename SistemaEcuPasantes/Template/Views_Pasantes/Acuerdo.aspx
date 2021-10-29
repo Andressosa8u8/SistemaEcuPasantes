@@ -59,14 +59,15 @@
                     </p>
                 </div>
                 <div class="form-check" style="text-align: left; margin-left: 30px">
-                    <asp:CheckBox ID="checkbox3" runat="server"
+                    <asp:CheckBox ID="ckbAcuerdo" required="required" runat="server"
                         AutoPostBack="True"
-                        Text="Acepto los Terminos"
+                        Text="Acepto los Terminos y condiciones y el aviso de privacidad"
                         TextAlign="Right" Checked="false" />
                 </div>
-
+                <div class="card-footer text-right">
+                    <asp:Button ID="btnGuardar" CssClass="btn btn-primary" runat="server" OnClick="btnGuardar_Click" Text="Aceptar" />
+                </div>
             </div>
-
         </ContentTemplate>
     </asp:UpdatePanel>
 </asp:Content>
