@@ -70,7 +70,30 @@
                         Se expide el presente certificado para los fines pertinentes.<br />
                         <br />
 
-                        Atentamente,    
+                        Atentamente,
+                        <br />
+                        <br />
+                        <br />
+
+                        <img src="../Template Principal/dist/images/Firmas.png" style="width: 700px; height: 200px" />
+
+                        <br />
+                        <br />
+
+                        <div class="container" style="border: solid 1px; width: 250px; height: 80px; box-shadow: -10px -10px 1px gray">
+                            <label style="text-align: center; font-size: 11px">
+                                Dirección Nacional Académico para Emergencias Subdirección Técnica de Doctrina<br />
+                                Fecha: 25/08/2021<br />
+                                UIO-DNAE-VIN-0323-R 
+                            </label>
+                        </div>
+                        <br />
+                        <br />
+                        <br />
+                        <center>
+                            <img src="../Template Principal/dist/images/Footer.png" style="width: 900px; height: 150px" />
+                        </center>
+
                     </p>
 
                 </div>
