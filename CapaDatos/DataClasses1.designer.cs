@@ -157,6 +157,13 @@ namespace CapaDatos
 			return ((ISingleResult<AsistenciasResult>)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ValidarCodigoPasante")]
+		public ISingleResult<ValidarCodigoPasanteResult> ValidarCodigoPasante([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> codigo)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), codigo);
+			return ((ISingleResult<ValidarCodigoPasanteResult>)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.BuscarPorNumeroDeHoras")]
 		public ISingleResult<BuscarPorNumeroDeHorasResult> BuscarPorNumeroDeHoras([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Apellidos", DbType="VarChar(100)")] string apellidos)
 		{
@@ -2736,6 +2743,32 @@ namespace CapaDatos
 				if ((this._Tipo != value))
 				{
 					this._Tipo = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ValidarCodigoPasanteResult
+	{
+		
+		private string _Codigo_Pasante;
+		
+		public ValidarCodigoPasanteResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Codigo_Pasante", DbType="VarChar(20)")]
+		public string Codigo_Pasante
+		{
+			get
+			{
+				return this._Codigo_Pasante;
+			}
+			set
+			{
+				if ((this._Codigo_Pasante != value))
+				{
+					this._Codigo_Pasante = value;
 				}
 			}
 		}

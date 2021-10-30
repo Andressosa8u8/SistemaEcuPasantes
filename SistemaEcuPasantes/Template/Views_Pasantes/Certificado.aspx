@@ -35,7 +35,7 @@
                     <div class="container">
                         <div class="row-cols-2">
                             <div class="col-2" style="text-align: right">
-                                <asp:TextBox ID="TextBox1" runat="server" CssClass="auto-style1" ReadOnly="true" Style="background-color: transparent; width: 260px" Text="Quito, 25 de Agosto de 2021"></asp:TextBox>
+                                <asp:TextBox ID="txtFecha" runat="server" CssClass="auto-style1" ReadOnly="false" Style="background-color: transparent; width: 260px; text-transform:uppercase" ></asp:TextBox>
                             </div>
                         </div>
                     </div>

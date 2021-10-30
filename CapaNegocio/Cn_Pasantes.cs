@@ -61,6 +61,11 @@ namespace CapaNegocio
             var auto = dc.Tbl_Pasantes.Any(pasa => pasa.Usu_id.Equals(Usu) && pasa.Acuerdo == "aceptado" && pasa.Activo == "A");
             return auto;
         }
+        public static bool autentificarxCodigo(int Usu, int cod)
+        {
+            var auto = dc.Tbl_Pasantes.Any(pasa => pasa.Usu_id.Equals(Usu) && pasa.Codigo_Pasante.Equals(cod) && pasa.Activo == "A");
+            return auto;
+        }
         //metodo para traer el objeto
         //public static Tbl_Pasantes autentificarxLogin(string nombre, string pass)
         //{
@@ -78,6 +83,7 @@ namespace CapaNegocio
             try
             {
                 pasa.Activo = "P";
+                pasa.Acuerdo = "no aceptado";
                 pasa.Fecha = DateTime.Now;
                 dc.Tbl_Pasantes.InsertOnSubmit(pasa);
                 dc.SubmitChanges();

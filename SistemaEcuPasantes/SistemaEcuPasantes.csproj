@@ -350,6 +350,8 @@
     <Content Include="Template\Template Principal\dist\vendors\mdi\fonts\materialdesignicons-webfont.woff" />
     <Content Include="Template\Template Principal\dist\vendors\mdi\fonts\materialdesignicons-webfont.woff2" />
     <Content Include="Template\Views_Pasantes\Pasantes.Master" />
+    <Content Include="Template\Documentos\Reporte_de_venta_1 %281%29.pdf" />
+    <Content Include="Template\Documentos\Reporte_de_venta_1.pdf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -367,9 +369,7 @@
       <Name>CapaNegocio</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Template\Documentos\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

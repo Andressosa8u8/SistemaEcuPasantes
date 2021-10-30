@@ -123,6 +123,12 @@
       <Column Name="Tipo" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.ValidarCodigoPasante" Method="ValidarCodigoPasante">
+    <Parameter Name="codigo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ValidarCodigoPasanteResult">
+      <Column Name="Codigo_Pasante" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.BuscarPorNumeroDeHoras" Method="BuscarPorNumeroDeHoras">
     <Parameter Name="Apellidos" Parameter="apellidos" Type="System.String" DbType="VarChar(100)" />
     <ElementType Name="BuscarPorNumeroDeHorasResult">

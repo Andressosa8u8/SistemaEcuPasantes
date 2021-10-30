@@ -11,7 +11,10 @@ namespace SistemaEcuPasantes.Template.Views_Pasantes
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                txtFecha.Text = DateTime.Now.ToString("QUITO,d 'de' MMMM 'de' yyyy");
+            }
         }
     }
 }
